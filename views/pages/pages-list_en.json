@@ -5,7 +5,11 @@
         {
             "name": "Main page",
             "slug": "/"
+        },
+        {
+            "name": "ui",
+            "slug": "ui"
         }
     ],
-    "total": 1
+    "total": 2
 }
