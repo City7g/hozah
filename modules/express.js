@@ -21,7 +21,7 @@ const app = express();
 app.use(bodyParser.json());
 const hbs = exphbs.create({
   layoutsDir: 'views/layouts',
-  partialsDir: ['views/teamplates', 'views/teamplates/firstScreen'],
+  partialsDir: ['views/templates', 'views/templates/firstScreen'],
   defaultLayout: 'default',
   extname: '.hbs',
   helpers: {

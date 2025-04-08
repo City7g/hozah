@@ -1,8 +1,16 @@
-<div class="wrapper main-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}" data-router-view="ui"
+<div id="wrapper" class="wrapper" data-title="{{title}}" data-lang="{{currentLang}}" data-router-view="ui"
   data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/ui.css" data-style-id="styleBoxes">
-  {{>ui }}
+  <section class="ui">
+    <div class="container">
+      <h1 class="title-h1">UI Kit</h1>
 
-  <div class="styleBoxes" id="pageStyleBoxes">
-    {{!-- {{>sections/test }} --}}
-  </div>
+      <p class="title-h1">Title h1</p>
+      <p class="title-h2">Title h2</p>
+      <p class="title-h3">Title h3</p>
+      <p class="title-h4">Title h4</p>
+      <p class="text-main">Text main</p>
+    </div>
+  </section>
+
+  <div id="pageStyleBoxes" class="styleBoxes"></div>
 </div>
