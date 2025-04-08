@@ -1,0 +1,22 @@
+@import '../../_vars';
+@import '../../_mixins';
+.index-fs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: toRem(300);
+  padding-bottom: toRem(300);
+  min-height: 80vh;
+  h1 {
+    color: $white;
+    margin-top: 0;
+  }
+  svg {
+    width: auto;
+    height: auto;
+    width: toRem(400);
+    height: auto;
+    margin-bottom: toRem(20);
+  }
+}

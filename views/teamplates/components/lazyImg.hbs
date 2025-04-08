@@ -1,0 +1,151 @@
+{{#if img}}
+	{{#ifEquals ext 'svg'}}
+		{{#if div}}
+			<div
+				data-src="{{puthSRC}}/{{path}}.{{ext}}"
+				class="lazyWebp"
+				alt="{{#if alt}}{{alt}}{{else}}image alt{{/if}}"
+				data-acf-{{#if sub}}sub{{/if}}field="image"
+				data-acf-subtype="div-svg"
+				data-acf-label="{{#if acfLabel}}{{acfLabel}}{{else}}Background image{{/if}}">
+			</div>
+		{{else}}
+			<img
+				data-src="{{puthSRC}}/{{path}}.{{ext}}"
+				{{#if loading}}loading="{{loading}}"{{/if}}
+				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUGFdjYAACAAAFAAGq1chRAAAAAElFTkSuQmCC"
+				class="lazyWebp {{#if class}}{{class}}{{/if}}"
+				{{#unless noAcf}}
+					data-acf-{{#if sub}}sub{{/if}}field="image"
+					data-acf-subtype="default-svg{{#if no2x}}-no2x{{/if}}{{#if noWebp}}-noWebp{{/if}}"
+					data-acf-label="{{#if acfLabel}}{{acfLabel}}{{else}}Image{{/if}}"
+				{{/unless}}
+				alt="{{#if alt}}{{alt}}{{else}}image alt{{/if}}"
+			>
+		{{/if}}
+
+	{{/ifEquals}}
+
+	{{#ifNotEquals ext 'svg'}}
+		{{#if div}}
+			<div 
+				class="lazyWebp {{#if class}}{{class}}{{/if}}"
+				alt="{{#if alt}}{{alt}}{{else}}image alt{{/if}}"
+				data-src="{{puthSRC}}/{{path}}.{{#if ext}}{{ext}}{{else}}jpg{{/if}}"
+				data-retina="{{puthSRC}}/{{path}}{{#unless no2x}}@2x{{/unless}}.{{#if ext}}{{ext}}{{else}}jpg{{/if}}" {{#unless noWebp}} data-webp="{{puthSRC}}/{{path}}.webp"
+					data-webp-retina="{{puthSRC}}/{{path}}{{#unless no2x}}@2x{{/unless}}.webp"
+				{{/unless}}
+				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUGFdjYAACAAAFAAGq1chRAAAAAElFTkSuQmCC"
+				{{#unless noAcf}}
+					data-acf-{{#if sub}}sub{{/if}}field="image"
+					data-acf-subtype="div{{#if no2x}}-no2x{{/if}}{{#if noWebp}}-noWebp{{/if}}"
+					data-acf-label="{{#if acfLabel}}{{acfLabel}}{{else}}Background image{{/if}}"
+				{{/unless}}
+			></div>
+		{{else}}
+			<img 
+				{{#if loading}}loading="{{loading}}"{{/if}}
+				data-src="{{puthSRC}}/{{path}}.{{#if ext}}{{ext}}{{else}}jpg{{/if}}"
+				data-retina="{{puthSRC}}/{{path}}{{#unless no2x}}@2x{{/unless}}.{{#if ext}}{{ext}}{{else}}jpg{{/if}}" {{#unless noWebp}} data-webp="{{puthSRC}}/{{path}}.webp"
+					data-webp-retina="{{puthSRC}}/{{path}}{{#unless no2x}}@2x{{/unless}}.webp"
+				{{/unless}}
+				src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAAtJREFUGFdjYAACAAAFAAGq1chRAAAAAElFTkSuQmCC"
+				class="lazyWebp {{#if class}}{{class}}{{/if}}"
+				alt="{{#if alt}}{{alt}}{{else}}image alt{{/if}}"
+				{{#if width}}width="{{width}}" {{/if}}
+				{{#if height}}height="{{height}}" {{/if}}
+				{{#unless noAcf}}
+					data-acf-{{#if sub}}sub{{/if}}field="image"
+					data-acf-subtype="default{{#if no2x}}-no2x{{/if}}{{#if noWebp}}-noWebp{{/if}}{{#if loading}}-loading{{/if}}"
+					data-acf-label="{{#if acfLabel}}{{acfLabel}}{{else}}Image{{/if}}"
+				{{/unless}}
+			>
+		{{/if}}
+	{{/ifNotEquals}}
+{{else}}
+	<picture class="lazyWebpPicture {{#if class}}{{class}}{{/if}}"
+		{{#unless noAcf}}
+			data-acf-{{#if sub}}sub{{/if}}field="image"
+			data-acf-subtype="picture{{#if mobilePath}}-withMobilePath{{/if}}{{#ifEquals ext 'svg'}}-svg{{/ifEquals}}{{#if no2x}}-no2x{{/if}}{{#if noWebp}}-noWebp{{/if}}"
+			data-acf-label="{{#if acfLabel}}{{acfLabel}}{{else}}Image{{/if}}"
+		{{/unless}}>
+		{{#ifNotEquals ext 'svg'}}
+			{{#if mobilePath}}
+			<source
+				srcset="{{puthSRC}}/{{mobilePath}}.webp{{#unless no2x}} 1x, {{puthSRC}}/{{mobilePath}}@2x.webp 2x{{/unless}}"
+				type="image/webp" media="(max-width: 640px)">
+			{{/if}}
+			<source
+				srcset="{{puthSRC}}/{{path}}.webp{{#unless no2x}} 1x, {{puthSRC}}/{{path}}@2x.webp 2x{{/unless}}"
+				type="image/webp"
+			>
+		{{/ifNotEquals}}
+		{{#if mobilePath}}
+			<source
+				srcset="{{puthSRC}}/{{mobilePath}}.{{#if ext}}{{ext}}{{else}}jpg{{/if}}{{#unless no2x}} 1x, {{puthSRC}}/{{mobilePath}}@2x.{{#if ext}}{{ext}}{{else}}jpg{{/if}} 2x{{/unless}}"
+				media="(max-width: 640px)"
+				type="image/{{#if ext}}{{ext}}{{else}}jpg{{/if}}"
+			>
+		{{/if}}
+		{{#ifNotEquals ext 'svg'}}
+			<source
+				srcset="{{puthSRC}}/{{path}}.{{#if ext}}{{ext}}{{else}}jpg{{/if}}{{#unless no2x}} 1x, {{puthSRC}}/{{path}}@2x.{{#if ext}}{{ext}}{{else}}jpg{{/if}} 2x{{/unless}}"
+				type="image/{{#if ext}}{{ext}}{{else}}jpg{{/if}}"
+			>
+			<img
+				src="{{puthSRC}}/{{path}}.{{#if ext}}{{ext}}{{else}}jpg{{/if}}"
+				alt="{{#if alt}}{{alt}}{{else}}image alt{{/if}}"
+				{{#ifNotEquals lazy false }} loading="lazy" {{/ifNotEquals}}
+			>
+		{{/ifNotEquals}}
+		{{#ifEquals ext 'svg'}}
+			<source
+				srcset="{{puthSRC}}/{{path}}.svg"
+				type="image/svg">
+				<img src="{{puthSRC}}/{{path}}.svg"
+				alt="{{#if alt}}{{alt}}{{else}}image alt{{/if}}" {{#ifNotEquals lazy false }}
+				loading="lazy" {{/ifNotEquals}}>
+		{{/ifEquals}}
+	</picture>
+{{/if}}
+
+
+
+
+{{!--
+{{>components/lazyImg path=slide.image mobilePath=slide.imageMobile ext='jpg'
+lazy=true }}
+
+path - path to the image (default: ''). Required.
+mobilePath - path to the mobile image (when) (default: ''). Not required.
+ext - image extension (default: jpg). Not required.
+img - if true, then it is an img element (default: false). Not required.
+class - class for img element. Not required.
+no2x - if true, then there is no @2x image (default: false). Not required.
+noWebp - if true, then there is no webp image (default: false). Not required.
+lazy - if true, then it is a lazy load image (default: false). Not required.
+div - if true, then it is a div element with background (default: false). Not required.
+
+ACF:
+noAcf - if true, then it is not an acf field (default: false). Not required.
+acfLabel - label for acf field (default: Image or Background image). Not required.
+sub - if true, then it is a subfield (in repeater) (default: false). Not required.
+
+{{>components/lazyImg path="img/image"}}
+{{>components/lazyImg path="img/image" ext="svg"}}
+{{>components/lazyImg path="img/image" img=true}}
+{{>components/lazyImg path="img/image" mobilePath="img/image-mobile"}}
+
+{{>components/lazyImg path="img/image" sub=true}}
+{{>components/lazyImg path="img/image" sub=true ext="svg"}}
+{{>components/lazyImg path="img/image" sub=true img=true}}
+{{>components/lazyImg path="img/image" sub=true mobilePath="img/image-mobile"}}
+
+{{>components/lazyImg path="img/image" no2x=true}}
+{{>components/lazyImg path="img/image" noWebp=true}}
+{{>components/lazyImg path="img/image" noWebp=true no2x=true}}
+
+{{>components/lazyImg path="img/image" div=true}}
+{{>components/lazyImg path="img/image" div=true ext="svg"}}
+
+--}}

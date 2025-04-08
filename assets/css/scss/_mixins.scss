@@ -1,0 +1,230 @@
+@function toRem($value) {
+  $remValue: calc($value / 16) + rem;
+  @return $remValue;
+}
+
+@function toVW($value, $width: 1920) {
+  // @return  calc($value) + px;
+  $remValue: calc($value / $width * 100) + vw;
+  @return $remValue;
+}
+
+@function toVH($value, $height: 860) {
+  // @return  calc($value) + px;
+  $remValue: calc($value / $height * 100) + vh;
+  @return $remValue;
+}
+
+@function per($px, $from) {
+  $result: calc($px/ $from) * 100%;
+  @return $result;
+}
+
+@mixin textOverflow($lines: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+@mixin noTap {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+@mixin scrollmagicMobilePin {
+  padding: 0 !important;
+  height: auto !important;
+  min-height: initial !important;
+  width: auto !important;
+  min-width: initial !important;
+  inset: initial !important;
+}
+
+@mixin rootFontSize($root: ':root', $value, $width: 1920, $rule: 'max-width') {
+  @media (#{$rule}: #{$width}px) {
+    #{$root} {
+      font-size: toVW($value, $width);
+    }
+  }
+}
+
+@mixin minNotebook {
+  @media (min-width: ($tablet + 1)) {
+    @content;
+  }
+}
+
+@mixin minDesk {
+  @media (min-width: ($notebook + 1)) {
+    @content;
+  }
+}
+@mixin minDesk2 {
+  .wrapper & {
+    @media (min-width: ($desktop + 1)) {
+      @content;
+    }
+  }
+}
+@mixin minDesk2Global {
+  @media (min-width: ($desktop + 1)) {
+    @content;
+  }
+}
+
+@mixin notebookHeight {
+  @media (min-width: ($tablet + 1)) and (max-height: $notebookHeight) {
+    @content;
+  }
+}
+
+@mixin minTablet {
+  @media (min-width: ($tablet2 + 1)) {
+    @content;
+  }
+}
+@mixin minTablet2 {
+  @media (min-width: ($mobile + 1)) {
+    @content;
+  }
+}
+
+@mixin myHover {
+  @include noTap;
+  @include minTablet {
+    @media (hover: hover) {
+      &:hover {
+        @content;
+      }
+    }
+    &:active {
+      @content;
+    }
+  }
+}
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  @content;
+}
+
+@mixin wpFix {
+  .editor-styles-wrapper,
+  .wrapper {
+    @content;
+  }
+}
+
+@mixin isWpAdmin {
+  body.wp-admin & {
+    @content;
+  }
+}
+
+@mixin grid($margin: 12, $marginTablet: 12) {
+  & > .w100 {
+    width: 100%;
+  }
+  & > .w50 {
+    width: calc(50% - (toRem($margin * 2)));
+    @media (max-width: $tablet) {
+      width: calc(50% - (toRem($marginTablet * 2)));
+    }
+  }
+  & > .w33 {
+    width: calc(33.333% - (toRem($margin * 2)));
+    @media (max-width: $tablet) {
+      width: calc(33.333% - (toRem($marginTablet * 2)));
+    }
+  }
+  & > .w25 {
+    width: calc(25% - (toRem($margin * 2)));
+    @media (max-width: $tablet) {
+      width: calc(25% - (toRem($marginTablet * 2)));
+    }
+  }
+
+  & > .w25,
+  & > .w33,
+  & > .w50,
+  & > .w100 {
+    margin-left: toRem($margin);
+    margin-right: toRem($margin);
+    margin-bottom: toRem($margin * 2);
+    .isFirefox & {
+      margin-left: toRem($margin - 0.01);
+      margin-right: toRem($margin - 0.01);
+    }
+    @media (max-width: $tablet) {
+      margin-left: toRem($marginTablet);
+      margin-right: toRem($marginTablet);
+      margin-bottom: toRem($marginTablet * 2);
+      .isFirefox & {
+        margin-left: toRem($marginTablet - 0.01);
+        margin-right: toRem($marginTablet - 0.01);
+      }
+      &.notebookw50 {
+        width: calc(50% - (toRem($marginTablet * 2)));
+      }
+    }
+    @media (max-width: $tablet) {
+      &.tabletw50 {
+        width: calc(50% - (toRem($marginTablet * 2)));
+      }
+      &.tabletw33 {
+        width: calc(33.333% - (toRem($marginTablet * 2)));
+      }
+      &.tabletw100 {
+        width: 100%;
+      }
+    }
+    @media (max-width: $tablet2) {
+      &.tablet2w100 {
+        width: 100%;
+      }
+      &.tablet2w50 {
+        width: calc(50% - (toRem($marginTablet * 2)));
+      }
+      &.tablet2w33 {
+        width: calc(33.333% - (toRem($marginTablet * 2)));
+      }
+    }
+    @media (max-width: $mobile) {
+      &.mobilew100 {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@mixin rootFontSizeGlobal($root: ':root') {
+  @include rootFontSize($root, 14, 1680, 'min-width');
+  @include rootFontSize($root, 16.0111, 1441);
+  @include rootFontSize($root, 16.0111, 1101);
+  @include rootFontSize($root, 16.52, 1024);
+  @include rootFontSize($root, 16.35, 780);
+  @include rootFontSize($root, 16.35, 760);
+  @include rootFontSize($root, 16, 690);
+  @include rootFontSize($root, 20, 540);
+  @include rootFontSize($root, 16.1, 420);
+  @include rootFontSize($root, 16.22, 380);
+}
+
+@mixin maskSafari {
+  -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); // fix for safari
+}

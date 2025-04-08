@@ -1,0 +1,129 @@
+<section
+    class="template-2">
+    <div class="space">
+        <h2>Структура страницы</h2>
+        <img class="lazyWebp" width="1000" height="300" data-src="img/photo/11.png" data-webp="img/photo/11.webp"
+            data-retina="img/photo/11.png" data-webp-retina="img/photo/11.webp" alt="logo">
+        <br>
+        <p>
+            Логика следующая: мы делим страницу на главный экран и на остальную его часть. Главный экран уже должен иметь
+            инлайновые стили в разметке в хедере и скрипты для работы с ним. Остальная часть секций должна находиться в div
+            с классом "styleBoxes" и иметь дата-атрибуты:
+        </p>
+        <ul>
+            <li><code>data-style-loaded="false"</code> - указывает на то, что стили еще не загрузились.</li>
+            <li><code>data-style-href="{{puthSRC}}/css/pages/index.css"</code> - путь к файлу, который нужно загрузить.</li>
+        </ul>
+        <p>
+            При попадании на экран будут загружены файлы стилей и атрибут <code>data-style-loaded</code> изменится на
+            <code>true</code>.
+            Также можно загрузить скрипты для остальной части страницы, добавив соответствующие атрибуты:
+        </p>
+        <ul>
+            <li><code>data-script-init="false"</code></li>
+            <li><code>data-script-src="{{puthSRC}}/js/swiperSlider{{version}}.js"</code></li>
+        </ul>
+        <p>
+            После загрузки статус <code>data-script-init</code> изменится на <code>true</code>.
+        </p>
+    </div>
+<div class="space">
+    <h2>Структура первого экрана</h2>
+    <img class="lazyWebp" width="1000" height="100" data-src="img/photo/4.png" data-webp="img/photo/4.webp"
+        data-retina="img/photo/4.png" data-webp-retina="img/photo/4.webp" alt="logo">
+    <br>
+    Атрибуты для загрузки стилей и класс обернуты в условие <code>build</code> для того что только в режиме <code>npm run build</code> у нас инлайново в <code>head</code> будет записываться стили,<br> в режиме разработки <code>npm run dev</code> все стили первых екранов у нас будут добавлены на все страницы.
+    <p>Атрибуты:</p>
+    <ul>
+        <li><code>data-style-loaded="false"</code></li>
+        <li><code>data-fs="fs-style"</code></li>
+        <li><code>data-style-href="fs-path"</code></li>
+    </ul>
+  
+    <h3>Структура компонента с динамической загрузкой скрипта</h3>
+    <img class="lazyWebp" width="1000" height="150" data-src="img/photo/6.png" data-webp="img/photo/6.webp"
+        data-retina="img/photo/6.png" data-webp-retina="img/photo/6.webp" alt="logo">
+    <br>
+    <p>
+        Для загрузки скрипта используются следующие дата-атрибуты:
+    </p>
+    <ul>
+        <li><code>data-script-init="false"</code> - статус загрузки скрипта.</li>
+        <li><code>data-script-src="{{puthSRC}}/js/swiperSlider{{version}}.js"</code> - путь загрузки.</li>
+    </ul>
+
+</div>
+<div class="space">
+        <h2>Динамическая загрузка стилей</h2>
+        
+        <h3>Для первого экрана</h3>
+        <p>Атрибуты:</p>
+        <ul>
+            <li><code>data-style-loaded="false"</code></li>
+            <li><code>data-fs="fs-style"</code></li>
+            <li><code>data-style-href="fs-path"</code></li>
+        </ul>
+        Обернуть в условие <code>build</code>
+        
+        <h3>Для всей страницы</h3>
+        <ul>
+            <li><code>data-style-loaded="false"</code></li>
+            <li><code>data-style-href="{{puthSRC}}/css/pages/index.css"</code></li>
+        </ul>
+        
+        <h3>Общее</h3>
+        <p>Стилевые файлы для страницы и первого экрана должны иметь те же имена, что и сами страницы. Этот момент важно учитывать при
+            указании пути в атрибуте <code>data-style-href</code>. Если у вас возникнут сомнения, вы всегда сможете найти
+            собранный файл здесь: для первого экрана — <code>src\css\single</code>, для всей страницы —
+            <code>src\css\pages</code>.
+        </p>
+</div>
+<div class="space">
+        <h2>Динамическая загрузка скриптов</h2>
+        <p>Атрибуты:</p>
+        <ul>
+            <li><code>data-script-init="false"</code></li>
+            <li><code>data-script-src="{{puthSRC}}/js/swiperSlider{{version}}.js"</code></li>
+        </ul>
+        <p>Все скрипты, которые не включены в общий бандл, должны быть созданы как отдельные файлы скриптов. Они будут размещены
+            в папке <code>assets\js\webpack\assets\single</code>. Все файлы, находящиеся здесь, будут созданы для дальнейшего их
+            подключения по пути <code>src\js</code> именно их расположение мы и указываем в атрибуте
+            <code>data-script-src</code> как модуль, который можно будет импортировать в
+            <code>assets\js\webpack\assets\modules</code>.
+        </p>
+        
+        <p>Каждый полноценный скрипт должен быть классом и иметь методы <code>init</code> и <code>destroy</code>. В конечном
+            итоге этот скрипт будет создан, инициализирован и добавлен в массив <code>LOADED_SCRIPTS_PACK</code>. Вот пример из
+            файла <code>assets\js\webpack\assets\single\swiperSlider.js</code>:</p>
+        
+        <pre><code>const SWIPERSlider = new SwiperSlider();
+            SWIPERSlider.init(); // инициализация здесь, так как мы будем загружать его динамически; если скрипт загружается изначально, инициализацию проводить не нужно, она будет вызвана в <code>assets\js\scripts\siteEffects.js</code>
+            
+            if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(SWIPERSlider);
+            </code></pre>
+        
+        <p>Массив <code>LOADED_SCRIPTS_PACK</code> будет создан в файле <code>assets\js\scripts\observerLoaders.js</code> и
+            будет использоваться:</p>
+        <ul>
+            <li>При заходе на страницу в <code>assets\js\scripts\siteEffects.js</code>.</li>
+            <li>При выходе со страницы в <code>assets\js\scripts\subPage.js</code>.</li>
+        </ul>
+</div>
+<div class="space">
+        <h2>Основные бандлы скриптов</h2>
+        <ul>
+            <li>Для библиотек: <code>assets\js\libs.js</code></li>
+            <li>Для пользовательского кода: <code>assets\js\app.js</code></li>
+        </ul>
+        
+        <p>Каждый код, который должен выполняться при переходах, должен быть оформлен в виде класса и иметь методы
+            <code>init</code> и <code>destroy</code>. Он должен также добавляться в массив <code>OBSERVER_LOADERS</code>,
+            который будет вызываться:
+        </p>
+        <ul>
+            <li>При заходе на страницу в <code>assets\js\scripts\siteEffects.js</code>.</li>
+            <li>При выходе со страницы в <code>assets\js\scripts\subPage.js</code>.</li>
+        </ul>
+</div>
+
+</section>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="{{currentLang}}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>{{title}} | Project Name</title>
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="description" content="{{description}}">
+  <meta name="keywords" content="{{keywords}}">
+  <meta name="robots" content="noindex, nofollow">
+  <!-- open graph -->
+  <meta property="og:url" content="{{serverUrl}}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{title}}">
+  <meta property="og:description" content="{{description}}">
+  <meta property="og:image" content="{{serverUrl}}img/logoPNG.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{title}}">
+  <meta name="twitter:description" content="{{description}}">
+  <meta name="twitter:url" content="{{serverUrl}}">
+  <meta name="twitter:image" content="{{serverUrl}}img/ogImage.jpg">
+  <!-- open graph -->
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="{{puthSRC}}/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{puthSRC}}/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{puthSRC}}/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="{{puthSRC}}/img/favicon/site.webmanifest">
+  <link rel="mask-icon" href="{{puthSRC}}/img/favicon/safari-pinned-tab.svg">
+  <meta name="msapplication-TileColor" content="#010101">
+  <meta name="theme-color" content="#010101">
+  <!-- favicon -->
+  <!-- styles -->
+  <link rel="stylesheet" href="{{puthSRC}}/css/critical{{version}}.css">
+  {{#if build }}
+  <style id="fs-style"></style>
+  {{else}}
+  {{#if cssSingleFileName}}
+  {{#each cssSingleFileName}}
+  <link rel="stylesheet" href="{{puthSRC}}/css/single/{{this}}.css">
+  {{/each}}
+  {{/if}}
+  {{/if}}
+
+  {{#if noWebp}}
+  <script>
+    var noWebp = {{{ noWebp }}}
+  </script>
+  {{/if}}
+  <link rel='stylesheet' id='ut-all-styles-css' href='#' type='text/css' media='all' />
+</head>
+
+<body class="{{bodyClass}}">
+  <div class="wrapper">
+    {{!--
+    <script id="sectionStyles">
+      window.sectionStyles = {}
+    </script>
+    <script id="sectionScripts">
+      window.sectionScripts = {}
+    </script> --}}
+    {{>header}}
+    <div data-router-wrapper>
+      {{{body}}}
+    </div>
+    {{>footer}}
+  </div>
+  <div id="pageLoader">
+    <div></div>
+  </div>
+  {{>modals}}
+  {{!-- --}}
+  <script src="
+    https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js
+    " defer></script>
+  <script src="{{puthSRC}}/js/main{{version}}.js" defer></script>
+  <script src="{{puthSRC}}/js/libs{{version}}.js" defer></script>
+  <script src="{{puthSRC}}/js/script{{version}}.js" defer></script>
+</body>
+
+</html>

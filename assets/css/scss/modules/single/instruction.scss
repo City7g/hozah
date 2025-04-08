@@ -1,0 +1,31 @@
+@import '../../_vars';
+@import '../../_mixins';
+.page-1-fs {
+  .block {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: toRem(20);
+    .text {
+      width: 70%;
+      padding-right: toRem(50);
+    }
+    .image {
+      width: 30%;
+    }
+    .image img {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+  }
+  .special {
+    li {
+      position: relative;
+      &::before {
+        content: '★';
+        color: #adff2f;
+        margin-right: toRem(5);
+      }
+    }
+  }
+}

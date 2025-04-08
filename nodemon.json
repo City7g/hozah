@@ -1,0 +1,5 @@
+{
+    "ignore": [
+        "views/pages/pages-list_en.json"
+    ]
+}

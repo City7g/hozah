@@ -1,0 +1,234 @@
+.modal {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  // pointer-events: none;
+  // transition: opacity 0.4s, visibility 0.4s;
+  z-index: 999;
+  display: none;
+  @media (max-width: $tablet) {
+    .minNotebookOnly {
+      display: none !important;
+    }
+    .close-modal.tabletOnly {
+      display: flex !important;
+    }
+  }
+
+  .bodalBG {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  &.opened {
+    // pointer-events: auto;
+    opacity: 1;
+    // display: block;
+  }
+
+  &.openedImportant,
+  &.showImportant {
+    // pointer-events: auto;
+    opacity: 1;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .modal-inner-second {
+    position: relative;
+    @include minNotebook {
+      width: auto;
+      display: inline-block;
+    }
+    @media (max-width: $tablet) {
+      overflow-y: auto;
+      max-height: 100%;
+      max-height: calc(var(--vh) - var(--deltaVH));
+    }
+  }
+  .modal-inner {
+    max-height: var(--vh);
+    text-align: center;
+    position: relative;
+    width: 100%;
+    @include minNotebook {
+      padding: toRem(14) 0;
+    }
+    @media (max-width: $tablet) {
+      border-radius: toRem(24) toRem(24) 0 0;
+      // max-height: var(--vh);
+      max-height: calc(var(--vh) - var(--deltaVH) - toRem(0));
+      padding-top: toRem(40);
+      background: $white;
+      padding-top: toRem(34);
+      .modalContent {
+        padding-top: 0;
+        padding-bottom: calc(1px + var(--deltaVH));
+        // padding-bottom: toRem(40);
+      }
+    }
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // .scroll-content {
+    //   pointer-events: auto;
+    //   width: auto;
+    //   display: inline-block;
+    //   margin: auto;
+    // }
+  }
+
+  .modal-dialog {
+    margin: auto;
+    text-align: left;
+  }
+
+  &[data-position='right'] {
+    .scroll-content {
+      display: flex;
+      justify-content: flex-end;
+      @include minNotebook {
+        padding-right: var(--hideScrollBarPadding, 0);
+      }
+    }
+  }
+  @include minNotebook {
+    &.fullHeight {
+      .modal-dialog,
+      .modalContent {
+        min-height: calc(var(--vh) - toRem(14 * 2));
+
+        height: 100%;
+      }
+      .modal-inner {
+        min-height: 100%;
+      }
+    }
+  }
+}
+
+.modal {
+  .modal-dialog {
+    width: toRem(704);
+    max-width: 100%;
+    user-select: none;
+    @include noTap;
+    &.fullWIdth {
+      width: 100%;
+      max-width: toRem(1440);
+    }
+    @media (max-width: $tablet) {
+      max-width: initial;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    align-items: flex-end;
+  }
+  .close-modal {
+    position: absolute;
+    top: toRem(42);
+    right: toRem(34);
+    will-change: transform;
+    z-index: 5;
+    width: toRem(50);
+    height: toRem(50);
+    border-radius: toRem(11);
+    background: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @include minNotebook {
+      transition: $transition;
+      border: toRem(1) solid $black;
+    }
+    .svg-icon {
+      stroke: $black;
+      stroke-width: 1.5px;
+    }
+    .svg-icon,
+    .svg-icon-wrap {
+      width: toRem(20);
+      height: toRem(20);
+      display: block;
+    }
+    // @include myHover {
+    //   border-color: $white;
+    // }
+    @media (max-width: $tablet) {
+      width: toRem(24);
+      height: toRem(24);
+      right: toRem(16);
+      top: toRem(38);
+      .svg-icon,
+      .svg-icon-wrap {
+        width: toRem(16);
+        height: toRem(16);
+      }
+      .svg-icon {
+        stroke: $black;
+        stroke-width: 3px;
+      }
+    }
+  }
+}
+.modalContent {
+  padding: toRem(60) toRem(35);
+  padding-right: toRem(110);
+  background: $white;
+  font-size: toRem(14);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  @include minNotebook {
+    box-shadow: 0 toRem(4) toRem(26.9) toRem(-12) #d0cbd9;
+  }
+  border-radius: toRem(24);
+  .modal-title,
+  h3 {
+    font-size: toRem(48);
+    font-weight: 400;
+    line-height: 110%; /* 52.8px */
+    letter-spacing: toRem(-1.92);
+    text-transform: capitalize;
+    margin-bottom: toRem(40);
+    padding-right: toRem(70);
+    @media (max-width: $tablet) {
+      font-size: toRem(32);
+      font-weight: 400;
+      line-height: 110%; /* 35.2px */
+      letter-spacing: toRem(-1.28);
+      margin-bottom: toRem(24);
+      padding-right: toRem(30);
+    }
+  }
+
+  h5 {
+    font-size: toRem(12);
+    font-weight: 500;
+    line-height: 140%; /* 16.8px */
+    text-transform: uppercase;
+    letter-spacing: 0;
+  }
+  p {
+    margin-bottom: toRem(27);
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: $tablet) {
+    padding: toRem(32) toRem(24);
+  }
+}

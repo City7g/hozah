@@ -1,0 +1,170 @@
+<section data-animated="false" class="container page-1-fs pageHeroScreen {{#if build}}styleBoxes{{/if}}" {{#if build}}
+    data-style-loaded="false" data-fs="fs-style" data-style-href="fs-path" {{/if}}>
+    <h1>Вступление</h1>
+    <p>
+        Сборщик на основе <a target="_blank"
+            href="https://bitbucket.org/redlab_ua/default-node-site/src/master/">default-node-site</a>
+        с ленивой загрузкой страниц (версия используемой сборки от 2023-09-01).<br>
+        Все особенности работы с предыдущим сборщиком присущи и этому, различие в подходе к формированию стилей и
+        скриптов (разбиение и динамическая загрузка).
+    </p>
+    <div class="space">
+        <h2>Особенности:</h2>
+        <ul class="special">
+            <li>Удалён jQuery, скрипты переписаны на ванильный JavaScript.</li>
+            <li>Создание множества файлов скриптов и стилей для динамической подгрузки.</li>
+            <li>Минимальный бандл стилей и скриптов.</li>
+            <li>Стили для первого экрана записываются в head инлайново.</li>
+            <li>Динамическая загрузка стилей и скриптов.</li>
+            <li>Очистка скриптов, загруженных динамически, при переходе на другие страницы.</li>
+            <li>Есть режим сборки с минификацией HTML документа, команда: <code>npm run buildMin</code></li>
+            <li>Пофикшена проблема в случае ошибки в файлах при которых крашилась пересборка при последующем сохранении
+                (нужно
+                было перезапукскать сборку)</li>
+        </ul>
+    </div>
+    <h2>Общая информация: стили</h2>
+    <div class="block">
+        <div class="text">
+            <p>
+                Пак библиотечных стилей урезан и включает только сброс стилей
+                <code>assets\css\libs\normalize.css</code><br>
+                Глобальный файл стиля для всех страниц <code>assets\css\scss\vendors.scss</code>. собраная версия
+                <code>critical.css</code><br>
+                <code>assets\css\scss\vendors.scss</code> файл должен содержать только минимальное количество стилей,
+                используемых на всех страницах
+                (например, стили для
+                заголовков, хедера и т. д.).<br>
+                Остальные подключаемые стили деляться на :<br>
+                <code>assets\css\scss\modules\single</code> - файлы для стартовых екранов (в <code>build</code> режиме
+                встраиваются в <code>head</code> инлайново )
+                <code>assets\css\scss\modules\page</code> - файлы для остальной части страницы (подргружаемой
+                динамически).<br><br>
+                Для <b>WordPress</b> темы используется файл <code>assets\css\scss\allComponents.scss</code>. Файл
+                включает в себя все компоненты проекта, необходимо для корректного отображения в админке блоков
+                gutenberg.
+            </p>
+        </div>
+        <div class="image">
+            <img class="lazyWebp" width="350" height="250" data-src="img/photo/1.png" data-webp="img/photo/1.webp"
+                data-retina="img/photo/1.png" data-webp-retina="img/photo/1.webp" alt="logo"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        </div>
+    </div>
+    <h2>Подход написания стилей</h2>
+    <div class="block">
+        <div class="text">
+            <p>
+                При разработке мы используем подход БЭМ (Блок, Элемент, Модификатор), при этом можем упускать все его
+                принципы. Главный
+                принцип это блочная разработка, блок может быть на любой странице и не зависит от родительских классов
+                страницы на
+                подобии about-page.<br>
+                Соблюдаем такую структуру, <b>используем вложенность стилей</b>.
+            </p>
+            <p>
+                Следовательно используем класс родитель и внутри него описываем любую структуру блоков либо по БЭМ
+                подходу
+                <code>error-first-screen-heading</code>.
+            </p>
+            <p>Если блок имеет незначительные отличия на другой странице - добавляем класс модификатор и пишем стили
+                именно в файле стилей для этого блока (например <code>breadcrumbs.invert</code> в файле
+                <code>breadcrumbs.scss</code> )
+            </p>
+        </div>
+        <div class="image">
+            {{>components/lazyImg path='img/photo/13' ext='jpg' }}
+        </div>
+    </div>
+    <div class="block space">
+        <div class="text">
+            <p>
+            <h4>Структура папок</h4>
+            <p>
+                <code>assets\css\scss\sections</code> - файлы для целого блока страницы (например, блок с новостями,
+                услуги,
+                слайдер и т. д.). Такой блок может использоваться на любой странице сайта и не должен зависеть от
+                структуры и классов к примеру главной страницы. При сборке создается файл стилей
+                <code>src/css/sections/`sections-name`.css</code> и в дальнейшем подключается на стороне бекенда на
+                странице, где он используется. При разработке же мы подключаем этот файл на уровне страницы, как описано
+                выше.<br><br>
+                <code>assets/css/scss/components</code> - файлы для компонентов, которые используются в нескольких
+                секциях. При сборке создается файл стилей <code>src/css/components/`component-name`.css</code>. Не
+                уверен что он будет использоваться, пока пусть будет.
+                <br>
+                Подразумевается что файлы являются "частичными" и импортируются помощью директивы <code>@import</code>
+                файлом
+                где так же импортируются миксины и переменные (здесь не подключаем <code>@import '../../_vars';</code>
+                ). Имя пишем
+                через подчеркиванеи (например,
+                <code>_section.scss</code>).<br><br>
+                <code>assets\css\scss\globalComponents</code> - файлы для глобальных компонетнов (к примеру button), уже
+                подключены в vendors.
+
+            </p>
+        </div>
+        <div class="image">
+            <img class="lazyWebp" width="350" height="250" data-src="img/photo/12.png" data-webp="img/photo/12.webp"
+                data-retina="img/photo/12.png" data-webp-retina="img/photo/12.webp" alt="logo"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        </div>
+    </div>
+    <h2>ОБЩАЯ ИНФОРМАЦИЯ: Скрипты</h2>
+
+    <div class="block space">
+        <div class="text">
+            <p>
+                Стартовый пак скриптов также урезан. Всего два глобальных подключаемых скрипта:
+                <code>assets\js\app.js</code>
+                (main.js)
+                и <code>assets\js\libs.js</code> (libs.js).<br>
+                Остальные файлы создаются как модули, точка входа - <code>assets\js\webpack\assets\single</code>. Для
+                динамической загрузки.
+                <br><br>
+
+                Анимацию для секций строим на основе SiteAnimation, стартовый пример находится здесь -
+                <code>assets\js\webpack\assets\SiteAnimation\example.js</code>. Вызываем скрипт в файле
+                <code>assets\js\scripts/siteEffects.js</code> в функции initSiteEffects так:<br>
+                <code>if (document.querySelector('.Example')) {
+                requestAnimationFrame(() => Example.init())}</code>.<br>
+
+
+                Для админки WordPress урезаем анимации, проверяем и выходим с функции
+                <code>if (this.isWpAdmin) return;</code>.
+            </p>
+        </div>
+        <div class="image">
+            <img class="lazyWebp" width="550" height="250" data-src="img/photo/2.png" data-webp="img/photo/2.webp"
+                data-retina="img/photo/2.png" data-webp-retina="img/photo/2.webp" alt="logo"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img class="lazyWebp" width="550" height="250" data-src="img/photo/3.png" data-webp="img/photo/3.webp"
+                data-retina="img/photo/3.png" data-webp-retina="img/photo/3.webp" alt="logo"
+                src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+        </div>
+    </div>
+    <div class="space">
+        <h2>Начало</h2>
+        <ul>
+            <li>Создание страницы - файла json_en.hbs в каталоге <code>views\pages</code></li>
+            <li>Создание первого экрана - файла hbs в каталоге <code>views\teamplates\firstScreen</code></li>
+            <li>Создание компонентов по необходимости в каталоге <code>views\teamplates</code></li>
+            <li>Создание файла стилей для первого экрана <code>assets\css\scss\modules\single</code> (Важно: название
+                файла
+                должно соответствовать названию страницы; например, <code>index.hbs</code> -> <code>index.scss</code>,
+                <code>blog.hbs</code>
+                -> <code>blog.scss</code>)
+            </li>
+            <li>Создание файла стилей для остальной части страницы (за исключением первого экрана)
+                <code>assets\css\scss\modules\page</code> (Важно: название файла
+                должно соответствовать названию страницы; например, <code>index.hbs</code> -> <code>index.scss</code>,
+                <code>blog.hbs</code>
+                -> <code>blog.scss</code>)
+            </li>
+            <li>Создание скрипта для компонента по необходимости в <code>assets\js\webpack\assets\single</code>. Это
+                должен быть
+                класс с обязательными методами <code>init</code> и <code>destroy</code> для инициализации и демонтажа.
+            </li>
+        </ul>
+    </div>
+
+</section>

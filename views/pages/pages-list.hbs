@@ -1,0 +1,15 @@
+<div class="wrapper main-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}"
+    data-router-view="pages-list">
+    <div class="pagesList" id="pagesList">
+        <div class="container">
+            <h1 class="h4">Pages list</h1>
+            <ul>
+                {{#each list as |item|}}
+                <li>
+                    <a href="{{concat slug ../htmlPrefix}}">{{name}} - {{slug}}{{../htmlPrefix}}</a>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>

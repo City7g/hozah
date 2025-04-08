@@ -1,0 +1,11 @@
+{
+    "developmentPage": true,
+    "title": "Pages list",
+    "list": [
+        {
+            "name": "Main page",
+            "slug": "/"
+        }
+    ],
+    "total": 1
+}

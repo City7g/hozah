@@ -1,0 +1,15 @@
+@import '_vars';
+@import '_mixins';
+#pagesList {
+  .svg {
+    margin-bottom: toRem(20);
+  }
+  ul {
+    li {
+      margin-bottom: toRem(10);
+      a {
+        font-size: toRem(19);
+      }
+    }
+  }
+}

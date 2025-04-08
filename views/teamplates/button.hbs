@@ -1,0 +1,32 @@
+<{{#if tag}}{{tag}}{{else}}button{{/if}} {{#if target}}target="{{target}}" {{/if}}
+    class="btn {{class}} {{#if type}}{{type}}{{else}}primary{{/if}}" {{#if disabled}}disabled{{/if}} {{#if
+    id}}id="{{id}}" {{/if}} {{#if typeTag}}type="{{typeTag}}" {{/if}} {{#if onclick}}onclick="{{onclick}}" {{/if}} {{#if
+    href}}href="{{href}}{{#if build}}{{#unless target}}.html{{/unless}}{{/if}}" {{/if}} {{#if href}}{{#unless
+    noAcf}}data-acf-{{#if sub}}sub{{/if}}field="link" data-acf-label="{{#if acfLabel}}{{acfLabel}}{{else}}Link{{/if}}"
+    {{/unless}}{{/if}}>
+    {{#if hasProgress}}
+    <span class="progressLine"><span></span></span>
+    {{/if}}
+    {{#if text}}
+    <span>{{text}}</span>
+    {{/if}}
+    {{#if icon}}
+    <span class="svg-icon-wrap">
+        <svg class="svg-icon">
+            <use xlink:href="/img/symbol/svg/sprite.symbol.svg#{{icon}}"></use>
+        </svg>
+    </span>
+    {{/if}}
+    {{#if svg}}{{{svg}}}{{/if}}
+</{{#if tag}}{{tag}}{{else}}button{{/if}}>
+
+{{!-- examples --}}
+{{!--
+noAcf - if true, the data-acf-... attributes will not be added
+sub - if true, the data-acf-... attributes will be added with the sub- prefix (in repeater)
+acfLabel - the value of the data-acf-label attribute
+
+{{>button text="LOAD MORE"}}
+{{>button type="primary" text="LOAD MORE" disabled="true"}}
+{{>button type="secondary" text="LOAD MORE" }}
+--}}

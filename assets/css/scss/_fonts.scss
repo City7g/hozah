@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url('../fonts/SuisseIntl-Regular.eot');
+  src: url('../fonts/SuisseIntl-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SuisseIntl-Regular.woff2') format('woff2'),
+    url('../fonts/SuisseIntl-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url('../fonts/SuisseIntl-Book.eot');
+  src: url('../fonts/SuisseIntl-Book.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SuisseIntl-Book.woff2') format('woff2'),
+    url('../fonts/SuisseIntl-Book.woff') format('woff');
+  font-weight: 450;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Suisse Int'l";
+  src: url('../fonts/SuisseIntl-Medium.eot');
+  src: url('../fonts/SuisseIntl-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/SuisseIntl-Medium.woff2') format('woff2'),
+    url('../fonts/SuisseIntl-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

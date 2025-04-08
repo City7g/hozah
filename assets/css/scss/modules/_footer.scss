@@ -1,0 +1,39 @@
+@import '../_vars';
+@import '../_mixins';
+footer {
+  display: flex;
+  align-items: center;
+  ul {
+    display: flex;
+    align-items: center;
+    li {
+      margin-right: toRem(12);
+
+      & > a {
+        transition: color 0.2s;
+
+        &.current-route {
+          color: $red;
+          pointer-events: none;
+          opacity: 0.5;
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  .logo a {
+    width: toRem(80);
+    height: toRem(80);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: toRem(40);
+      height: toRem(40);
+      margin: auto;
+    }
+  }
+}

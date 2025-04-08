@@ -1,0 +1,17 @@
+node_modules
+.idea
+*.rar
+*.zip
+/log
+/src/
+# /src/links.txt
+# src/img
+# src/css/
+# src/js/
+# src/**/*.html
+assets/js/webpack/dist
+assets/css/scss/temp
+.env
+.htpasswd
+.htaccess
+.DS_Store

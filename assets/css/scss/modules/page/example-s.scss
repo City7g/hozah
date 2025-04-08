@@ -1,0 +1,8 @@
+@import '../../_vars';
+@import '../../_mixins';
+@import '../slider';
+@import '../video';
+.template-3 {
+  padding: toRem(40);
+  color: white;
+}

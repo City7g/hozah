@@ -1,0 +1,33 @@
+<header>
+  <div class="container small container_without_padding">
+    <div class="mainRow row margin0 between nowrap">
+      <div class="column columnLeft">
+        {{> components/logo type=type}}
+      </div>
+      <div class="column columnCenter">
+        <nav>
+          <ol>
+            <li><a href="/instruction{{#if build}}.html{{/if}}">instruction</a></li>
+            <li><a href="/example-s{{#if build}}.html{{/if}}">example-s</a></li>
+            <li><a href="/noise{{#if build}}.html{{/if}}">noise</a></li>
+            <li><a href="/pages-list{{#if build}}.html{{/if}}">pages-list</a></li>
+          </ol>
+        </nav>
+      </div>
+      <div class="column columnRight">
+        <button class="menuBtn">
+          <span class="name">menu</span>
+          <span class="wrap">
+            <span class="line"></span>
+            <span class="line"></span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="menuRow">
+    <div class="row menuRowInner margin0 between">
+      {{!-- empty --}}
+    </div>
+  </div>
+</header>
