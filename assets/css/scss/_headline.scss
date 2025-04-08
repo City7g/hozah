@@ -42,7 +42,7 @@
 
   @media screen and (min-width: ($tablet + 1)) {
     font-size: toRem(32);
-    line-height: toRem(36);
+    line-height: toRem(38);
   }
 }
 
@@ -97,4 +97,8 @@ h6,
 .title-h4 {
   font-family: 'Aeonik';
   // margin: 0 0 toRem(20);
+
+  span {
+    color: #0eb495;
+  }
 }

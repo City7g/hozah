@@ -1,33 +1,26 @@
-<header>
-  <div class="container small container_without_padding">
-    <div class="mainRow row margin0 between nowrap">
-      <div class="column columnLeft">
-        {{> components/logo type=type}}
+<header class="header">
+  <div class="container">
+    <div class="header__wrap">
+      <div class="header__logo">
+        {{>components/logo }}
       </div>
-      <div class="column columnCenter">
-        <nav>
-          <ol>
-            <li><a href="/instruction{{#if build}}.html{{/if}}">instruction</a></li>
-            <li><a href="/example-s{{#if build}}.html{{/if}}">example-s</a></li>
-            <li><a href="/noise{{#if build}}.html{{/if}}">noise</a></li>
-            <li><a href="/pages-list{{#if build}}.html{{/if}}">pages-list</a></li>
-          </ol>
-        </nav>
-      </div>
-      <div class="column columnRight">
-        <button class="menuBtn">
-          <span class="name">menu</span>
-          <span class="wrap">
-            <span class="line"></span>
-            <span class="line"></span>
-          </span>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="menuRow">
-    <div class="row menuRowInner margin0 between">
-      {{!-- empty --}}
+      <nav class="header__list">
+        <ul>
+          <li>
+            <a href="/about">About us</a>
+          </li>
+          <li>
+            <a href="/about">For car park owners</a>
+          </li>
+          <li>
+            <a href="/about">For drivers</a>
+          </li>
+          <li>
+            <a href="/about">Help & Support</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__button"></div>
     </div>
   </div>
 </header>

@@ -5,30 +5,26 @@
   --deltaVH: 0;
 }
 .container {
-  padding-top: toRem(100);
-  padding-bottom: toRem(100);
-  padding-left: toRem(92);
-  padding-right: toRem(92);
-  position: relative;
+  padding: 0 toRem(20);
   width: 100%;
-  &.static {
-    position: static;
-  }
-  @media (max-width: $tablet) {
-    padding-left: toRem(16);
-    padding-right: toRem(16);
-  }
-}
 
-.container_without_padding {
-  padding-top: 0;
-  padding-bottom: 0;
+  @media screen and (min-width: ($tablet + 1)) {
+    padding: 0 toRem(60);
+  }
 }
 
 .container:after {
   content: '';
   display: table;
   clear: both;
+}
+
+.styleBoxes section {
+  margin: toRem(60) 0;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin: toRem(120) 0;
+  }
 }
 
 .wrapper {
@@ -216,7 +212,7 @@ svg {
   }
 
   a:hover {
-    color: $red;
+    color: #0eb495;
   }
   .space {
     margin-bottom: toRem(50);

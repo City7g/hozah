@@ -1,22 +1,18 @@
 <div class="wrapper main-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}" data-router-view="home"
-    data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/index.css" data-style-id="styleBoxes">
-    {{> indexFS}}
-    <div class="styleBoxes" id="pageStyleBoxes">
-        <div class="testSection" data-style-id="testSection" data-style-loaded="false" data-script-init="false"
-            data-script-id="testSection">
-            <h2><a target="_blank"
-                    href="https://redlab_ua@bitbucket.org/redlab_ua/default-node-optimized-site.git"><b>Repository</b> -
-                    link</a></h2>
-        </div>
-    </div>
+  data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/index.css" data-style-id="styleBoxes">
+  {{>indexFS }}
+
+  <div class="styleBoxes" id="pageStyleBoxes">
+    {{>sections/help }}
+  </div>
 </div>
 
 {{!-- or load all page styles --}}
 
 {{!-- <div class="wrapper main-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}"
-    data-router-view="home" data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/index.css"
-    data-script-src="{{puthSRC}}/js/MainPageScript{{version}}.js" data-script-init="false" data-style-id="styleBoxes">
-    {{> indexFS}}
-    <div class="styleBoxes noStyles" id="pageStyleBoxes">
-    </div>
+  data-router-view="home" data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/index.css"
+  data-script-src="{{puthSRC}}/js/MainPageScript{{version}}.js" data-script-init="false" data-style-id="styleBoxes">
+  {{> indexFS}}
+  <div class="styleBoxes noStyles" id="pageStyleBoxes">
+  </div>
 </div> --}}

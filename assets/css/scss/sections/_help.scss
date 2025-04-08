@@ -1,0 +1,13 @@
+.help__wrap {
+  @media screen and (min-width: ($tablet + 1)) {
+    max-width: 50%;
+  }
+}
+
+.help__title {
+  margin-bottom: toRem(16);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-bottom: toRem(24);
+  }
+}

@@ -1,22 +1,54 @@
 @import '../../_vars';
 @import '../../_mixins';
-.index-fs {
+
+.f-index {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: toRem(300);
-  padding-bottom: toRem(300);
-  min-height: 80vh;
-  h1 {
-    color: $white;
-    margin-top: 0;
+  padding-top: toRem(100);
+  padding-bottom: toRem(60);
+  min-height: 100vh;
+  min-height: 100svh;
+  background-color: #064093;
+  color: #f9f9f9;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    padding-top: toRem(164);
+    padding-bottom: toRem(60);
   }
-  svg {
-    width: auto;
-    height: auto;
-    width: toRem(400);
-    height: auto;
+}
+
+.f-index__wrap {
+  @media screen and (min-width: ($tablet + 1)) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: toRem(20);
+  }
+}
+
+.f-index__title {
+  margin-bottom: toRem(8);
+
+  @media screen and (min-width: ($tablet + 1)) {
     margin-bottom: toRem(20);
+    margin-right: toRem(-100);
+  }
+}
+
+.f-index__subtitle {
+  margin-bottom: toRem(16);
+  color: #689bef;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-bottom: toRem(24);
+  }
+}
+
+.f-index__btn {
+  margin-top: toRem(24);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-top: toRem(40);
   }
 }

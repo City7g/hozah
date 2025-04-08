@@ -1,7 +1,4 @@
 @import '../../_vars';
 @import '../../_mixins';
-@import '../../sections/_testSection';
-.template-1 {
-  padding: toRem(40);
-  color: grey;
-}
+
+@import '../../sections/help';
