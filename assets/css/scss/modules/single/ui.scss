@@ -2,6 +2,8 @@
 @import '../../mixins';
 
 @import '../../components/article';
+@import '../../components/service';
+@import '../../components/benefits';
 
 .ui h1 {
   margin-bottom: toRem(60);

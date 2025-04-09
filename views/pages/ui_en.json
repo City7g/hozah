@@ -11,11 +11,18 @@
       "image": "item-1"
     }
   ],
-  "service": [
+  "services": [
     {
       "title": "A Single Ecosystem. Total Control",
       "text": "By integrating smart payments, compliance, real-time data, and asset optimisation, Hozah removes complexity, streamlines operations, and unlocks untapped revenue-helping commercial landowners and asset managers maximise the value of their parking portfolio.",
       "btn": "Learn more"
+    }
+  ],
+  "benefits": [
+    {
+      "title": "<span>30%</span> average revenue growth",
+      "text": "for clients using Hozah’s ecosystem",
+      "image": "item-1"
     }
   ]
 }
