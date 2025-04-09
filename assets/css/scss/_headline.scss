@@ -46,6 +46,32 @@
   }
 }
 
+.text-label {
+  font-size: toRem(12);
+  line-height: toRem(14);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.text-bold {
+  font-size: toRem(16);
+  line-height: toRem(19);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+
+.text-subtitle {
+  font-size: toRem(16);
+  line-height: toRem(19);
+  font-weight: 700;
+  letter-spacing: 0;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    font-size: toRem(20);
+    line-height: toRem(24);
+  }
+}
+
 // .content.black,
 // .blackContent {
 //   color: $black;

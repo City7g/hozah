@@ -1,39 +1,32 @@
 @import '../_vars';
 @import '../_mixins';
-footer {
-  display: flex;
-  align-items: center;
-  ul {
-    display: flex;
-    align-items: center;
-    li {
-      margin-right: toRem(12);
 
-      & > a {
-        transition: color 0.2s;
+.footer {
+  padding: toRem(80) 0 toRem(38);
+  background-color: #064093;
+  color: #efefef;
 
-        &.current-route {
-          color: $red;
-          pointer-events: none;
-          opacity: 0.5;
-        }
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
+  @media screen and (min-width: ($tablet + 1)) {
+    padding-bottom: toRem(24);
   }
-  .logo a {
-    width: toRem(80);
-    height: toRem(80);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img {
-      width: toRem(40);
-      height: toRem(40);
-      margin: auto;
-    }
+}
+
+.footer__wrap {
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-left: calc(50% - toRem(10));
   }
+}
+
+.footer__title {
+  margin-bottom: toRem(16);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-bottom: toRem(40);
+  }
+}
+
+.footer__bottom {
+  margin-top: toRem(32);
+  padding-top: toRem(15);
+  border-top: 1px solid #efefef;
 }

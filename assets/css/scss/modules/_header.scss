@@ -1,3 +1,5 @@
+@import '../components/burger';
+
 header {
   position: fixed;
   left: 0;
@@ -23,12 +25,26 @@ header {
   }
 }
 
+.header__mobile {
+  display: contents;
+}
+
 .header__logo svg {
   display: block;
+  width: auto;
+  height: toRem(28);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    height: toRem(39);
+  }
 }
 
 .header__list ul {
-  display: flex;
+  display: none;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    display: flex;
+  }
 }
 
 .header__list ul li + li {

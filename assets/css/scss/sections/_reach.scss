@@ -1,0 +1,55 @@
+.reach {
+  position: relative;
+  text-align: center;
+  background-color: #064093;
+  color: #efefef;
+
+  @media screen and (max-width: $tablet) {
+    padding: toRem(100) 0 !important;
+  }
+}
+
+.reach__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.reach__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+.reach__wrap {
+  position: relative;
+
+  @media screen and (max-width: $tablet) {
+    min-height: 100vh;
+    min-height: 100svh;
+  }
+
+  @media screen and (min-width: ($tablet + 1)) {
+    max-width: toRem(720);
+    margin: auto;
+  }
+}
+
+.reach__title {
+  margin-bottom: toRem(16);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-bottom: toRem(24);
+  }
+}
+
+.reach__text {
+  margin-bottom: toRem(24);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-bottom: toRem(40);
+  }
+}

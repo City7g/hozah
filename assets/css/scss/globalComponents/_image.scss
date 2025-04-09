@@ -1,0 +1,22 @@
+.c-image {
+  display: block;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+  }
+
+  // transform: rotate(180deg);
+}
+
+.c-image > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  object-fit: cover;
+  object-position: center center;
+}

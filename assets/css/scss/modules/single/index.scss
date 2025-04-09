@@ -52,3 +52,9 @@
     margin-top: toRem(40);
   }
 }
+
+.f-index__image {
+  @media screen and (min-width: ($tablet + 1)) {
+    text-align: right;
+  }
+}

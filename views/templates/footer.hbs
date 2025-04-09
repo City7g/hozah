@@ -1,15 +1,14 @@
-<footer data-style-loaded="true">
-  <ul>
-    <li class="logo"><a href="/">
-        <img class="lazyWebp" width="45" height="45" data-src="img/redlab-logo.svg" data-webp="img/redlab-logo.svg"
-          data-retina="img/redlab-logo.svg" data-webp-retina="img/redlab-logo.svg" alt="logo"
-          src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-      </a></li>
-    <li><a href="/instruction{{#if build}}.html{{/if}}">instruction</a></li>
-    <li><a href="/example-s{{#if build}}.html{{/if}}">example-s</a></li>
-    <li><a href="/noise{{#if build}}.html{{/if}}">noise</a></li>
-    <li><a href="/pages-list{{#if build}}.html{{/if}}">pages-list</a></li>
-  </ul>
+<footer class="footer" data-style-loaded="true">
+  <div class="container">
+    <div class="footer__wrap">
+      <h2 class="title-h2 footer__title">{{{ footer.title }}}</h2>
+      <p class="text-subtitle footer__text">{{{ footer.text }}}</p>
+    </div>
+
+    <div class="footer__bottom">
+      <p>{{ footer.copy }}</p>
+    </div>
+  </div>
 </footer>
 
 {{!-- {{>modals}} --}}

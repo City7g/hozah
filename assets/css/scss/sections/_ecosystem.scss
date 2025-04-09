@@ -1,0 +1,42 @@
+@import '../components/service';
+
+.ecosystem {
+}
+
+// .ecosystem__wrap {
+//   display: grid;
+
+//   @media screen and (min-width: ($tablet + 1)) {
+//     grid-template-columns: repeat(2, 1fr);
+//   }
+// }
+
+.ecosystem__title {
+  margin: 0 -1px toRem(15);
+  text-align: center;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-bottom: toRem(64);
+  }
+}
+
+.ecosystem__image {
+  display: block;
+  text-align: center;
+
+  @media screen and (max-width: $tablet) {
+    margin: 0 toRem(-14);
+  }
+}
+
+.ecosystem__list {
+  display: grid;
+  gap: toRem(24);
+  margin-top: toRem(26);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: toRem(40);
+    margin-top: toRem(60);
+  }
+}

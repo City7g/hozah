@@ -1,0 +1,19 @@
+<section class="why" data-acf-block="why" data-acf-label="why" data-acf-style="why">
+  <div class="container">
+    <div class="why__wrap">
+      <h2 class="title-h2 why__title">
+        {{{ why.title }}}
+      </h2>
+
+      <div class="why__list">
+        {{#each why.list }}
+        <div class="c-benefits">
+          {{>components/lazyImg path=(concat "img/icons/" image ) ext="png" class="c-benefits__image" }}
+          <h4 class="title-h4 c-benefits__title">{{{ title }}}</h4>
+          <p class="text-main c-benefits__text">{{ text }}</p>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

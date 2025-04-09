@@ -1,0 +1,25 @@
+<div class="c-article">
+  {{>components/lazyImg path=(concat "img/articles/" image ) class="c-image c-article__image" }}
+
+  <div class="c-article__content">
+    <h4 class="title-h4 c-article__title">
+      {{ title }}
+    </h4>
+
+    <p class="text-main c-article__text">
+      {{ text }}
+    </p>
+
+    <div class="c-article__bottom">
+      <div class="c-article__tags">
+        {{#each tags }}
+        <p class="text-label c-article__tag">{{ this }}</p>
+        {{/each}}
+      </div>
+
+      <p class="text-label c-article__date">
+        {{ date }}
+      </p>
+    </div>
+  </div>
+</div>

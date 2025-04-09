@@ -1,3 +1,21 @@
 {
-  "title": "ui"
+  "title": "ui",
+  "articles": [
+    {
+      "title": "Hozah has been awarded PayTech Company of the Year",
+      "text": "This award is a testament to our unwavering commitment to driving innovation in payment technology. We are redefining the parking experience, making the journey effortless through cutting-edge technology.",
+      "date": "Aug 27, 2024",
+      "tags": [
+        "Company"
+      ],
+      "image": "item-1"
+    }
+  ],
+  "service": [
+    {
+      "title": "A Single Ecosystem. Total Control",
+      "text": "By integrating smart payments, compliance, real-time data, and asset optimisation, Hozah removes complexity, streamlines operations, and unlocks untapped revenue-helping commercial landowners and asset managers maximise the value of their parking portfolio.",
+      "btn": "Learn more"
+    }
+  ]
 }

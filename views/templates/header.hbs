@@ -4,23 +4,26 @@
       <div class="header__logo">
         {{>components/logo }}
       </div>
-      <nav class="header__list">
-        <ul>
-          <li>
-            <a href="/about">About us</a>
-          </li>
-          <li>
-            <a href="/about">For car park owners</a>
-          </li>
-          <li>
-            <a href="/about">For drivers</a>
-          </li>
-          <li>
-            <a href="/about">Help & Support</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="header__button"></div>
+
+      <div class="header__mobile">
+        <nav class="header__list">
+          <ul>
+            {{#each header.links }}
+            <li>
+              <a href=path>{{ name }}</a>
+            </li>
+            {{/each}}
+          </ul>
+        </nav>
+
+        {{>button tag="a" href="#" text=header.btn class="header__btn" type="secondary" }}
+      </div>
+
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </div>
 </header>
