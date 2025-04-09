@@ -7,8 +7,25 @@
     "text": "Hozah’s fully connected parking ecosystem digitises every aspect of car park management -from payments and enforcement to permits and real-time insights. Our AI-driven technology ensures seamless operations, increased compliance, and optimised profitability, all while delivering a frictionless experience for drivers.",
     "btn": "Book a meeting"
   },
+  "partners": {
+    "title": "Trusted by Leading <span>Asset Managers & Landowners</span>",
+    "list": [
+      "item-0",
+      "item-1",
+      "item-2",
+      "item-3",
+      "item-4",
+      "item-5",
+      "item-6",
+      "item-7",
+      "item-8",
+      "item-9",
+      "item-10"
+    ]
+  },
   "help": {
-    "title": "<span>Who</span> We Help & <span>How</span>","text": "We provide scalable, tech-driven parking solutions for shopping centres, retail, hospitality, healthcare, education, development land, and travel - helping landowners and asset managers unlock new revenue streams, drive compliance, and create a seamless parking experience.",
+    "title": "<span>Who</span> We Help & <span>How</span>",
+    "text": "We provide scalable, tech-driven parking solutions for shopping centres, retail, hospitality, healthcare, education, development land, and travel - helping landowners and asset managers unlock new revenue streams, drive compliance, and create a seamless parking experience.",
     "list": [
       {
         "text": "Education",

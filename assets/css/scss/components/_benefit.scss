@@ -1,4 +1,4 @@
-.c-benefits {
+.c-benefit {
   display: grid;
   grid-template-columns: auto 1fr;
   justify-items: flex-start;
@@ -10,7 +10,7 @@
   }
 }
 
-.c-benefits__image {
+.c-benefit__image {
   justify-self: flex-start;
   display: flex;
   justify-content: center;
@@ -30,17 +30,14 @@
   }
 }
 
-.c-benefits__image img {
-  width: 80%;
-  height: 80%;
+.c-benefit__image img {
+  width: 70%;
+  height: 70%;
   object-fit: contain;
 }
 
-.c-benefits__title span {
+.c-benefit__title span {
   @media screen and (max-width: $tablet) {
     display: block;
   }
-}
-
-.c-benefits__text {
 }
