@@ -4,11 +4,37 @@
     <div class="container">
       <h1 class="title-h1">UI Kit</h1>
 
+      <h2>Articles</h2>
       <p class="title-h1">Title h1</p>
       <p class="title-h2">Title h2</p>
       <p class="title-h3">Title h3</p>
       <p class="title-h4">Title h4</p>
       <p class="text-main">Text main</p>
+
+      <h2>Button</h2>
+      {{>button text="Button" }}
+      {{>button text="Button" type="secondary" }}
+
+      <h2>Articles</h2>
+      <div class="ui__two">
+        {{#each articles }}
+        {{>components/article }}
+        {{/each}}
+      </div>
+
+      <h2>Services</h2>
+      <div class="ui__two">
+        {{#each services }}
+        {{>components/service }}
+        {{/each}}
+      </div>
+
+      <h2>Benefits</h2>
+      <div class="ui__two">
+        {{#each benefits }}
+        {{>components/benefit }}
+        {{/each}}
+      </div>
     </div>
   </section>
 

@@ -7,7 +7,7 @@
 .wp-core-ui .editor-styles-wrapper .btn {
   background: #0eb495;
   outline: none;
-  border: 0;
+  border: 1px solid #0eb495;
   font-family: 'Aeonik';
   border-radius: toRem(8);
   outline: none;
@@ -15,7 +15,7 @@
   transition: $transition;
   text-decoration: none !important;
   color: $white;
-  padding: toRem(12) toRem(20);
+  padding: toRem(11) toRem(19);
   @include noTap;
   display: inline-flex;
   align-items: center;
@@ -25,6 +25,14 @@
   font-weight: 700;
   font-size: toRem(16);
   line-height: toRem(20);
+
+  @include hover {
+    color: $white;
+  }
+
+  &.secondary {
+    background-color: transparent;
+  }
 
   &[disabled],
   &.disabled {

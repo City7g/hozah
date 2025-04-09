@@ -1,0 +1,38 @@
+@import '../components/article';
+
+.news {
+}
+
+.news__wrap {
+  display: grid;
+  gap: toRem(16);
+  align-items: center;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-template-columns: repeat(8, 1fr);
+    gap: toRem(60) toRem(20);
+  }
+}
+
+.news__title {
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-column: 1 / -2;
+  }
+}
+
+.news__btn {
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-column-end: -1;
+  }
+}
+
+.news__list {
+  display: grid;
+  gap: toRem(24);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, 1fr);
+    gap: toRem(20);
+  }
+}

@@ -8,12 +8,123 @@
     "btn": "Book a meeting"
   },
   "help": {
-    "title": "<span>Who</span> We Help & <span>How</span>",
-    "text": "We provide scalable, tech-driven parking solutions for shopping centres, retail, hospitality, healthcare, education, development land, and travel - helping landowners and asset managers unlock new revenue streams, drive compliance, and create a seamless parking experience. "
+    "title": "<span>Who</span> We Help & <span>How</span>","text": "We provide scalable, tech-driven parking solutions for shopping centres, retail, hospitality, healthcare, education, development land, and travel - helping landowners and asset managers unlock new revenue streams, drive compliance, and create a seamless parking experience.",
+    "list": [
+      {
+        "text": "Education",
+        "image": "item-1"
+      },
+      {
+        "text": "Retail & leisure",
+        "image": "item-2"
+      },
+      {
+        "text": "Development land",
+        "image": "item-3"
+      },
+      {
+        "text": "NHS",
+        "image": "item-4"
+      },
+      {
+        "text": "P&D car parks",
+        "image": "item-5"
+      },
+      {
+        "text": "Hospitality",
+        "image": "item-6"
+      },
+      {
+        "text": "Business",
+        "image": "item-7"
+      },
+      {
+        "text": "Travel",
+        "image": "item-8"
+      }
+    ]
   },
   "future": {
     "title": "Hozah: The Future <span>of Parking Automation</span>",
     "text": "Hozah is transforming parking management with Hozah Autopay and our fully connected parking ecosystem, trusted nationwide by commercial landowners and asset managers.<br> Our proprietary technology digitises and automates every element of car park operations —from payments and permits to emissions, tolling, diagnostics, and ANPR — removing friction, reducing overheads, and unlocking untapped revenue. <br>You set the rules. We digitise them.",
     "btn": "More about us"
+  },
+  "why": {
+    "title": "Why Leading Landowners Choose Hozah",
+    "list": [
+      {
+        "title": "<span>30%</span> average revenue growth",
+        "text": "for clients using Hozah’s ecosystem",
+        "image": "item-1"
+      },
+      {
+        "title": "<span>8+ years</span> of experience",
+        "text": "leading AI-driven parking automation",
+        "image": "item-2"
+      },
+      {
+        "title": "<span>+2 million</span>  transactions",
+        "text": "processed through Hozah systems",
+        "image": "item-3"
+      },
+      {
+        "title": "<span>24/7</span> technical support",
+        "text": "ensuring uninterrupted operations",
+        "image": "item-4"
+      }
+    ]
+  },
+  "ecosystem": {
+    "title": "Our <span>Technology-Driven</span> Parking Ecosystem",
+    "list": [
+      {
+        "title": "A Single Ecosystem. Total Control",
+        "text": "By integrating smart payments, compliance, real-time data, and asset optimisation, Hozah removes complexity, streamlines operations, and unlocks untapped revenue-helping commercial landowners and asset managers maximise the value of their parking portfolio.",
+        "btn": "Learn more"
+      },
+      {
+        "title": "A Single Ecosystem. Total Control",
+        "text": "Hozah is more than just a parking solution—it’s an intelligent, fully connected ecosystem that digitises, automates, and optimises every aspect of car park management.",
+        "btn": "Learn more"
+      }
+    ]
+  },
+  "reach": {
+    "title": "Turn Your Car Park into <span>a High-Performing Asset</span>",
+    "text": "Get a tailored parking solution designed for measurable success.",
+    "btn": "Reach out to our team"
+  },
+  "news": {
+    "title": "<span>Latest</span> News",
+    "btn": "To all news",
+    "list": [
+      {
+        "title": "Hozah has been awarde the Year",
+        "text": "This award is a testament to our unwavering commitment to driving innovation in payment technology. We are redefining the parking experience, making the journey effortless through cutting-edge technology.",
+        "date": "Aug 27, 2024",
+        "tags": [
+          "Company"
+        ],
+        "image": "item-1"
+      },
+      {
+        "title": "New Parking Code of Practice",
+        "text": "This month, we highlight key takeaways from the newly published Private Parking Sector Single Code of Practice by the British Parking Association (BPA) and",
+        "date": "Aug 27, 2024",
+        "tags": [
+          "Industry"
+        ],
+        "image": "item-2"
+      },
+      {
+        "title": "Hozah will be at Completely Retail Marketplace",
+        "text": "For expert insights on retail asset management, parking solutions, and the latest in parking technology, don’t miss the chance to connect with Robert P. and Billy Morris. ",
+        "date": "Aug 27, 2024",
+        "tags": [
+          "Company"
+        ],
+        "image": "item-3"
+      }
+    ]
   }
 }

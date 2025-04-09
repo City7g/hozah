@@ -114,7 +114,7 @@ a {
   color: $white;
   &:not(.current-route) {
     @include myHover {
-      color: $red;
+      color: #0eb495;
     }
   }
   &.current-route {

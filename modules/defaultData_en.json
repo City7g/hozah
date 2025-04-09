@@ -1,5 +1,31 @@
 {
   "test": "lorem",
-  "projectVersion": "1.1.43",
-  "buildDate": "9.4.2025"
+  "projectVersion": "1.1.44",
+  "buildDate": "9.4.2025",
+  "header": {
+    "links": [
+      {
+        "name": "About us",
+        "path": "/"
+      },
+      {
+        "name": "For car park owners",
+        "path": "/"
+      },
+      {
+        "name": "For drivers",
+        "path": "/"
+      },
+      {
+        "name": "Help & Support",
+        "path": "/"
+      }
+    ],
+    "btn": "Contact us"
+  },
+  "footer": {
+    "title": "Your <span>Success Story</span> Starts <span>Here</span>",
+    "text": "Partner with Hozah to digitise, automate, and optimise your car park management. Get in touch at hello@hozah.com today to discover how our tech-led solutions can drive game-changing results.<br><br>Alternatively, please leave your email below and we’ll get back  to you.",
+    "copy": "© 2024 Hozah. All rights reserved. Hozah Ltd"
+  }
 }

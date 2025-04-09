@@ -1,8 +1,21 @@
 <section class="help" data-acf-block="help" data-acf-label="Help" data-acf-style="help">
   <div class="container">
     <div class="help__wrap">
-      <h2 class="title-h2 help__title">{{{ help.title }}}</h2>
-      <p class="text-main help__text">{{ help.text }}</p>
+      <h2 class="title-h2 help__title">
+        {{{ help.title }}}
+      </h2>
+      <p class="text-main help__text">
+        {{ help.text }}
+      </p>
+
+      <div class="help__list">
+        {{#each help.list }}
+        <div class="c-category">
+          {{>components/lazyImg path=(concat "img/icons/" image ) ext="png" class="c-category__image" }}
+          <p class="text-bold c-category__text">{{ text }}</p>
+        </div>
+        {{/each}}
+      </div>
     </div>
   </div>
 </section>

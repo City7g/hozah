@@ -1,0 +1,33 @@
+.why {
+  @media screen and (max-width: $tablet) {
+    padding-bottom: toRem(471) !important;
+  }
+}
+
+.why__wrap {
+  margin-left: toRem(52);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-left: calc(25% + toRem(5));
+  }
+}
+
+.why__title {
+  margin-bottom: toRem(16);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-bottom: toRem(24);
+  }
+}
+
+.why__list {
+  display: grid;
+  gap: toRem(40);
+  margin-top: toRem(40);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: toRem(48) toRem(20);
+    margin-top: toRem(68);
+  }
+}

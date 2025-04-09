@@ -20,10 +20,10 @@
 }
 
 .styleBoxes section {
-  margin: toRem(60) 0;
+  padding: toRem(60) 0;
 
   @media screen and (min-width: ($tablet + 1)) {
-    margin: toRem(120) 0;
+    padding: toRem(120) 0;
   }
 }
 

@@ -1,4 +1,63 @@
 @import '../../vars';
 @import '../../mixins';
 
-@import '../../sections/ui';
+@import '../../components/article';
+@import '../../components/service';
+@import '../../components/benefits';
+
+.ui h1 {
+  margin-bottom: toRem(60);
+}
+
+.ui h2 {
+  margin-bottom: toRem(20);
+}
+
+.ui h2 ~ h2 {
+  margin-top: toRem(40);
+}
+
+.ui__two {
+  display: grid;
+  gap: toRem(16);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ui__three {
+  display: grid;
+  gap: toRem(16);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ui__four {
+  display: grid;
+  gap: toRem(16);
+
+  @media screen and (min-width: ($mobile + 1)) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.ui__six {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: toRem(16);
+
+  @media screen and (min-width: ($mobile + 1)) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
