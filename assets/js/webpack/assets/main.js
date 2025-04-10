@@ -150,11 +150,13 @@ import SiteWave from './SiteAnimation/SiteWave';
 import FadePage from './SiteAnimation/FadePage';
 import CustomFade from './SiteAnimation/CustomFade';
 import Modals from './SiteAnimation/Modals';
+import Marquee from './SiteAnimation/Marquee';
 window.Header = Header;
 window.SiteWave = SiteWave;
 window.FadePage = FadePage;
 window.CustomFade = CustomFade;
 window.Modals = Modals;
+window.Marquee = Marquee;
 
 // remove if not needed
 import NoiseEffect from './utils/Noise';
