@@ -24,5 +24,14 @@
       "text": "for clients using Hozah’s ecosystem",
       "image": "item-1"
     }
+  ],
+  "partners": [
+    "item-0"
+  ],
+  "categories": [
+    {
+      "text": "Education",
+      "image": "item-1"
+    }
   ]
 }

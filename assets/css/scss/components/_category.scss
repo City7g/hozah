@@ -1,0 +1,38 @@
+.c-category {
+  position: relative;
+  text-align: center;
+}
+
+.c-category__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: toRem(100);
+  height: toRem(100);
+  background-color: #a3c7f7;
+  border-radius: toRem(14);
+
+  @media screen and (max-width: $tablet) {
+    margin: auto;
+  }
+}
+
+.c-category__image img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.c-category__text {
+  @media screen and (min-width: ($tablet + 1)) {
+    position: absolute;
+    top: calc(100% + toRem(8));
+    left: 50%;
+    width: 150%;
+    transform: translateX(-50%);
+  }
+
+  @media screen and (max-width: $tablet) {
+    margin-top: toRem(8);
+  }
+}

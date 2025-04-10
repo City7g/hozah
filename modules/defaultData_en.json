@@ -9,6 +9,10 @@
         "path": "/"
       },
       {
+        "name": "UI",
+        "path": "/ui"
+      },
+      {
         "name": "For car park owners",
         "path": "/"
       },
@@ -25,7 +29,7 @@
   },
   "footer": {
     "title": "Your <span>Success Story</span> Starts <span>Here</span>",
-    "text": "Partner with Hozah to digitise, automate, and optimise your car park management. Get in touch at hello@hozah.com today to discover how our tech-led solutions can drive game-changing results.<br><br>Alternatively, please leave your email below and we’ll get back  to you.",
+    "text": "Partner with Hozah to digitise, automate, and optimise your car park management. Get in touch at hello@hozah.com today to discover how our tech-led solutions can drive game-changing results.<br><br>Alternatively, please leave your email below and we’ll get back to you.",
     "copy": "© 2024 Hozah. All rights reserved. Hozah Ltd"
   }
 }

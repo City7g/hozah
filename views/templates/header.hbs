@@ -1,16 +1,16 @@
 <header class="header">
   <div class="container">
     <div class="header__wrap">
-      <div class="header__logo">
+      <a href="/" class="header__logo">
         {{>components/logo }}
-      </div>
+      </a>
 
       <div class="header__mobile">
         <nav class="header__list">
           <ul>
             {{#each header.links }}
             <li>
-              <a href=path>{{ name }}</a>
+              <a href={{ path }}>{{ name }}</a>
             </li>
             {{/each}}
           </ul>
