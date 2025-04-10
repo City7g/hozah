@@ -158,6 +158,22 @@ window.Modals = Modals;
 
 // remove if not needed
 import NoiseEffect from './utils/Noise';
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
 window.addEventListener('load', function () {
   window.noiseEffect = new NoiseEffect('#wrapper', 2, 'img.js-noise');
+  new Swiper('.js-stories-slider', {
+    modules: [Navigation],
+    centeredSlides: true,
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1.5,
+    spaceBetween: 124,
+    mousewheel: true,
+
+    navigation: {
+      nextEl: '.js-stories-slider .stories__slider-btn--next',
+      prevEl: '.js-stories-slider .stories__slider-btn--prev',
+    },
+  });
 });

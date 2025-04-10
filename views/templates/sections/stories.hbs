@@ -1,0 +1,104 @@
+<section class="stories" data-acf-block="stories" data-acf-label="stories" data-acf-style="stories">
+  <div class="container">
+    <h2 class="title-h2 stories__title">
+      {{{ stories.title }}}
+    </h2>
+    <div class="stories__slider">
+      <div class="swiper js-stories-slider">
+        <div class="swiper-wrapper">
+          {{#each stories.list}}
+          <div class="swiper-slide">
+            <div class="stories__slide">
+              <div class="stories__slide-logo">
+                {{>components/lazyImg path=(concat "img/slide-logo/" image )
+                class="stories__slide-img"
+                }}
+                <div class="stories__slide-name">
+                  {{ name }}
+                </div>
+                <div class="stories__slide-status">
+                  {{ status }}
+                </div>
+              </div>
+              <div class="stories__slide-desc">
+                <div class="stories__slide-green">
+                  {{ percent }}
+                </div>
+                <h4 class="stories__slide-title">
+                  {{ title }}
+                </h4>
+                <p class="stories__slide-text">
+                  {{ text }}
+                </p>
+              </div>
+              {{>button tag="a" href="#" text=btn class="swiper__slide-btn" }}
+            </div>
+          </div>
+          {{/each}}
+          {{#each stories.list}}
+          <div class="swiper-slide">
+            <div class="stories__slide">
+              <div class="stories__slide-logo">
+                {{>components/lazyImg path=(concat "img/slide-logo/" image )
+                class="stories__slide-img"
+                }}
+                <div class="stories__slide-name">
+                  {{ name }}
+                </div>
+                <div class="stories__slide-status">
+                  {{ status }}
+                </div>
+              </div>
+              <div class="stories__slide-desc">
+                <div class="stories__slide-green">
+                  {{ percent }}
+                </div>
+                <h4 class="stories__slide-title">
+                  {{ title }}
+                </h4>
+                <p class="stories__slide-text">
+                  {{ text }}
+                </p>
+                {{>button tag="a" href="#" text=btn class="swiper__slide-btn" }}
+              </div>
+            </div>
+          </div>
+          {{/each}}
+          {{#each stories.list}}
+          <div class="swiper-slide">
+            <div class="stories__slide">
+              <div class="stories__slide-logo">
+                {{>components/lazyImg path=(concat "img/slide-logo/" image )
+                class="stories__slide-img"
+                }}
+                <div class="stories__slide-name">
+                  {{ name }}
+                </div>
+                <div class="stories__slide-status">
+                  {{ status }}
+                </div>
+              </div>
+              <div class="stories__slide-desc">
+                <div class="stories__slide-green">
+                  {{ percent }}
+                </div>
+                <h4 class="stories__slide-title">
+                  {{ title }}
+                </h4>
+                <p class="stories__slide-text">
+                  {{ text }}
+                </p>
+                {{>button tag="a" href="#" text=btn class="swiper__slide-btn" }}
+              </div>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+
+        <button type="button" class="stories__slider-btn stories__slider-btn--prev"><svg></svg></button>
+        <button type="button" class="stories__slider-btn stories__slider-btn--next"><svg></svg></button>
+
+      </div>
+    </div>
+  </div>
+</section>

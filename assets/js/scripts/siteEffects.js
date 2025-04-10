@@ -35,7 +35,7 @@ function initSiteEffects(fadePage = true, middle = false) {
     document.body.classList.add('transition0s', 'animation0s');
     requestAnimationFrame(() => LazyImages.init());
     requestAnimationFrame(() => FadePage.init());
-    requestAnimationFrame(() => Header.init());
+    //requestAnimationFrame(() => Header.init());
   } else {
     requestAnimationFrame(function () {
       document.body.classList.remove('transition0s', 'animation0s');
