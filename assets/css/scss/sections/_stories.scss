@@ -1,0 +1,119 @@
+.stories__slider {
+  margin-top: toRem(64);
+}
+
+.stories__title {
+  @media screen and (min-width: ($tablet + 1)) {
+    text-align: center;
+  }
+}
+
+.stories__slide {
+  background: $lightest-grey;
+  border-radius: toRem(20);
+  padding: toRem(20);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    display: grid;
+    grid-gap: toRem(80);
+    grid-template-columns: 140px 1fr;
+    padding: toRem(40);
+    position: relative;
+  }
+}
+
+.stories__slide-green {
+  color: $accent-green;
+  font-weight: 500;
+  font-size: toRem(32);
+  line-height: 115%;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    font-size: toRem(60);
+  }
+}
+
+.stories__slide-title {
+  color: $dark-blue;
+  font-weight: 700;
+  font-size: toRem(24);
+  line-height: 115%;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    font-size: toRem(32);
+    line-height: 120%;
+  }
+}
+
+.stories__slide-text {
+  border-top: 1px solid $light-grey;
+  padding-top: toRem(16);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-top: toRem(20);
+    padding-top: toRem(20);
+  }
+}
+
+.stories__slide-name {
+  color: $dark-blue;
+  font-weight: 700;
+  font-size: toRem(20);
+  line-height: 120%;
+  margin-top: toRem(63);
+}
+
+.stories__slider-btn {
+  background: $dark-blue;
+  cursor: pointer;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    align-items: center;
+    border-radius: toRem(6);
+    display: flex;
+    height: toRem(44);
+    padding: toRem(8);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: toRem(44);
+    z-index: 2;
+  }
+}
+
+.btn.swiper__slide-btn {
+  margin-top: toRem(32);
+  position: static;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    bottom: toRem(40);
+    left: calc(140px + toRem(120));
+    position: absolute;
+  }
+}
+
+.stories__slider-btn--prev {
+  left: toRem(60);
+}
+
+.stories__slider-btn--next {
+  right: toRem(60);
+}
+
+.stories__slide-logo {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  grid-gap: toRem(24);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    display: block;
+  }
+}
+
+.stories__slide-status {
+  color: $dark-blue;
+  font-size: 14px;
+  grid-column: 2 / 3;
+  line-height: 135%;
+  opacity: 0.8;
+}
