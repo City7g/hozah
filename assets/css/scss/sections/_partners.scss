@@ -1,0 +1,22 @@
+.partners__title {
+  @media screen and (min-width: ($tablet + 1)) {
+    max-width: 37%;
+  }
+}
+
+.partners__list {
+  display: flex;
+  margin-top: toRem(40);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-top: toRem(50);
+  }
+}
+
+.partners__list > * {
+  margin-left: toRem(8);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-left: toRem(20);
+  }
+}
