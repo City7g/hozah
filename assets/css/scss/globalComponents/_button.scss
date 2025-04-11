@@ -25,6 +25,7 @@
   font-weight: 700;
   font-size: toRem(16);
   line-height: toRem(20);
+  letter-spacing: 0;
 
   @include hover {
     color: $white;

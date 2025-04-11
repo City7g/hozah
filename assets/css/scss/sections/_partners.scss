@@ -1,3 +1,9 @@
+.styleBoxes section.partners {
+  @media screen and (max-width: $tablet) {
+    padding: toRem(64) 0 toRem(138);
+  }
+}
+
 .partners__title {
   @media screen and (min-width: ($tablet + 1)) {
     max-width: 37%;

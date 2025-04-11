@@ -2,20 +2,19 @@
 @import '../../_mixins';
 
 .f-index {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: toRem(100);
-  padding-bottom: toRem(60);
+  padding: toRem(100) 0 toRem(180);
   min-height: 100vh;
   min-height: 100svh;
   background-color: #064093;
   color: #f9f9f9;
 
   @media screen and (min-width: ($tablet + 1)) {
-    padding-top: toRem(164);
-    padding-bottom: toRem(60);
+    padding: toRem(164) 0 toRem(60);
   }
 }
 
@@ -25,6 +24,11 @@
     grid-template-columns: repeat(2, 1fr);
     gap: toRem(20);
   }
+}
+
+.f-index__content {
+  position: relative;
+  order: -1;
 }
 
 .f-index__title {
@@ -43,9 +47,20 @@
   @media screen and (min-width: ($tablet + 1)) {
     margin-bottom: toRem(24);
   }
+
+  @media screen and (max-width: $tablet) {
+    max-width: 80%;
+  }
 }
 
 .f-index__btn {
+}
+
+.f-index__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0 toRem(10);
   margin-top: toRem(24);
 
   @media screen and (min-width: ($tablet + 1)) {
@@ -57,4 +72,37 @@
   @media screen and (min-width: ($tablet + 1)) {
     text-align: right;
   }
+
+  @media screen and (max-width: $tablet) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+}
+
+.f-index__image img {
+  @media screen and (max-width: $tablet) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.f-index__awards {
+  margin-top: toRem(24);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-top: toRem(66);
+  }
+}
+
+.f-index__awards-title {
+  margin-bottom: toRem(12);
+  font-family: 'Aeonik';
+  font-size: toRem(16);
+  line-height: toRem(20);
+  letter-spacing: 0;
 }

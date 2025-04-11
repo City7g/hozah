@@ -1,5 +1,14 @@
 .stories__slider {
   margin-top: toRem(64);
+
+  .swiper {
+    overflow: visible;
+
+    .swiper-slide {
+      width: auto;
+      height: auto;
+    }
+  }
 }
 
 .stories__title {

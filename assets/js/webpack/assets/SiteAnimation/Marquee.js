@@ -9,7 +9,11 @@ export default new (class Marquee extends SiteAnimation {
     this.clonedItems = [];
     this.timeline = null;
     this.resizeObserver = null;
+    this.intersectionObserver = null;
+    this.isIntersecting = false;
     this.isInitialized = false;
+    this.lastScrollY = 0;
+    this.scrollThreshold = 10;
   }
 
   init() {
@@ -129,12 +133,18 @@ export default new (class Marquee extends SiteAnimation {
       this._handleResize.bind(this),
       250,
     );
+    this._boundHandleScroll = this._debounce(
+      this._handleScroll.bind(this),
+      100,
+    );
 
     this.container.addEventListener('mouseenter', this._boundPauseAnimation);
     this.container.addEventListener('mouseleave', this._boundPlayAnimation);
 
     this.resizeObserver = new ResizeObserver(this._boundHandleResize);
     this.resizeObserver.observe(this.container);
+
+    window.addEventListener('scroll', this._boundHandleScroll);
   }
 
   _removeEventListeners() {
@@ -152,6 +162,11 @@ export default new (class Marquee extends SiteAnimation {
       this.resizeObserver.disconnect();
       this.resizeObserver = null;
     }
+    if (this.intersectionObserver) {
+      this.intersectionObserver.disconnect();
+      this.intersectionObserver = null;
+    }
+    window.removeEventListener('scroll', this._boundHandleScroll);
   }
 
   _pauseAnimation() {
@@ -180,6 +195,28 @@ export default new (class Marquee extends SiteAnimation {
     } else {
       this.timeline?.pause();
     }
+  }
+
+  _handleScroll() {
+    if (!this.container) return;
+
+    const currentScrollY = window.scrollY;
+    const isScrollingUp = currentScrollY < this.lastScrollY;
+    const isScrolledEnough = currentScrollY >= this.scrollThreshold;
+
+    if (isScrollingUp) {
+      this.container.classList.add('--hide');
+    } else {
+      this.container.classList.remove('--hide');
+    }
+
+    if (isScrolledEnough) {
+      this.container.classList.add('--mini');
+    } else {
+      this.container.classList.remove('--mini');
+    }
+
+    this.lastScrollY = currentScrollY;
   }
 
   _debounce(func, wait) {

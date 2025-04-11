@@ -1,0 +1,116 @@
+@import '../../../../node_modules/@glidejs/glide/src/assets/sass/glide.core.scss';
+
+.awards {
+  position: relative;
+  // overflow: visible;
+  width: toRem(339);
+}
+
+.awards .glide__slides {
+  // overflow: hidden;
+}
+
+.awards__item {
+  display: block;
+  width: toRem(105) !important;
+  height: toRem(36);
+  margin-right: 0;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    width: toRem(140) !important;
+    height: toRem(48);
+    margin-right: 0;
+  }
+}
+
+.awards__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: toRem(3);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    border-radius: toRem(4);
+  }
+}
+
+.awards__left,
+.awards__right {
+  position: absolute;
+  top: 0;
+  width: toRem(48);
+  height: 100%;
+  z-index: 1;
+}
+
+.awards__left {
+  left: 0;
+  background-image: linear-gradient(
+    to left,
+    rgba(#064093, 0),
+    rgba(#064093, 1)
+  );
+}
+
+.awards__right {
+  right: 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(#064093, 0),
+    rgba(#064093, 1)
+  );
+}
+
+.awards__prev,
+.awards__next {
+  position: absolute;
+  top: toRem(24);
+  width: toRem(24);
+  height: toRem(24);
+}
+
+.awards__prev svg,
+.awards__next svg {
+  width: 100%;
+  height: 100%;
+  fill: #689bef;
+}
+
+.awards__prev:disabled svg,
+.awards__next:disabled svg {
+  fill: #aaaaaa;
+}
+
+.awards__prev {
+  left: toRem(-28);
+  transform: translateY(-50%);
+}
+
+.awards__next {
+  right: toRem(-28);
+  transform: translateY(-50%);
+}
+
+.awards__pagination {
+  position: static;
+  display: flex;
+  justify-content: center;
+  margin-top: toRem(16);
+}
+
+.awards__pagination .glide__bullet {
+  width: toRem(4);
+  height: toRem(4);
+  background: #689bef;
+  opacity: 1;
+  margin: 0 toRem(4);
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &.glide__bullet--active {
+    background: #689bef;
+    transform: scale(1.5);
+  }
+}

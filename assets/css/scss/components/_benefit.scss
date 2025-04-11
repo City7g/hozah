@@ -19,7 +19,11 @@
   width: toRem(80);
   height: toRem(80);
   background-color: #a3c7f7;
-  border-radius: toRem(8);
+  border-radius: toRem(10);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    border-radius: toRem(8);
+  }
 
   @media screen and (max-width: $tablet) {
     grid-column: 1 / 2;

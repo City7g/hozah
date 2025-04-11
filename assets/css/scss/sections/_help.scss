@@ -1,5 +1,11 @@
 @import '../components/category';
 
+.styleBoxes section.help {
+  @media screen and (max-width: $tablet) {
+    padding: toRem(80) 0 toRem(370);
+  }
+}
+
 .help__wrap {
   @media screen and (min-width: ($tablet + 1)) {
     max-width: calc(50% - toRem(10));

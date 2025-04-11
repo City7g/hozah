@@ -1,6 +1,6 @@
 @import '../components/burger';
 
-header {
+.header {
   position: fixed;
   left: 0;
   top: 0;
@@ -9,7 +9,20 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 100;
+  transition: 0.3s ease;
+  transition-property: transform, background-color;
+}
 
+.header.--hide {
+  transform: translateY(-100%);
+}
+
+.header.--mini {
+  background-color: #064093;
+}
+
+.header.--open {
+  transform: translateY(0);
   background-color: #064093;
 }
 
@@ -26,7 +39,27 @@ header {
 }
 
 .header__mobile {
-  display: contents;
+  position: fixed;
+  top: toRem(60);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: calc(100vh - toRem(60));
+  height: calc(100dvh - toRem(60));
+  padding: toRem(60) toRem(20) toRem(46);
+  background-color: #064093;
+  transform: translateY(200%);
+  transition: 0.8s transform ease;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    display: contents;
+  }
+}
+
+.header.--open .header__mobile {
+  transform: translateY(-1px);
 }
 
 .header__logo svg {
@@ -40,14 +73,19 @@ header {
 }
 
 .header__list ul {
-  display: none;
+  display: flex;
+  flex-direction: column;
 
   @media screen and (min-width: ($tablet + 1)) {
-    display: flex;
+    flex-direction: row;
   }
 }
 
 .header__list ul li + li {
+  @media screen and (max-width: $tablet) {
+    margin-top: toRem(36);
+  }
+
   @media screen and (min-width: ($tablet + 1)) {
     margin-left: toRem(40);
   }
@@ -55,8 +93,13 @@ header {
 
 .header__list ul a {
   font-family: 'Aeonik';
-  font-size: toRem(16);
-  line-height: toRem(20);
+  font-size: toRem(24);
+  line-height: toRem(28);
   font-weight: 700;
   letter-spacing: 0;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    font-size: toRem(16);
+    line-height: toRem(20);
+  }
 }

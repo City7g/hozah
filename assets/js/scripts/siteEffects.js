@@ -35,11 +35,16 @@ function initSiteEffects(fadePage = true, middle = false) {
     if (document.querySelector('.js-marquee')) {
       requestAnimationFrame(() => Marquee.init());
     }
+    if (document.querySelector('.js-awards')) {
+      window.Awards = new window.Awards();
+      requestAnimationFrame(() => window.Awards.init());
+      if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Awards);
+    }
   } else if (!fadePage) {
     document.body.classList.add('transition0s', 'animation0s');
     requestAnimationFrame(() => LazyImages.init());
     requestAnimationFrame(() => FadePage.init());
-    // requestAnimationFrame(() => Header.init());
+    requestAnimationFrame(() => Header.init());
   } else {
     requestAnimationFrame(function () {
       document.body.classList.remove('transition0s', 'animation0s');

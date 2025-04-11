@@ -10,7 +10,7 @@
   @media screen and (min-width: ($tablet + 1)) {
     grid-template-columns: 52% 1fr;
     padding: toRem(24);
-    gap: toRem(32);
+    gap: toRem(54) toRem(32);
   }
 
   @include hover {
@@ -19,12 +19,30 @@
   }
 }
 
+.c-article:first-child {
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-template-columns: 1fr;
+  }
+}
+
 .c-article__image {
+  position: relative;
+}
+
+.c-article__img {
   border-radius: toRem(16);
   overflow: hidden;
 
   &::before {
     padding-top: 81.2%;
+  }
+}
+
+.c-article:first-child .c-article__img {
+  &::before {
+    @media screen and (min-width: ($tablet + 1)) {
+      padding-top: 50%;
+    }
   }
 }
 
@@ -34,8 +52,15 @@
   justify-content: space-between;
 }
 
+.c-article:first-child .c-article__content {
+  @media screen and (min-width: ($tablet + 1)) {
+    order: -1;
+  }
+}
+
 .c-article__title {
   margin-bottom: toRem(16);
+  @include textOverflow(2);
 
   @media screen and (min-width: ($tablet + 1)) {
     margin-bottom: toRem(24);
@@ -45,6 +70,23 @@
 .c-article__text {
   margin-bottom: auto;
   @include textOverflow(3);
+}
+
+.c-article .c-article__btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s opacity ease;
+}
+
+.c-article {
+  @include hover {
+    .c-article__btn {
+      opacity: 1;
+    }
+  }
 }
 
 .c-article__bottom {
