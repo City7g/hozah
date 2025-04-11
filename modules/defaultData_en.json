@@ -1,6 +1,6 @@
 {
   "test": "lorem",
-  "projectVersion": "1.1.47",
+  "projectVersion": "1.1.48",
   "buildDate": "11.4.2025",
   "header": {
     "links": [
@@ -92,5 +92,11 @@
         ]
       }
     ]
-  }
+  },
+  "select": [
+    "Hozah Autopay",
+    "Pay by Web",
+    "Season Tickes",
+    "Hozah Autopay"
+  ]
 }

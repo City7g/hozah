@@ -151,6 +151,7 @@ import FadePage from './SiteAnimation/FadePage';
 import CustomFade from './SiteAnimation/CustomFade';
 import Modals from './SiteAnimation/Modals';
 import Marquee from './SiteAnimation/Marquee';
+import CustomSelect from './SiteAnimation/CustomSelect';
 import Awards from './SiteAnimation/Awards';
 window.Header = Header;
 window.SiteWave = SiteWave;
@@ -158,6 +159,7 @@ window.FadePage = FadePage;
 window.CustomFade = CustomFade;
 window.Modals = Modals;
 window.Marquee = Marquee;
+window.CustomSelect = CustomSelect;
 window.Awards = Awards;
 
 // remove if not needed

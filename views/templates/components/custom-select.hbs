@@ -1,0 +1,17 @@
+<div class="c-select">
+  <div class="c-select__box">
+    <div class="c-select__tags"></div>
+    <span class="c-select__text">Choose one or more options</span>
+    <svg class="c-select__arrow">
+      <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-bottom"></use>
+    </svg>
+  </div>
+  <div class="c-select__dropdown">
+    {{#each select }}
+    <label>
+      <input type="checkbox" value="{{toLowerCase this}}">
+      {{ this }}
+    </label>
+    {{/each}}
+  </div>
+</div>

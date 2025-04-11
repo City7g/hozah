@@ -1,0 +1,88 @@
+.c-select {
+  position: relative;
+  width: 300px;
+}
+
+.c-select input {
+  appearance: auto;
+}
+
+.c-select__box {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #0eb495;
+  border-radius: toRem(8);
+  background-color: #d3d3d3;
+  transition: 0.3s border-color ease;
+}
+
+.is-open .c-select__box {
+  border: 2px solid #0eb495;
+}
+
+.c-select__text {
+  font-size: toRem(16);
+  line-height: toRem(22);
+  color: #aaaaaa;
+  color: #064093;
+  @include textOverflow(1);
+  transition: 0.3s color ease;
+}
+
+.is-open .c-select__text {
+  color: #064093;
+}
+
+.c-select__arrow {
+  width: toRem(24);
+  height: toRem(24);
+}
+
+.c-select__dropdown {
+  display: none;
+  position: absolute;
+  width: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.c-select__dropdown label {
+  display: block;
+  padding: 5px;
+}
+
+.c-select__dropdown input[type='checkbox'] {
+  margin-right: 5px;
+}
+
+.c-select__tags {
+  display: flex;
+}
+
+.c-select__tag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 toRem(8);
+  border-radius: toRem(4);
+  background-color: #efefef;
+}
+
+.c-select__tag + .c-select__tag {
+  margin-left: toRem(12);
+}
+
+.c-select__tag-remove svg {
+  width: toRem(24);
+  height: toRem(24);
+  color: #0eb495;
+}
+
+.c-select__tag-text {
+  white-space: nowrap;
+}
