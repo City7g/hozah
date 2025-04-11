@@ -11,6 +11,9 @@
       <p class="title-h4">Title h4</p>
       <p class="text-main">Text main</p>
 
+      <h2>Custom Select</h2>
+      {{>components/custom-select }}
+
       <h2>Button</h2>
       {{>button text="Button" }}
       {{>button text="Button" type="secondary" }}
@@ -48,6 +51,11 @@
         {{#each categories }}
         {{>components/category }}
         {{/each}}
+      </div>
+
+      <h2>Awards</h2>
+      <div class="ui__two">
+        {{>components/awards }}
       </div>
     </div>
   </section>

@@ -145,8 +145,8 @@ const subPage = (function () {
   SubPage.prototype.leave = async function () {
     toggleScrollBehavior(true);
     return new Promise((resolve, reject) => {
-      let delay = window.Header?.isOpen ? 900 : 0;
-      if (window.Header?.isOpen) window.Header.menuBtnClick();
+      let delay = window.Header?.isOpen ? 0 : 0;
+      if (window.Header?.isOpen) window.Header.closeMenu();
       FadePage.out(delay);
       animateFromTo('body', 0.3, {}, { opacity: 0 }, 0.2 + delay / 1000);
       setTimeout(() => {

@@ -35,64 +35,6 @@
             </div>
           </div>
           {{/each}}
-          {{#each stories.list}}
-          <div class="swiper-slide">
-            <div class="stories__slide">
-              <div class="stories__slide-logo">
-                {{>components/lazyImg path=(concat "img/slide-logo/" image )
-                class="stories__slide-img"
-                }}
-                <div class="stories__slide-name">
-                  {{ name }}
-                </div>
-                <div class="stories__slide-status">
-                  {{ status }}
-                </div>
-              </div>
-              <div class="stories__slide-desc">
-                <div class="stories__slide-green">
-                  {{ percent }}
-                </div>
-                <h4 class="stories__slide-title">
-                  {{ title }}
-                </h4>
-                <p class="stories__slide-text">
-                  {{ text }}
-                </p>
-                {{>button tag="a" href="#" text=btn class="swiper__slide-btn" }}
-              </div>
-            </div>
-          </div>
-          {{/each}}
-          {{#each stories.list}}
-          <div class="swiper-slide">
-            <div class="stories__slide">
-              <div class="stories__slide-logo">
-                {{>components/lazyImg path=(concat "img/slide-logo/" image )
-                class="stories__slide-img"
-                }}
-                <div class="stories__slide-name">
-                  {{ name }}
-                </div>
-                <div class="stories__slide-status">
-                  {{ status }}
-                </div>
-              </div>
-              <div class="stories__slide-desc">
-                <div class="stories__slide-green">
-                  {{ percent }}
-                </div>
-                <h4 class="stories__slide-title">
-                  {{ title }}
-                </h4>
-                <p class="stories__slide-text">
-                  {{ text }}
-                </p>
-                {{>button tag="a" href="#" text=btn class="swiper__slide-btn" }}
-              </div>
-            </div>
-          </div>
-          {{/each}}
         </div>
 
         <div class="stories__slider-btns">

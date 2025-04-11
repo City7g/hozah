@@ -1,5 +1,9 @@
 <div class="c-article">
-  {{>components/lazyImg path=(concat "img/articles/" image ) class="c-image c-article__image" }}
+  <div class="c-article__image">
+    {{>components/lazyImg path=(concat "img/articles/" image ) class="c-image c-article__img" }}
+
+    {{>button tag="a" href="#" text="Read more" class="c-article__btn" }}
+  </div>
 
   <div class="c-article__content">
     <h4 class="title-h4 c-article__title">

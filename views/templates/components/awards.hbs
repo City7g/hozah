@@ -1,0 +1,27 @@
+<div class="awards js-awards">
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      {{#times 9}}
+      {{>components/lazyImg path=(concat "img/awards/item-" (math this "%" 2 "+" 1)) ext="png" class="swiper-slide
+      awards__item" }}
+      {{/times}}
+    </div>
+
+    <div class="awards__left"></div>
+    <div class="awards__right"></div>
+  </div>
+
+  <button type="button" class="awards__prev">
+    <svg>
+      <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-left"></use>
+    </svg>
+  </button>
+
+  <button type="button" class="awards__next">
+    <svg>
+      <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-right"></use>
+    </svg>
+  </button>
+
+  <div class="awards__pagination swiper-pagination"></div>
+</div>

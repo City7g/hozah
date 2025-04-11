@@ -3,6 +3,22 @@
     <div class="footer__wrap">
       <h2 class="title-h2 footer__title">{{{ footer.title }}}</h2>
       <p class="text-subtitle footer__text">{{{ footer.text }}}</p>
+
+      <div class="footer__links">
+        {{#each footer.links }}
+        <div class="footer__links-item">
+          <h4 class="text-bold">{{ title }}</h4>
+
+          <ul>
+            {{#each links }}
+            <li>
+              <a href="{{ path }}">{{ name }}</a>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+        {{/each}}
+      </div>
     </div>
 
     <div class="footer__bottom">

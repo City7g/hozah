@@ -25,6 +25,44 @@
   }
 }
 
+.footer__links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: toRem(24) 0;
+  margin-top: toRem(40);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-top: toRem(48);
+  }
+}
+
+.footer__links-item h4 {
+  margin-bottom: toRem(20);
+  color: #689bef;
+}
+
+.footer__links-item li + li {
+  margin-top: toRem(16);
+}
+
+.footer__links-item {
+  @media screen and (max-width: $tablet) {
+    grid-column: span 2;
+  }
+}
+
+.footer__links-item:nth-child(2) {
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-column-start: 3;
+  }
+}
+
+.footer__links-item:nth-child(3) {
+  @media screen and (max-width: $tablet) {
+    grid-column: 2 / 4;
+  }
+}
+
 .footer__bottom {
   margin-top: toRem(32);
   padding-top: toRem(15);

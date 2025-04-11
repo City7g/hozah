@@ -86,8 +86,11 @@ const hbs = exphbs.create({
     },
     times: function (n, block) {
       let accum = '';
-      for (var i = 0; i < n; ++i) accum += block.fn(i);
+      for (var i = 1; i < n; ++i) accum += block.fn(i);
       return accum;
+    },
+    toLowerCase: function (text) {
+      return text.toLowerCase().replace(/ /g, '-');
     },
   },
 });
@@ -170,6 +173,10 @@ Handlebars.registerHelper('times', function (n, block) {
   var accum = '';
   for (var i = 0; i < n; ++i) accum += block.fn(i);
   return accum;
+});
+
+Handlebars.registerHelper('toLowerCase', function (text) {
+  return text.toLowerCase().replace(/ /g, '-');
 });
 
 const fileNames = [];

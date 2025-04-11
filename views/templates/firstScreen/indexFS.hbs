@@ -3,14 +3,22 @@
 
   <div class="container">
     <div class="f-index__wrap">
+      {{>components/lazyImg path="img/first/home" mobilePath="img/bg/first-mobile" ext="png" class="f-index__image" }}
+
       <div class="f-index__content">
         <h1 class="title-h1 f-index__title">{{{ first.title }}}</h1>
         <h2 class="title-h4 f-index__subtitle">{{ first.subtitle }}</h2>
         <p class="text-main f-index__text">{{ first.text }}</p>
-        {{>button tag="a" href="#" text=first.btn class="f-index__btn" }}
-      </div>
+        <div class="f-index__bottom">
+          {{>button tag="a" href="#" text=first.btn class="f-index__btn" }}
+          {{>components/truspilot }}
+        </div>
 
-      {{>components/lazyImg path="img/first/home" ext="png" class="f-index__image" }}
+        <div class="f-index__awards">
+          <h4 class="f-index__awards-title">Our Awards</h4>
+          {{>components/awards }}
+        </div>
+      </div>
     </div>
   </div>
 </section>

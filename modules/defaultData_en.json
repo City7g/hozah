@@ -30,6 +30,73 @@
   "footer": {
     "title": "Your <span>Success Story</span> Starts <span>Here</span>",
     "text": "Partner with Hozah to digitise, automate, and optimise your car park management. Get in touch at hello@hozah.com today to discover how our tech-led solutions can drive game-changing results.<br><br>Alternatively, please leave your email below and we’ll get back to you.",
-    "copy": "© 2024 Hozah. All rights reserved. Hozah Ltd"
-  }
+    "copy": "© 2024 Hozah. All rights reserved. Hozah Ltd",
+    "links": [
+      {
+        "title": "Company",
+        "links": [
+          {
+            "name": "About us",
+            "path": "#"
+          },
+          {
+            "name": "News",
+            "path": "#"
+          },
+          {
+            "name": "Contact us",
+            "path": "#"
+          },
+          {
+            "name": "Follow us",
+            "path": "#"
+          }
+        ]
+      },
+      {
+        "title": "Our solutions",
+        "links": [
+          {
+            "name": "For car park owners",
+            "path": "#"
+          },
+          {
+            "name": "For drivers",
+            "path": "#"
+          },
+          {
+            "name": "Hozah Autopay",
+            "path": "#"
+          },
+          {
+            "name": "Help & Support",
+            "path": "#"
+          }
+        ]
+      },
+      {
+        "title": "Legal information",
+        "links": [
+          {
+            "name": "Privacy policy",
+            "path": "#"
+          },
+          {
+            "name": "Cookie Information",
+            "path": "#"
+          },
+          {
+            "name": "Terms and conditions",
+            "path": "#"
+          }
+        ]
+      }
+    ]
+  },
+  "select": [
+    "Hozah Autopay",
+    "Pay by Web",
+    "Season Tickes",
+    "Hozah Autopay"
+  ]
 }
