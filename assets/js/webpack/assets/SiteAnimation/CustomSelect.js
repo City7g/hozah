@@ -42,6 +42,9 @@ export default new (class CustomSelect extends SiteAnimation {
     if (parent.classList.contains('init')) return;
     parent.classList.add('init');
 
+    // Добавляем tabindex для фокусировки с клавиатуры
+    box.setAttribute('tabindex', '0');
+
     // Инициализация начального состояния
     gsap.set(dropdown, {
       opacity: 0,
@@ -58,6 +61,14 @@ export default new (class CustomSelect extends SiteAnimation {
     box.addEventListener('click', (e) => {
       if (!e.target.closest('.c-select__tag-remove')) {
         e.stopPropagation();
+        this.toggleDropdown(parent, dropdown, items);
+      }
+    });
+
+    // Обработчик нажатия клавиш
+    box.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
         this.toggleDropdown(parent, dropdown, items);
       }
     });
@@ -109,7 +120,7 @@ export default new (class CustomSelect extends SiteAnimation {
           opacity: 1,
           y: 0,
           duration: 0.2,
-          stagger: 0.05,
+          stagger: 0.04,
           ease: 'power2.out',
         },
         '-=0.1',
@@ -133,9 +144,7 @@ export default new (class CustomSelect extends SiteAnimation {
     tag.className = 'c-select__tag';
     tag.innerHTML = `
       <span class="c-select__tag-text">${text}</span>
-      <span class="c-select__tag-remove" data-value="${value}">
-        <svg><use xlink:href="/img/symbol/svg/sprite.symbol.svg#close"></use></svg>
-      </span>
+      <svg class="c-select__tag-remove" data-value="${value}"><use xlink:href="/img/symbol/svg/sprite.symbol.svg#close"></use></svg>
     `;
 
     // Начальное состояние тега для анимации
@@ -184,6 +193,15 @@ export default new (class CustomSelect extends SiteAnimation {
         value: checkbox.value,
       }));
 
+    // Устанавливаем display: flex, если есть выбранные элементы
+    if (selectedOptions.length > 0) {
+      gsap.set(tagsContainer, { display: 'flex' });
+      parent.classList.add('has-selection');
+    } else {
+      gsap.set(tagsContainer, { display: 'none' });
+      parent.classList.remove('has-selection');
+    }
+
     // Сохраняем предыдущие и новые значения для сравнения
     const previousValues = Array.from(
       tagsContainer.querySelectorAll('.c-select__tag-remove'),
@@ -194,11 +212,6 @@ export default new (class CustomSelect extends SiteAnimation {
       selectedOptions.length > 0 && previousValues.length === 0;
     const allSelectionsRemoved =
       selectedOptions.length === 0 && previousValues.length > 0;
-
-    // Если появился первый выбранный элемент - сразу скрываем текст
-    if (hasNewSelections) {
-      gsap.set(textElement, { display: 'none', opacity: 0 });
-    }
 
     // Найдем элементы, которые нужно удалить (есть в previous, но нет в new)
     const tagsToRemove = Array.from(
@@ -219,17 +232,6 @@ export default new (class CustomSelect extends SiteAnimation {
         stagger: 0.05,
         onComplete: () => {
           tagsToRemove.forEach((tag) => tag.remove());
-
-          // Если удалены все выбранные элементы - показываем текст после удаления
-          if (allSelectionsRemoved) {
-            gsap.set(textElement, { display: 'block' });
-            gsap.to(textElement, {
-              opacity: 1,
-              y: 0,
-              duration: 0.3,
-              ease: 'power2.out',
-            });
-          }
         },
       });
     } else if (allSelectionsRemoved) {

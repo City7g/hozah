@@ -3,14 +3,14 @@
     <div class="c-select__tags"></div>
     <span class="c-select__text">Choose one or more options</span>
     <svg class="c-select__arrow">
-      <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-bottom"></use>
+      <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-up"></use>
     </svg>
   </div>
-  <div class="c-select__dropdown">
+  <div class="c-select__dropdown allow-scroll" data-lenis-prevent>
     {{#each select }}
     <label>
       <input type="checkbox" value="{{toLowerCase this}}">
-      {{ this }}
+      <span>{{ this }}</span>
     </label>
     {{/each}}
   </div>

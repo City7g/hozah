@@ -1,6 +1,6 @@
 .c-select {
   position: relative;
-  width: 300px;
+  width: 100%;
 }
 
 .c-select input {
@@ -8,60 +8,153 @@
 }
 
 .c-select__box {
-  padding: 10px;
+  position: relative;
+  padding: toRem(10);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 2px solid #0eb495;
+  border: 2px solid #d3d3d3;
   border-radius: toRem(8);
-  background-color: #d3d3d3;
+  background-color: #f9f9f9;
   transition: 0.3s border-color ease;
+
+  &:focus-visible {
+    outline: none;
+    border-color: #0eb495;
+  }
 }
 
 .is-open .c-select__box {
-  border: 2px solid #0eb495;
+  background-color: #f9f9f9;
+  border-color: #0eb495;
+}
+
+.has-selection .c-select__box {
+  background-color: #f9f9f9;
+  border-color: #0eb495;
 }
 
 .c-select__text {
   font-size: toRem(16);
   line-height: toRem(22);
   color: #aaaaaa;
-  color: #064093;
   @include textOverflow(1);
-  transition: 0.3s color ease;
+  transition: 0.1s ease;
+  transition-property: color, opacity;
 }
 
 .is-open .c-select__text {
   color: #064093;
 }
 
+.has-selection .c-select__text {
+  opacity: 0;
+}
+
 .c-select__arrow {
   width: toRem(24);
   height: toRem(24);
+  transition: 0.3s ease;
+  transition-property: transform, stroke, opacity;
+  fill: transparent;
+  stroke: #aaaaaa;
+  stroke-width: 2px;
+  transform: rotate(180deg);
+  margin-left: toRem(8);
+}
+
+.has-selection .c-select__arrow {
+  opacity: 0;
+}
+
+.is-open .c-select__arrow {
+  transform: rotate(0);
+  stroke: #17c6a3;
 }
 
 .c-select__dropdown {
   display: none;
   position: absolute;
+  top: calc(100% + toRem(8));
   width: 100%;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  z-index: 1;
+  border-radius: toRem(8);
+  z-index: 5;
+  background-color: #efefef;
+  padding: toRem(8);
+  max-height: toRem(300);
+  overflow: auto;
+  scrollbar-width: none;
 }
 
 .c-select__dropdown label {
-  display: block;
-  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: toRem(12) toRem(16) toRem(12) toRem(8);
+  cursor: pointer;
 }
 
 .c-select__dropdown input[type='checkbox'] {
-  margin-right: 5px;
+  appearance: none;
+  width: toRem(24);
+  height: toRem(24);
+  margin-left: toRem(4);
+  border-radius: toRem(4);
+  border: 1px solid #d3d3d3;
+  transition: 0.3s ease;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: toRem(16) toRem(11);
+  transition-property: border-color, background;
+
+  &:focus-visible {
+    outline: 1px solid #0eb495;
+    outline-offset: 2px;
+    border-color: #0eb495;
+  }
+}
+
+.c-select__dropdown label {
+  @include hover {
+    input[type='checkbox'] {
+      border-color: #0eb495;
+    }
+  }
+}
+
+.c-select__dropdown label input {
+  order: 2;
+}
+
+.c-select__dropdown label input[type='checkbox']:checked {
+  background-color: #0eb495;
+  border-color: #0eb495;
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='13' viewBox='0 0 18 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17 1L6 12L1 7' stroke='%23F9F9F9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.c-select__dropdown label span {
+  color: #aaaaaa;
+  transition: 0.3s color ease;
+}
+
+.c-select__dropdown label input:checked + span {
+  color: #064093;
 }
 
 .c-select__tags {
-  display: flex;
+  display: none;
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: toRem(8);
+  z-index: 1;
 }
 
 .c-select__tag {
@@ -77,10 +170,15 @@
   margin-left: toRem(12);
 }
 
-.c-select__tag-remove svg {
+.c-select__tag-remove {
   width: toRem(24);
   height: toRem(24);
-  color: #0eb495;
+  fill: #0eb495;
+  transition: 0.3s transform ease;
+
+  @include hover {
+    transform: scale(0.8);
+  }
 }
 
 .c-select__tag-text {
