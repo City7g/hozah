@@ -209,8 +209,8 @@ window.addEventListener('load', function () {
     },
 
     navigation: {
-      nextEl: '.js-impact-slider .slider-btns__item--prev',
-      prevEl: '.js-impact-slider .slider-btns__item--next',
+      nextEl: '.js-impact-slider .slider-btns__item--next',
+      prevEl: '.js-impact-slider .slider-btns__item--prev',
     },
   });
 });
