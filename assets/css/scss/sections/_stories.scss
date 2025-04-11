@@ -9,14 +9,17 @@
 }
 
 .stories__slide {
+  align-items: start;
   background: $lightest-grey;
   border-radius: toRem(20);
+  display: flex;
+  flex-direction: column;
   padding: toRem(20);
 
   @media screen and (min-width: ($tablet + 1)) {
     display: grid;
     grid-gap: toRem(80);
-    grid-template-columns: 140px 1fr;
+    grid-template-columns: toRem(140) 1fr;
     padding: toRem(40);
     position: relative;
   }
@@ -47,10 +50,10 @@
 
 .stories__slide-text {
   border-top: 1px solid $light-grey;
+  margin-top: toRem(20);
   padding-top: toRem(16);
 
   @media screen and (min-width: ($tablet + 1)) {
-    margin-top: toRem(20);
     padding-top: toRem(20);
   }
 }
@@ -60,29 +63,45 @@
   font-weight: 700;
   font-size: toRem(20);
   line-height: 120%;
-  margin-top: toRem(63);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-top: toRem(63);
+  }
 }
 
 .stories__slider-btn {
+  align-items: center;
   background: $dark-blue;
+  border-radius: toRem(6);
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: toRem(44);
+  padding: toRem(8);
+  width: toRem(44);
+  z-index: 2;
+
+  svg {
+    height: toRem(28);
+    width: toRem(28);
+  }
+
+  + .stories__slider-btn {
+    @media screen and (max-width: $tablet) {
+      margin-left: toRem(8);
+    }
+  }
 
   @media screen and (min-width: ($tablet + 1)) {
-    align-items: center;
-    border-radius: toRem(6);
-    display: flex;
-    height: toRem(44);
-    padding: toRem(8);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: toRem(44);
-    z-index: 2;
   }
 }
 
 .btn.swiper__slide-btn {
   margin-top: toRem(32);
+  order: 2;
   position: static;
 
   @media screen and (min-width: ($tablet + 1)) {
@@ -101,19 +120,36 @@
 }
 
 .stories__slide-logo {
+  align-items: start;
   display: grid;
-  grid-template-columns: 64px 1fr;
-  grid-gap: toRem(24);
+  grid-column-gap: toRem(24);
+  grid-template-columns: toRem(64) 1fr;
+  margin-top: toRem(133);
+  order: 1;
 
   @media screen and (min-width: ($tablet + 1)) {
     display: block;
+    margin-top: 0;
+    order: 0;
   }
+}
+
+.stories__slide-img {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
 }
 
 .stories__slide-status {
   color: $dark-blue;
-  font-size: 14px;
+  font-size: toRem(14);
   grid-column: 2 / 3;
   line-height: 135%;
   opacity: 0.8;
+}
+
+.stories__slider-btns {
+  @media screen and (max-width: $tablet) {
+    display: flex;
+    margin-top: toRem(24);
+  }
 }

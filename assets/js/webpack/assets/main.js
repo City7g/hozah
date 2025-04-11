@@ -171,9 +171,42 @@ window.addEventListener('load', function () {
     spaceBetween: 124,
     mousewheel: true,
 
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      1101: {
+        slidesPerView: 1.5,
+      },
+    },
+
     navigation: {
       nextEl: '.js-stories-slider .stories__slider-btn--next',
       prevEl: '.js-stories-slider .stories__slider-btn--prev',
+    },
+  });
+
+  new Swiper('.js-impact-slider .swiper', {
+    modules: [Navigation],
+    centeredSlides: true,
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 2.5,
+    spaceBetween: 20,
+    mousewheel: true,
+
+    breakpoints: {
+      320: {
+        slidesPerView: 1,
+      },
+      1101: {
+        slidesPerView: 2.5,
+      },
+    },
+
+    navigation: {
+      nextEl: '.js-impact-slider .slider-btns__item--prev',
+      prevEl: '.js-impact-slider .slider-btns__item--next',
     },
   });
 });
