@@ -116,6 +116,19 @@
     "text": "Get a tailored parking solution designed for measurable success.",
     "btn": "Reach out to our team"
   },
+  "impact": {
+    "title": "<span>Proven</span> Impact",
+    "subtitle": "Discover how Hozah’s ecosystem is transforming parking operations. <br>See our case studies for real-world impact. ",
+    "list": [
+      {
+        "title": "Enhancing the Visitor Experience at the London Eye with Hozah",
+        "label": "Travel",
+        "image": "item-1",
+        "desc": "Reduced average wait time at the London Eye car park by 30% through efficient payment processing and real-time occupancy updates. Improved customer satisfaction by 35% based on post-visit surveys.",
+        "btn": "Learn more"
+      }
+    ]
+  },
   "news": {
     "title": "<span>Latest</span> News",
     "btn": "To all news",
