@@ -24,7 +24,7 @@
   padding: toRem(16) toRem(16) toRem(70);
   transition: 0.4s;
 
-  @media (hover: hover) {
+  @include hover {
     &:hover {
       background: $accent-blue;
 
@@ -44,6 +44,12 @@
 
   @media screen and (min-width: ($tablet + 1)) {
     padding: toRem(24);
+  }
+}
+
+.impact__slide-img {
+  &:before {
+    padding-top: 65.9%;
   }
 }
 
@@ -110,6 +116,7 @@
   transition: 0.4s;
 
   @media screen and (min-width: ($tablet + 1)) {
+    bottom: auto;
     left: 50%;
     opacity: 0;
     top: 50%;

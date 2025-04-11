@@ -34,12 +34,47 @@
               {{>button tag="a" href="#" text=btn class="swiper__slide-btn" }}
             </div>
           </div>
+          <div class="swiper-slide">
+            <div class="stories__slide">
+              <div class="stories__slide-logo">
+                {{>components/lazyImg path=(concat "img/slide-logo/" image )
+                class="stories__slide-img"
+                }}
+                <div class="stories__slide-name">
+                  {{ name }}
+                </div>
+                <div class="stories__slide-status">
+                  {{ status }}
+                </div>
+              </div>
+              <div class="stories__slide-desc">
+                <div class="stories__slide-green">
+                  {{ percent }}
+                </div>
+                <h4 class="stories__slide-title">
+                  {{ title }}
+                </h4>
+                <p class="stories__slide-text">
+                  {{ text }}
+                </p>
+              </div>
+              {{>button tag="a" href="#" text=btn class="swiper__slide-btn" }}
+            </div>
+          </div>
           {{/each}}
         </div>
 
         <div class="stories__slider-btns">
-          <button type="button" class="stories__slider-btn stories__slider-btn--prev"><svg></svg></button>
-          <button type="button" class="stories__slider-btn stories__slider-btn--next"><svg></svg></button>
+          <button type="button" class="stories__slider-btn stories__slider-btn--prev">
+            <svg>
+              <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-left"></use>
+            </svg>
+          </button>
+          <button type="button" class="stories__slider-btn stories__slider-btn--next">
+            <svg>
+              <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-right"></use>
+            </svg>
+          </button>
         </div>
 
       </div>

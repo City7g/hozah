@@ -23,7 +23,7 @@
                                     {{ label }}
                                 </div>
                                 {{>components/lazyImg path=(concat "img/slide-img/" image )
-                                class="impact__slide-img"
+                                class="impact__slide-img c-image"
                                 }}
                             </div>
                             <a href="#" class="impact__bluebtn">
@@ -46,7 +46,7 @@
                                     {{ label }}
                                 </div>
                                 {{>components/lazyImg path=(concat "img/slide-img/" image )
-                                class="impact__slide-img"
+                                class="impact__slide-img c-image"
                                 }}
                             </div>
                             <a href="#" class="impact__bluebtn">
@@ -69,33 +69,9 @@
                                     {{ label }}
                                 </div>
                                 {{>components/lazyImg path=(concat "img/slide-img/" image )
-                                class="impact__slide-img"
+                                class="impact__slide-img c-image"
                                 }}
                             </div>
-                            <a href="#" class="impact__bluebtn">
-                                {{ btn }}
-                            </a>
-                        </div>
-                        <div class="impact__slide-desc">
-                            {{ desc }}
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="impact__slide">
-                        <h3 class="impact__slide-title">
-                            {{ title }}
-                        </h3>
-                        <div class="impact__slide-wrap">
-                            <div class="impact__slide-wrap__inner">
-                                <div class="impact__slide-label">
-                                    {{ label }}
-                                </div>
-                                {{>components/lazyImg path=(concat "img/slide-img/" image )
-                                class="impact__slide-img"
-                                }}
-                            </div>
-
                             <a href="#" class="impact__bluebtn">
                                 {{ btn }}
                             </a>
@@ -110,10 +86,17 @@
         </div>
         <div class="container">
             <div class="slider-btns">
-                <button type="button" class="slider-btns__item slider-btns__item--prev"><svg></svg></button>
-                <button type="button" class="slider-btns__item slider-btns__item--next"><svg></svg></button>
+                <button type="button" class="slider-btns__item slider-btns__item--prev">
+                    <svg>
+                        <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-left"></use>
+                    </svg>
+                </button>
+                <button type="button" class="slider-btns__item slider-btns__item--next">
+                    <svg>
+                        <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-right"></use>
+                    </svg>
+                </button>
             </div>
         </div>
-    </div>
     </div>
 </section>
