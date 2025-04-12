@@ -153,6 +153,7 @@ import Modals from './SiteAnimation/Modals';
 import Marquee from './SiteAnimation/Marquee';
 import CustomSelect from './SiteAnimation/CustomSelect';
 import Awards from './SiteAnimation/Awards';
+import Impact from './SiteAnimation/Impact';
 window.Header = Header;
 window.SiteWave = SiteWave;
 window.FadePage = FadePage;
@@ -161,13 +162,12 @@ window.Modals = Modals;
 window.Marquee = Marquee;
 window.CustomSelect = CustomSelect;
 window.Awards = Awards;
+window.Impact = Impact;
 
-// remove if not needed
-import NoiseEffect from './utils/Noise';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
+
 window.addEventListener('load', function () {
-  window.noiseEffect = new NoiseEffect('#wrapper', 2, 'img.js-noise');
   new Swiper('.js-stories-slider', {
     modules: [Navigation],
     centeredSlides: true,
@@ -187,30 +187,6 @@ window.addEventListener('load', function () {
     navigation: {
       nextEl: '.js-stories-slider .stories__slider-btn--next',
       prevEl: '.js-stories-slider .stories__slider-btn--prev',
-    },
-  });
-
-  new Swiper('.js-impact-slider .swiper', {
-    modules: [Navigation],
-    centeredSlides: true,
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 2.5,
-    spaceBetween: 20,
-    mousewheel: true,
-
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-      1101: {
-        slidesPerView: 2.5,
-      },
-    },
-
-    navigation: {
-      nextEl: '.js-impact-slider .slider-btns__item--next',
-      prevEl: '.js-impact-slider .slider-btns__item--prev',
     },
   });
 });

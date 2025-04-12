@@ -33,5 +33,16 @@
       "text": "Education",
       "image": "item-1"
     }
+  ],
+  "cases": [
+    {
+      "title": "Driving Revenue Growth at Westfield London",
+      "text": "Increased annual revenue by 15% through higher parking fees and improved occupancy rates. Achieved a 20% increase in average spend per visit by encouraging longer stays.",
+      "tags": [
+        "Travel"
+      ],
+      "image": "item-1",
+      "btn": "Learn more"
+    }
   ]
 }

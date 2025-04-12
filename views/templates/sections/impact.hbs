@@ -1,102 +1,36 @@
 <section class="impact js-impact-slider" data-acf-block="impact" data-acf-label="impact" data-acf-style="impact">
-    <div class="container">
-        <h2 class="title-h2 impact__title">
-            {{{ impact.title }}}
-        </h2>
-        <div class="impact__subtitle">
-            {{{impact.subtitle}}}
-        </div>
+  <div class="container">
+    <h2 class="title-h2 impact__title">
+      {{{ impact.title }}}
+    </h2>
+    <p class="text-subtitle impact__subtitle">
+      {{{ impact.subtitle }}}
+    </p>
+  </div>
 
-    </div>
-    <div class="impact__slider">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                {{#each impact.list}}
-                <div class="swiper-slide">
-                    <div class="impact__slide">
-                        <h3 class="impact__slide-title">
-                            {{ title }}
-                        </h3>
-                        <div class="impact__slide-wrap">
-                            <div class="impact__slide-wrap__inner">
-                                <div class="impact__slide-label">
-                                    {{ label }}
-                                </div>
-                                {{>components/lazyImg path=(concat "img/slide-img/" image )
-                                class="impact__slide-img c-image"
-                                }}
-                            </div>
-                            <a href="#" class="impact__bluebtn">
-                                {{ btn }}
-                            </a>
-                        </div>
-                        <div class="impact__slide-desc">
-                            {{ desc }}
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="impact__slide">
-                        <h3 class="impact__slide-title">
-                            {{ title }}
-                        </h3>
-                        <div class="impact__slide-wrap">
-                            <div class="impact__slide-wrap__inner">
-                                <div class="impact__slide-label">
-                                    {{ label }}
-                                </div>
-                                {{>components/lazyImg path=(concat "img/slide-img/" image )
-                                class="impact__slide-img c-image"
-                                }}
-                            </div>
-                            <a href="#" class="impact__bluebtn">
-                                {{ btn }}
-                            </a>
-                        </div>
-                        <div class="impact__slide-desc">
-                            {{ desc }}
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="impact__slide">
-                        <h3 class="impact__slide-title">
-                            {{ title }}
-                        </h3>
-                        <div class="impact__slide-wrap">
-                            <div class="impact__slide-wrap__inner">
-                                <div class="impact__slide-label">
-                                    {{ label }}
-                                </div>
-                                {{>components/lazyImg path=(concat "img/slide-img/" image )
-                                class="impact__slide-img c-image"
-                                }}
-                            </div>
-                            <a href="#" class="impact__bluebtn">
-                                {{ btn }}
-                            </a>
-                        </div>
-                        <div class="impact__slide-desc">
-                            {{ desc }}
-                        </div>
-                    </div>
-                </div>
-                {{/each}}
-            </div>
+  <div class="impact__slider">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        {{#each impact.list}}
+        <div class="swiper-slide">
+          {{>components/case }}
         </div>
-        <div class="container">
-            <div class="slider-btns">
-                <button type="button" class="slider-btns__item slider-btns__item--prev">
-                    <svg>
-                        <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-left"></use>
-                    </svg>
-                </button>
-                <button type="button" class="slider-btns__item slider-btns__item--next">
-                    <svg>
-                        <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-right"></use>
-                    </svg>
-                </button>
-            </div>
-        </div>
+        {{/each}}
+      </div>
     </div>
+
+    <div class="impact__btns">
+      <button type="button" class="slider-btns__item slider-btns__item--prev">
+        <svg>
+          <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-left"></use>
+        </svg>
+      </button>
+
+      <button type="button" class="slider-btns__item slider-btns__item--next">
+        <svg>
+          <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-right"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
 </section>

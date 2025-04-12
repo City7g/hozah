@@ -1,0 +1,21 @@
+<div class="c-case">
+  <h3 class="title-h4 c-case__title">
+    {{ title }}
+  </h3>
+
+  <div class="c-case__content">
+    {{#each tags }}
+    <div class="c-case__label">
+      {{ this }}
+    </div>
+    {{/each}}
+
+    {{>components/lazyImg path=(concat "img/impact/" image ) class="c-image c-case__img" }}
+
+    {{>button tag="a" href="#" text=btn class="c-case__btn" }}
+  </div>
+
+  <p class="c-case__text">
+    {{ text }}
+  </p>
+</div>

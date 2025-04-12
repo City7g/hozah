@@ -43,6 +43,11 @@ function initSiteEffects(fadePage = true, middle = false) {
       requestAnimationFrame(() => window.Awards.init());
       if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Awards);
     }
+    if (document.querySelector('.js-impact-slider')) {
+      window.Impact = new window.Impact();
+      requestAnimationFrame(() => window.Impact.init());
+      if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Impact);
+    }
   } else if (!fadePage) {
     document.body.classList.add('transition0s', 'animation0s');
     requestAnimationFrame(() => LazyImages.init());

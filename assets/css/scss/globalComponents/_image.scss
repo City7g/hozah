@@ -5,9 +5,8 @@
   &:before {
     content: '';
     display: block;
+    padding-top: 100%;
   }
-
-  // transform: rotate(180deg);
 }
 
 .c-image > img {

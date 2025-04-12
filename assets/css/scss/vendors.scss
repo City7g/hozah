@@ -1,5 +1,6 @@
 @import '_vars';
 @import '_mixins';
+@import '../../../node_modules/@splidejs/splide/src/css/core/index.scss';
 
 :root {
   font-size: toVW(16);
