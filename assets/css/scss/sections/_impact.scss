@@ -2,6 +2,11 @@
 
 .impact {
   position: relative;
+  overflow: hidden;
+}
+
+.impact .splide__track {
+  overflow: visible;
 }
 
 .impact__subtitle {
@@ -11,41 +16,20 @@
 
 .impact__slider {
   margin-top: toRem(70);
+
+  @media screen and (max-width: $tablet) {
+    padding: 0 toRem(20);
+  }
 }
 
-.impact__btns {
-  display: flex;
-
+.impact__slider .arrows {
   @media screen and (min-width: ($tablet + 1)) {
     position: absolute;
     right: toRem(60);
-    top: 213px;
+    top: toRem(-108);
   }
 
   @media screen and (max-width: $tablet) {
     margin-top: toRem(40);
   }
-}
-
-.slider-btns__item {
-  align-items: center;
-  background: $dark-blue;
-  border-radius: toRem(6);
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  height: toRem(44);
-  padding: toRem(8);
-  width: toRem(44);
-  z-index: 2;
-}
-
-.slider-btns__item svg {
-  height: toRem(28);
-  width: toRem(28);
-  fill: #a3c7f7;
-}
-
-.slider-btns__item + .slider-btns__item {
-  margin-left: toRem(8);
 }

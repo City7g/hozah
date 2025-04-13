@@ -1,6 +1,5 @@
 import Splide from '@splidejs/splide';
-import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
+import Glide from '@glidejs/glide';
 
 export default class Impact {
   constructor() {
@@ -14,33 +13,62 @@ export default class Impact {
   }
 
   sliderInit() {
-    this.slider = new Swiper('.js-impact-slider .swiper', {
-      modules: [Navigation],
-      centeredSlides: true,
-      loop: true,
-      slidesPerView: 2.5,
-      spaceBetween: 20,
+    // this.slider = new Swiper('.js-impact-slider .swiper', {
+    //   modules: [Navigation],
+    //   centeredSlides: true,
+    //   loop: true,
+    //   slidesPerView: 2.5,
+    //   spaceBetween: 20,
+    //   breakpoints: {
+    //     320: {
+    //       slidesPerView: 1,
+    //     },
+    //     1101: {
+    //       slidesPerView: 2.5,
+    //     },
+    //   },
+    //   navigation: {
+    //     nextEl: '.js-impact-slider .slider-btns__item--next',
+    //     prevEl: '.js-impact-slider .slider-btns__item--prev',
+    //   },
+    // });
+    var splide = new Splide('.js-impact-slider .splide', {
+      type: 'loop',
+      perPage: 2.5,
+      // arrows: false,
+      gap: '1.25rem',
+      focus: 'center',
+      pagination: false,
       breakpoints: {
-        320: {
-          slidesPerView: 1,
+        1100: {
+          perPage: 2,
+          gap: '.75rem',
+          focus: 0,
         },
-        1101: {
-          slidesPerView: 2.5,
+        768: {
+          perPage: 1,
         },
-      },
-      navigation: {
-        nextEl: '.js-impact-slider .slider-btns__item--next',
-        prevEl: '.js-impact-slider .slider-btns__item--prev',
       },
     });
-    // console.log(splide);
-    // var splide = new Splide('.splide', {
-    //   type: 'loop',
-    //   perPage: 3,
-    //   focus: 'center',
+
+    splide.mount();
+    this.slider = splide;
+
+    // var glide = new Glide('.js-impact-slider .glide', {
+    //   type: 'carousel',
+    //   // startAt: 0,
+    //   perView: 3,
+    //   breakpoints: {
+    //     768: {
+    //       perPage: 2,
+    //     },
+    //     1101: {
+    //       perPage: 3,
+    //     },
+    //   },
     // });
-    // console.log(splide);
-    // splide.mount();
+
+    // glide.mount();
   }
 
   destroy() {

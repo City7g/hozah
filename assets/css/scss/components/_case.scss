@@ -1,7 +1,9 @@
 .c-case {
+  display: flex;
+  flex-direction: column;
   background: $lightest-grey;
   border-radius: toRem(20);
-  padding: toRem(16) toRem(16) toRem(70);
+  padding: toRem(16);
   transition: 0.4s ease;
   transition-property: color, background-color;
   color: #064093;
@@ -16,14 +18,9 @@
   }
 }
 
-.c-case__img {
-  &:before {
-    padding-top: 65.9%;
-  }
-}
-
 .c-case__title {
   margin-bottom: toRem(16);
+  margin-bottom: toRem(12);
 
   @media screen and (min-width: ($tablet + 1)) {
     margin-bottom: toRem(20);
@@ -33,27 +30,41 @@
 .c-case__content {
   position: relative;
 
-  @media screen and (min-width: ($tablet + 1)) {
-    overflow: hidden;
-    border-radius: toRem(16);
+  @media screen and (max-width: $tablet) {
+    display: contents;
   }
 }
 
 .c-case__label {
+  position: absolute;
+  top: toRem(12);
+  left: toRem(12);
   background: $bg-light;
   border-radius: toRem(4);
   color: $dark-blue;
   font-weight: 700;
   font-size: toRem(12);
   line-height: 120%;
-  left: toRem(17);
   padding: toRem(8);
-  position: absolute;
-  top: toRem(23);
-  z-index: 1;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    top: toRem(23);
+    left: toRem(17);
+  }
+}
+
+.c-case__image {
+  position: relative;
 }
 
 .c-case__img {
+  overflow: hidden;
+  border-radius: toRem(16);
+
+  &:before {
+    padding-top: 65.9%;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -68,8 +79,8 @@
     );
   }
 }
+
 .c-case__img img {
-  border-radius: toRem(16);
   transition: 0.3s transform;
 }
 
@@ -83,6 +94,7 @@
 
 .c-case__text {
   margin-top: toRem(20);
+  @include textOverflow(3);
 }
 
 .c-case__btn {
@@ -93,6 +105,11 @@
     transform: translate(-50%, -50%);
     transition: 0.3s opacity ease;
     opacity: 0;
+  }
+
+  @media screen and (max-width: $tablet) {
+    order: 10;
+    margin-top: toRem(16);
   }
 }
 

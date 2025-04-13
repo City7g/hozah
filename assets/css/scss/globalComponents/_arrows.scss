@@ -1,0 +1,28 @@
+.arrows {
+  display: flex;
+}
+
+.arrows__prev,
+.arrows__next {
+  align-items: center;
+  background: $dark-blue;
+  border-radius: toRem(6);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  height: toRem(44);
+  padding: toRem(8);
+  width: toRem(44);
+  z-index: 2;
+}
+
+.arrows__prev svg,
+.arrows__next svg {
+  height: toRem(28);
+  width: toRem(28);
+  fill: #a3c7f7;
+}
+
+.arrows__prev + .arrows__next {
+  margin-left: toRem(8);
+}

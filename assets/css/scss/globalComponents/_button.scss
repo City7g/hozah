@@ -34,6 +34,11 @@
     background-color: transparent;
   }
 
+  &.blue {
+    border-color: #2377db;
+    background-color: #2377db;
+  }
+
   &[disabled],
   &.disabled {
     pointer-events: none;

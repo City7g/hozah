@@ -9,28 +9,31 @@
   </div>
 
   <div class="impact__slider">
-    <div class="swiper">
-      <div class="swiper-wrapper">
-        {{#each impact.list}}
-        <div class="swiper-slide">
-          {{>components/case }}
+    <div class="splide">
+      <div class="splide__track">
+        <div class="splide__list">
+          {{#each impact.list}}
+          <div class="splide__slide">
+            {{>components/case }}
+          </div>
+          {{/each}}
         </div>
-        {{/each}}
       </div>
+
+      {{>components/arrows }}
+      {{!-- <div class="splide__arrows"></div> --}}
     </div>
 
-    <div class="impact__btns">
-      <button type="button" class="slider-btns__item slider-btns__item--prev">
-        <svg>
-          <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-left"></use>
-        </svg>
-      </button>
-
-      <button type="button" class="slider-btns__item slider-btns__item--next">
-        <svg>
-          <use xlink:href="/img/symbol/svg/sprite.symbol.svg#arrow-right"></use>
-        </svg>
-      </button>
-    </div>
+    {{!-- <div class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <div class="glide__slides">
+          {{#each impact.list}}
+          <div class="glide__slide">
+            {{>components/case }}
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div> --}}
   </div>
 </section>
