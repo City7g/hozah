@@ -4,13 +4,6 @@
     <div class="container">
       <h1 class="title-h1">UI Kit</h1>
 
-      <h2>Cases</h2>
-      <div class="ui__two">
-        {{#each cases }}
-        {{>components/case }}
-        {{/each}}
-      </div>
-
       <h2>Articles</h2>
       <p class="title-h1">Title h1</p>
       <p class="title-h2">Title h2</p>
@@ -72,6 +65,20 @@
       <h2>Awards</h2>
       <div class="ui__two">
         {{>components/awards }}
+      </div>
+
+      <h2>Testimonials</h2>
+      <div class="ui__2-out-of-3">
+        {{#each testimonials }}
+        {{>components/testimonial }}
+        {{/each}}
+      </div>
+
+      <h2>Cases</h2>
+      <div class="ui__two">
+        {{#each cases }}
+        {{>components/case }}
+        {{/each}}
       </div>
     </div>
   </section>

@@ -9,6 +9,12 @@
   }
 }
 
+.styleBoxes section.reach {
+  @media screen and (min-width: ($tablet + 1)) {
+    padding-bottom: toRem(128);
+  }
+}
+
 .reach__bg {
   position: absolute;
   top: 0;

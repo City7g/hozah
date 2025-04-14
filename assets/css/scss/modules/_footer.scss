@@ -13,7 +13,7 @@
 
 .footer__wrap {
   @media screen and (min-width: ($tablet + 1)) {
-    margin-left: calc(50% - toRem(10));
+    margin-left: calc(50% + toRem(11));
   }
 }
 

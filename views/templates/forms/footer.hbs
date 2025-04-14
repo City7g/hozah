@@ -1,0 +1,26 @@
+<form class="footer-form js-footer-form" novalidate>
+  <div class="c-label">
+    <p class="text-body footer-form__title">Please enter your email</p>
+    <div class="c-label__wrap">
+      <input type="email" data-name="Email" name="email" placeholder="Email" />
+    </div>
+    <span class="c-label__error">Error</span>
+  </div>
+
+  <div class="footer-form__select">
+    <p class="text-body footer-form__title">Which services are you interested in?</p>
+    {{>components/custom-select }}
+  </div>
+
+  <label class="c-checkbox">
+    <input type="checkbox" name="agree">
+    <span>
+      I agree to the <a href="#">Privacy policy</a>, <a href="#">Terms & conditions</a> and <a href="#">Cookie
+        information</a>
+    </span>
+
+    <span class="c-checkbox__error">Error</span>
+  </label>
+
+  {{>button text="Submit a request" }}
+</form>

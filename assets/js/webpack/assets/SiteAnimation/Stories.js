@@ -1,33 +1,28 @@
 import Splide from '@splidejs/splide';
-import Glide from '@glidejs/glide';
 
 export default class Impact {
   constructor() {
     this.slider = null;
   }
   init() {
-    this.parent = document.querySelector('.js-impact-slider');
+    this.parent = document.querySelector('.js-stories-slider');
     if (!this.parent) return;
 
     this.sliderInit();
   }
 
   sliderInit() {
-    var splide = new Splide('.js-impact-slider .splide', {
+    var splide = new Splide('.js-stories-slider .splide', {
       type: 'loop',
-      perPage: 2.5,
+      perPage: 1.5,
       // arrows: false,
-      gap: '1.25rem',
+      gap: '7.75rem',
       focus: 'center',
       pagination: false,
       breakpoints: {
-        1100: {
-          perPage: 2,
-          gap: '.75rem',
-          focus: 0,
-        },
         768: {
           perPage: 1,
+          gap: '0.75rem',
         },
       },
     });

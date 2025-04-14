@@ -12,7 +12,7 @@
 // }
 
 .ecosystem__title {
-  margin: 0 -1px toRem(15);
+  margin-bottom: toRem(15);
   text-align: center;
 
   @media screen and (min-width: ($tablet + 1)) {
@@ -37,6 +37,6 @@
   @media screen and (min-width: ($tablet + 1)) {
     grid-template-columns: repeat(2, 1fr);
     gap: toRem(40);
-    margin-top: toRem(60);
+    margin-top: toRem(56);
   }
 }

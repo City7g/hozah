@@ -1,0 +1,29 @@
+<div class="c-testimonial">
+  <div class="c-testimonial__logo">
+    {{>components/lazyImg path=(concat "img/slide-logo/" image ) class="c-testimonial__img" }}
+
+    <div class="c-testimonial__name">
+      {{ name }}
+    </div>
+
+    <div class="c-testimonial__status">
+      {{ status }}
+    </div>
+  </div>
+
+  <div class="c-testimonial__desc">
+    <div class="title-h4 c-testimonial__green">
+      {{ percent }}
+    </div>
+
+    <h4 class="title-h4 c-testimonial__title">
+      {{ title }}
+    </h4>
+
+    <p class="c-testimonial__text">
+      {{ text }}
+    </p>
+  </div>
+
+  {{>button tag="a" href="#" text=btn class="c-testimonial__btn" }}
+</div>

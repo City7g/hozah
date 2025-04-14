@@ -1,4 +1,6 @@
 .styleBoxes section.why {
+  padding-top: toRem(128);
+
   @media screen and (max-width: $tablet) {
     padding: toRem(80) 0 toRem(471);
   }

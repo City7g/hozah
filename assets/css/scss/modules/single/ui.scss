@@ -59,3 +59,16 @@
     grid-template-columns: repeat(6, 1fr);
   }
 }
+
+.ui__2-out-of-3 {
+  display: grid;
+  gap: toRem(16);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  & > * {
+    grid-column: span 2;
+  }
+}

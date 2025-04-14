@@ -8,21 +8,18 @@
     </p>
   </div>
 
-  <div class="impact__slider">
-    <div class="splide">
-      <div class="splide__track">
-        <div class="splide__list">
-          {{#each impact.list}}
-          <div class="splide__slide">
-            {{>components/case }}
-          </div>
-          {{/each}}
+  <div class="splide impact__slider">
+    <div class="splide__track">
+      <div class="splide__list">
+        {{#each impact.list}}
+        <div class="splide__slide">
+          {{>components/case }}
         </div>
+        {{/each}}
       </div>
-
-      {{>components/arrows }}
-      {{!-- <div class="splide__arrows"></div> --}}
     </div>
+
+    {{>components/arrows }}
 
     {{!-- <div class="glide">
       <div class="glide__track" data-glide-el="track">

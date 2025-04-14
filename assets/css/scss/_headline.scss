@@ -60,6 +60,12 @@
   letter-spacing: 0;
 }
 
+.text-body {
+  font-size: toRem(16);
+  line-height: toRem(22);
+  font-weight: 400;
+}
+
 .text-subtitle {
   font-size: toRem(16);
   line-height: toRem(19);

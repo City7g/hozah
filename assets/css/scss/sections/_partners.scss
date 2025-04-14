@@ -1,4 +1,6 @@
 .styleBoxes section.partners {
+  padding: toRem(60) 0;
+
   @media screen and (max-width: $tablet) {
     padding: toRem(64) 0 toRem(138);
   }

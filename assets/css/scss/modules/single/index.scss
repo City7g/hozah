@@ -14,7 +14,8 @@
   color: #f9f9f9;
 
   @media screen and (min-width: ($tablet + 1)) {
-    padding: toRem(164) 0 toRem(60);
+    // padding: toRem(164) 0 toRem(60);
+    padding: toRem(164) 0 toRem(48);
   }
 }
 
@@ -95,7 +96,7 @@
   margin-top: toRem(24);
 
   @media screen and (min-width: ($tablet + 1)) {
-    margin-top: toRem(66);
+    margin-top: toRem(45);
   }
 }
 

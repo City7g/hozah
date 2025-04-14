@@ -15,6 +15,10 @@
   @media screen and (max-width: $tablet) {
     margin: auto;
   }
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-bottom: toRem(27);
+  }
 }
 
 .c-category__image img {
@@ -26,7 +30,7 @@
 .c-category__text {
   @media screen and (min-width: ($tablet + 1)) {
     position: absolute;
-    top: calc(100% + toRem(8));
+    top: calc(100% - toRem(19));
     left: 50%;
     width: 150%;
     transform: translateX(-50%);

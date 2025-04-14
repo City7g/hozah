@@ -44,5 +44,16 @@
       "image": "item-1",
       "btn": "Learn more"
     }
+  ],
+  "testimonials": [
+    {
+      "title": "Increased revenue",
+      "text": "Hozah’s digital-first approach transformed our car park, increasing revenue by 20% while improving compliance and customer satisfaction.",
+      "percent": "20%",
+      "name": "Julie Webb",
+      "status": "General Manager",
+      "image": "item-1",
+      "btn": "Read their case"
+    }
   ]
 }

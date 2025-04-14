@@ -153,7 +153,9 @@ import Modals from './SiteAnimation/Modals';
 import Marquee from './SiteAnimation/Marquee';
 import CustomSelect from './SiteAnimation/CustomSelect';
 import Awards from './SiteAnimation/Awards';
+import Stories from './SiteAnimation/Stories';
 import Impact from './SiteAnimation/Impact';
+import FooterForm from './SiteAnimation/FooterForm';
 window.Header = Header;
 window.SiteWave = SiteWave;
 window.FadePage = FadePage;
@@ -162,31 +164,6 @@ window.Modals = Modals;
 window.Marquee = Marquee;
 window.CustomSelect = CustomSelect;
 window.Awards = Awards;
+window.Stories = Stories;
 window.Impact = Impact;
-
-import Swiper from 'swiper';
-import { Navigation } from 'swiper/modules';
-
-window.addEventListener('load', function () {
-  new Swiper('.js-stories-slider', {
-    modules: [Navigation],
-    centeredSlides: true,
-    direction: 'horizontal',
-    loop: true,
-    slidesPerView: 'auto',
-    spaceBetween: 32,
-    mousewheel: true,
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-      },
-      1101: {
-        slidesPerView: 1.5,
-      },
-    },
-    navigation: {
-      nextEl: '.js-stories-slider .stories__slider-btn--next',
-      prevEl: '.js-stories-slider .stories__slider-btn--prev',
-    },
-  });
-});
+window.FooterForm = FooterForm;

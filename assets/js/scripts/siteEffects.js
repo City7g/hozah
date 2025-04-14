@@ -43,10 +43,18 @@ function initSiteEffects(fadePage = true, middle = false) {
       requestAnimationFrame(() => window.Awards.init());
       if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Awards);
     }
+    if (document.querySelector('.js-stories-slider')) {
+      window.Stories = new window.Stories();
+      requestAnimationFrame(() => window.Stories.init());
+      if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Stories);
+    }
     if (document.querySelector('.js-impact-slider')) {
       window.Impact = new window.Impact();
       requestAnimationFrame(() => window.Impact.init());
       if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Impact);
+    }
+    if (document.querySelector('.js-footer-form')) {
+      requestAnimationFrame(() => FooterForm.init());
     }
   } else if (!fadePage) {
     document.body.classList.add('transition0s', 'animation0s');

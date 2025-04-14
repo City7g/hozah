@@ -29,7 +29,7 @@
   @media screen and (min-width: ($tablet + 1)) {
     grid-template-columns: repeat(4, 1fr);
     justify-items: flex-start;
-    gap: toRem(75) toRem(20);
-    margin: toRem(70) 0 0;
+    gap: toRem(48) toRem(20);
+    margin: toRem(77) 0 0;
   }
 }
