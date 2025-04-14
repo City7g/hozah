@@ -16,6 +16,8 @@ function preventDefault(e) {
     area = e.target.closest('.modal-inner-second');
   } else if (e.target.closest('.modal-inner')) {
     area = e.target.closest('.modal-inner');
+  } else if (e.target.closest('.allow-scroll')) {
+    area = e.target.closest('.allow-scroll');
   } else {
     area = e.target;
   }

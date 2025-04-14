@@ -14,6 +14,8 @@ export default new (class Marquee extends SiteAnimation {
     this.isInitialized = false;
     this.lastScrollY = 0;
     this.scrollThreshold = 10;
+    this.isHovered = false;
+    this.animationSpeed = 50;
   }
 
   init() {
@@ -110,8 +112,7 @@ export default new (class Marquee extends SiteAnimation {
       return;
     }
 
-    const speed = 50;
-    const duration = originalSetWidth / speed;
+    const duration = originalSetWidth / this.animationSpeed;
 
     this.timeline = gsap.timeline({ repeat: -1, paused: true });
 
@@ -127,8 +128,6 @@ export default new (class Marquee extends SiteAnimation {
   }
 
   _addEventListeners() {
-    this._boundPauseAnimation = this._pauseAnimation.bind(this);
-    this._boundPlayAnimation = this._playAnimation.bind(this);
     this._boundHandleResize = this._debounce(
       this._handleResize.bind(this),
       250,
@@ -137,9 +136,30 @@ export default new (class Marquee extends SiteAnimation {
       this._handleScroll.bind(this),
       100,
     );
+    this._boundHandleHover = this._handleHover.bind(this);
 
-    this.container.addEventListener('mouseenter', this._boundPauseAnimation);
-    this.container.addEventListener('mouseleave', this._boundPlayAnimation);
+    this.container.addEventListener('mouseenter', this._boundHandleHover);
+    this.container.addEventListener('mouseleave', this._boundHandleHover);
+    this.container.addEventListener('touchstart', this._boundHandleHover);
+    this.container.addEventListener('touchend', this._boundHandleHover);
+
+    this.intersectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          this.isIntersecting = entry.isIntersecting;
+          if (entry.isIntersecting && !this.isHovered) {
+            this._playAnimation();
+          } else {
+            this._pauseAnimation();
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      },
+    );
+
+    this.intersectionObserver.observe(this.container);
 
     this.resizeObserver = new ResizeObserver(this._boundHandleResize);
     this.resizeObserver.observe(this.container);
@@ -149,14 +169,10 @@ export default new (class Marquee extends SiteAnimation {
 
   _removeEventListeners() {
     if (this.container) {
-      this.container.removeEventListener(
-        'mouseenter',
-        this._boundPauseAnimation,
-      );
-      this.container.removeEventListener(
-        'mouseleave',
-        this._boundPlayAnimation,
-      );
+      this.container.removeEventListener('mouseenter', this._boundHandleHover);
+      this.container.removeEventListener('mouseleave', this._boundHandleHover);
+      this.container.removeEventListener('touchstart', this._boundHandleHover);
+      this.container.removeEventListener('touchend', this._boundHandleHover);
     }
     if (this.resizeObserver) {
       this.resizeObserver.disconnect();
@@ -217,6 +233,17 @@ export default new (class Marquee extends SiteAnimation {
     }
 
     this.lastScrollY = currentScrollY;
+  }
+
+  _handleHover(event) {
+    const isEnter = event.type === 'mouseenter' || event.type === 'touchstart';
+    this.isHovered = isEnter;
+
+    if (isEnter) {
+      this.timeline?.pause();
+    } else if (this.isIntersecting) {
+      this.timeline?.play();
+    }
   }
 
   _debounce(func, wait) {

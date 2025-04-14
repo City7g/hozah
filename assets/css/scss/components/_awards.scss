@@ -90,6 +90,16 @@
   }
 }
 
+.awards__prev {
+  left: toRem(-28);
+  transform: translateY(-50%);
+}
+
+.awards__next {
+  right: toRem(-28);
+  transform: translateY(-50%);
+}
+
 .awards__prev svg,
 .awards__next svg {
   width: 100%;
@@ -102,14 +112,8 @@
   fill: #aaaaaa;
 }
 
-.awards__prev {
-  left: toRem(-28);
-  transform: translateY(-50%);
-}
-
-.awards__next {
-  right: toRem(-28);
-  transform: translateY(-50%);
+.awards__next svg {
+  transform: scaleX(-1);
 }
 
 .awards__pagination {

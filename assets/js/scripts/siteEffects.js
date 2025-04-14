@@ -39,19 +39,32 @@ function initSiteEffects(fadePage = true, middle = false) {
       requestAnimationFrame(() => CustomSelect.init());
     }
     if (document.querySelector('.js-awards')) {
-      window.Awards = new window.Awards();
-      requestAnimationFrame(() => window.Awards.init());
-      if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Awards);
+      if (typeof window.Awards === 'function') {
+        window.Awards = new window.Awards();
+      }
+      requestAnimationFrame(() => Awards.init());
+      if (typeof window.Awards === 'function') {
+        if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Awards);
+      }
     }
     if (document.querySelector('.js-stories-slider')) {
-      window.Stories = new window.Stories();
+      if (typeof window.Stories === 'function') {
+        window.Stories = new window.Stories();
+      }
       requestAnimationFrame(() => window.Stories.init());
-      if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Stories);
+
+      if (typeof window.Stories === 'function') {
+        if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Stories);
+      }
     }
     if (document.querySelector('.js-impact-slider')) {
-      window.Impact = new window.Impact();
+      if (typeof window.Impact === 'function') {
+        window.Impact = new window.Impact();
+      }
       requestAnimationFrame(() => window.Impact.init());
-      if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Impact);
+      if (typeof window.Impact === 'function') {
+        if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Impact);
+      }
     }
     if (document.querySelector('.js-footer-form')) {
       requestAnimationFrame(() => FooterForm.init());

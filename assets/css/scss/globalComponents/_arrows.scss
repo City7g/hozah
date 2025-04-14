@@ -26,3 +26,7 @@
 .arrows__prev + .arrows__next {
   margin-left: toRem(8);
 }
+
+.arrows__next svg {
+  transform: scaleX(-1);
+}

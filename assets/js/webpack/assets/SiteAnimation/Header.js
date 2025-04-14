@@ -17,6 +17,15 @@ export default new (class Header extends SiteAnimation {
 
     this.addListener(window, 'scroll', this.handleScroll.bind(this));
     this.addListener(this.burger, 'click', this.toggleMenu.bind(this));
+
+    // if (isTablet) {
+    //   console.log(this.header.querySelector('.header__list'));
+
+    //   this.header.querySelector('.header__list')?.classList.add('allow-scroll');
+    //   this.header
+    //     .querySelector('.header__list')
+    //     ?.setAttribute('data-lenis-prevent', '');
+    // }
   }
 
   toggleMenu() {

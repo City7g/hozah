@@ -72,6 +72,13 @@
   }
 }
 
+.header__list {
+  @media screen and (max-width: $tablet) {
+    overflow: auto;
+    overscroll-behavior: contain;
+  }
+}
+
 .header__list ul {
   display: flex;
   flex-direction: column;
