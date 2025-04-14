@@ -1,4 +1,4 @@
-<div class="modal blueContent fullHeight" id="advantages">
+{{!-- <div class="modal blueContent fullHeight" id="thanks">
   <div class="modal-inner">
     {{>button text=button icon="close" type="iconOnly" class="js-close-modal close-modal tabletOnly"}}
     <div class="modal-inner-second">
@@ -12,6 +12,16 @@
       </div>
     </div>
   </div>
+</div> --}}
+
+<div class="popup" id="thanks">
+  <div class="popup__wrap">
+    <div class="popup__content">
+      <h4 class="title-h3 popup__title">{{ modals.title }}</h4>
+      <p class="text-subtitle modal__text">{{ modals.text }}</p>
+      {{>button text=modals.btn }}
+    </div>
+  </div>
 </div>
 
-{{!-- Modals.openModal('#advantages'); --}}
+{{!-- Modals.openModal('#thanks'); --}}

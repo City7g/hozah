@@ -40,10 +40,10 @@ export default new (class Modals extends SiteAnimation {
       });
     });
 
-    const links = [...document.querySelectorAll('.advantages-details a')];
-    links.forEach((link) => {
-      link.classList.add('underline');
-    });
+    // const links = [...document.querySelectorAll('.advantages-details a')];
+    // links.forEach((link) => {
+    //   link.classList.add('underline');
+    // });
   }
 
   /**
@@ -103,7 +103,7 @@ export default new (class Modals extends SiteAnimation {
         duration: this.duration,
       },
     );
-    modalInnerSecond = block.querySelector('.modal-inner-second');
+    modalInnerSecond = block.querySelector('.popup');
     if (modalInnerSecond) {
       setTimeout(() => modalInnerSecond.scrollTo(0, 0), this.duration + 100);
     }
