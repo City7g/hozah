@@ -33,6 +33,7 @@ export default class Awards {
       on: {
         slideChange: () => {
           this.checkSlidePosition();
+          this.slider.updateProgress();
         },
         init: () => {
           this.checkSlidePosition();

@@ -1,9 +1,9 @@
 .c-label {
-  margin-bottom: toRem(20);
+  // margin-bottom: toRem(20);
   display: block;
 
   @media (max-width: $mobile) {
-    margin-bottom: toRem(40);
+    // margin-bottom: toRem(40);
   }
 
   &.textareaLabel {
@@ -277,7 +277,8 @@
 }
 
 .c-label__error,
-.c-checkbox__error {
+.c-checkbox__error,
+.c-select__error {
   margin-top: toRem(8);
   display: none;
   font-size: toRem(14);
@@ -286,16 +287,15 @@
   color: #d93400;
 }
 
-.c-label.--error .c-label__error {
-  display: block;
-}
-
-.c-checkbox.--error .c-checkbox__error {
+.c-label.--error .c-label__error,
+.c-checkbox.--error .c-checkbox__error,
+.c-select.--error .c-select__error {
   display: block;
 }
 
 .c-label.--error input,
-.c-label.--error textarea {
+.c-label.--error textarea,
+.c-select.--error .c-select__box {
   color: #d93400;
   border-color: #d93400;
 }

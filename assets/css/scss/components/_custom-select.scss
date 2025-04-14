@@ -9,7 +9,7 @@
 
 .c-select__box {
   position: relative;
-  padding: toRem(10);
+  padding: toRem(9) toRem(15);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -53,6 +53,9 @@
 }
 
 .c-select__arrow {
+  position: absolute;
+  right: toRem(14);
+  transform: translateY(-50%);
   width: toRem(24);
   height: toRem(24);
   transition: 0.3s ease;

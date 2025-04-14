@@ -42,3 +42,11 @@
     grid-row: span 2;
   }
 }
+
+.news .btn {
+  color: #064093;
+
+  @media screen and (max-width: $tablet) {
+    order: 1;
+  }
+}

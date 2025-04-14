@@ -6,7 +6,30 @@
   }
 }
 
+.why {
+  position: relative;
+}
+
+.why__bg {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    display: none;
+  }
+}
+
+.why__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  offset-position: bottom;
+}
+
 .why__wrap {
+  position: relative;
   margin-left: toRem(52);
 
   @media screen and (min-width: ($tablet + 1)) {

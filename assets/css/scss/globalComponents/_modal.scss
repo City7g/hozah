@@ -7,7 +7,7 @@
   top: 0;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(black, 0.6);
   // pointer-events: none;
   // transition: opacity 0.4s, visibility 0.4s;
   z-index: 999;
@@ -184,8 +184,7 @@
   }
 }
 .modalContent {
-  padding: toRem(60) toRem(35);
-  padding-right: toRem(110);
+  padding: toRem(97) toRem(180) toRem(97) toRem(60);
   background: $white;
   font-size: toRem(14);
   font-style: normal;
@@ -194,24 +193,7 @@
   @include minNotebook {
     box-shadow: 0 toRem(4) toRem(26.9) toRem(-12) #d0cbd9;
   }
-  border-radius: toRem(24);
-  .modal-title,
-  h3 {
-    font-size: toRem(48);
-    font-weight: 400;
-    line-height: 110%; /* 52.8px */
-    letter-spacing: toRem(-1.92);
-    text-transform: capitalize;
-    margin-bottom: toRem(40);
-    padding-right: toRem(70);
-    @media (max-width: $tablet) {
-      font-size: toRem(32);
-      font-weight: 400;
-      line-height: 110%; /* 35.2px */
-      letter-spacing: toRem(-1.28);
-      margin-bottom: toRem(24);
-      padding-right: toRem(30);
-    }
+  .modal-title {
   }
 
   h5 {
@@ -231,4 +213,12 @@
   @media (max-width: $tablet) {
     padding: toRem(32) toRem(24);
   }
+}
+
+.modal__title {
+  margin-bottom: toRem(24);
+}
+
+.modal .btn {
+  margin-top: toRem(40);
 }

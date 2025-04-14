@@ -14,7 +14,7 @@
   cursor: pointer;
   transition: $transition;
   text-decoration: none !important;
-  color: $white;
+  color: #fff;
   padding: toRem(11) toRem(19);
   @include noTap;
   display: inline-flex;
@@ -27,7 +27,7 @@
   letter-spacing: 0;
 
   @include hover {
-    color: $white;
+    // color: $white;
   }
 
   &.secondary {
@@ -37,6 +37,7 @@
   &.blue {
     border-color: #2377db;
     background-color: #2377db;
+    color: #fff;
   }
 
   &[disabled],

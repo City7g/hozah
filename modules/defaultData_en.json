@@ -1,6 +1,6 @@
 {
   "test": "lorem",
-  "projectVersion": "1.1.54",
+  "projectVersion": "1.1.55",
   "buildDate": "14.4.2025",
   "header": {
     "links": [
@@ -97,5 +97,10 @@
     "Hozah Autopay",
     "Pay by Web",
     "Season Tickes"
-  ]
+  ],
+  "modals": {
+    "title": "Thank you!",
+    "text": "Your message has been sent successfully — we’ll be in touch soon.",
+    "btn": "Back to homepage"
+  }
 }

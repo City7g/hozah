@@ -28,7 +28,24 @@
     margin-top: toRem(24);
   }
 
-  @media screen and (min-width: ($tablet + 1)) {
-    display: none !important;
+  // @media screen and (min-width: ($tablet + 1)) {
+  //   display: none !important;
+  // }
+}
+
+@media screen and (min-width: ($tablet + 1)) {
+  .stories .arrows__prev,
+  .stories .arrows__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .stories .arrows__prev {
+    left: 14%;
+  }
+
+  .stories .arrows__next {
+    right: 14%;
   }
 }

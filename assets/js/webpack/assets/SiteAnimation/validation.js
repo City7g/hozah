@@ -53,6 +53,7 @@ function validationFunc(form, callback) {
 
   const labels = form.querySelectorAll('.c-label');
   const checkboxes = form.querySelectorAll('.c-checkbox');
+  const selects = form.querySelectorAll('.c-select');
 
   labels.forEach((label) => {
     label.querySelector('input').addEventListener('input', () => {
@@ -63,6 +64,14 @@ function validationFunc(form, callback) {
   checkboxes.forEach((checkbox) => {
     checkbox.querySelector('input').addEventListener('change', () => {
       checkbox.classList.remove('--error');
+    });
+  });
+
+  selects.forEach((select) => {
+    select.querySelectorAll('input').forEach((input) => {
+      input.addEventListener('change', () => {
+        select.classList.remove('--error');
+      });
     });
   });
 
@@ -112,6 +121,15 @@ function validationFunc(form, callback) {
   [...form.querySelectorAll('textarea')].forEach((label) => {
     if (label.value === '' && label.required) {
       showLabelError(label, errors['required'][lang]['name']);
+
+      submitError = true;
+    }
+  });
+
+  [...form.querySelectorAll('.c-select')].forEach((select) => {
+    if (!select.querySelector('input:checked')) {
+      // showLabelError(label, errors['required'][lang]['name']);
+      select.classList.add('--error');
 
       submitError = true;
     }

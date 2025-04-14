@@ -3,7 +3,15 @@
 .awards {
   position: relative;
   // overflow: visible;
-  width: toRem(339);
+  width: toRem(240);
+
+  @media screen and (max-width: $tablet) {
+    margin-left: toRem(28);
+  }
+
+  @media screen and (min-width: ($tablet + 1)) {
+    width: toRem(339);
+  }
 }
 
 .awards .glide__slides {
@@ -73,9 +81,13 @@
 .awards__prev,
 .awards__next {
   position: absolute;
-  top: toRem(24);
+  top: toRem(18);
   width: toRem(24);
   height: toRem(24);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    top: toRem(24);
+  }
 }
 
 .awards__prev svg,
