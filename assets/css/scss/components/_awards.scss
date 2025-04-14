@@ -41,6 +41,15 @@
   width: toRem(48);
   height: 100%;
   z-index: 1;
+  transition: 0.3s transform;
+}
+
+.awards__left.hide {
+  transform: translateX(-100%);
+}
+
+.awards__right.hide {
+  transform: translateX(100%);
 }
 
 .awards__left {

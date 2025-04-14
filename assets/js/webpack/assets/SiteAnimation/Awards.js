@@ -30,7 +30,34 @@ export default class Awards {
         el: '.awards__pagination',
         clickable: true,
       },
+      on: {
+        slideChange: () => {
+          this.checkSlidePosition();
+        },
+        init: () => {
+          this.checkSlidePosition();
+        },
+      },
     });
+  }
+
+  checkSlidePosition() {
+    if (!this.slider) return;
+
+    const isFirst = this.slider.isBeginning;
+    const isLast = this.slider.isEnd;
+
+    if (isFirst) {
+      document.querySelector('.awards__left').classList.add('hide');
+    } else {
+      document.querySelector('.awards__left').classList.remove('hide');
+    }
+
+    if (isLast) {
+      document.querySelector('.awards__right').classList.add('hide');
+    } else {
+      document.querySelector('.awards__right').classList.remove('hide');
+    }
   }
 
   destroy() {
