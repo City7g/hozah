@@ -14,6 +14,7 @@
 }
 
 .popup__wrap {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,6 +26,12 @@
   @media screen and (min-width: ($tablet + 1)) {
     padding: toRem(60);
   }
+}
+
+.popup__close {
+  position: absolute;
+  top: toRem(20);
+  right: toRem(20);
 }
 
 .popup__content {
@@ -39,7 +46,7 @@
   }
 }
 
-.popup__content {
+.popup__text {
   @media screen and (min-width: ($tablet + 1)) {
     max-width: 75%;
   }

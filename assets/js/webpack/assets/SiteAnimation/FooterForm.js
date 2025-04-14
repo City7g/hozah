@@ -66,12 +66,29 @@ export default new (class FormCompany extends SiteAnimation {
     // });
 
     sendForm(parent, () => {
-      // this.showSuccess(
-      //   form.closest('.js-contact').querySelector('.contact-form__success'),
-      // );
+      Modals.openModal('#thanks');
+      this.removeValue(parent);
     });
 
     parent.classList.add('inited');
+  }
+
+  removeValue(parent) {
+    parent.querySelectorAll('.c-label').forEach((label) => {
+      label.querySelector('input').value = '';
+    });
+
+    parent.querySelectorAll('.c-checkbox').forEach((checkbox) => {
+      checkbox.querySelector('input').checked = false;
+    });
+
+    parent.querySelectorAll('.c-select').forEach((select) => {
+      select.querySelectorAll('input').forEach((input) => {
+        input.checked = false;
+      });
+      select.classList.remove('has-selection');
+      select.querySelector('.c-select__tags').removeAttribute('style');
+    });
   }
 
   checkNotEmpty(field, type) {
