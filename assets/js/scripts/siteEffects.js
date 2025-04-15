@@ -35,6 +35,9 @@ function initSiteEffects(fadePage = true, middle = false) {
     if (document.querySelector('.js-marquee')) {
       requestAnimationFrame(() => Marquee.init());
     }
+    if (document.querySelector('.js-ecosystem')) {
+      requestAnimationFrame(() => Ecosystem.init());
+    }
     if (document.querySelector('.c-select')) {
       requestAnimationFrame(() => CustomSelect.init());
     }
