@@ -25,6 +25,13 @@
   font-size: toRem(16);
   line-height: toRem(20);
   letter-spacing: 0;
+  transition: 0.3s;
+  transition-property: background-color, border-color, color;
+
+  &:active {
+    background-color: #8bd4c5;
+    border-color: #8bd4c5;
+  }
 
   @include hover {
     // color: $white;
@@ -32,6 +39,10 @@
 
   &.secondary {
     background-color: transparent;
+
+    &:active {
+      border-color: #8bd4c5;
+    }
   }
 
   &.blue {
