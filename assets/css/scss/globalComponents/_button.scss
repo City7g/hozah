@@ -31,10 +31,11 @@
   &:active {
     background-color: #8bd4c5;
     border-color: #8bd4c5;
+    color: #fff;
   }
 
   @include hover {
-    // color: $white;
+    color: #fff;
   }
 
   &.secondary {

@@ -84,6 +84,7 @@
   top: toRem(18);
   width: toRem(24);
   height: toRem(24);
+  cursor: pointer;
 
   @media screen and (min-width: ($tablet + 1)) {
     top: toRem(24);

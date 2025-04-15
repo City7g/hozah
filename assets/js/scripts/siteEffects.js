@@ -13,7 +13,9 @@ function initSiteEffects(fadePage = true, middle = false) {
         });
       }
     });
-    requestAnimationFrame(() => CustomFade.init());
+
+    requestAnimationFrame(() => FadeElems.init());
+    // requestAnimationFrame(() => CustomFade.init());
     requestAnimationFrame(() => Modals.init());
 
     // wpcf7

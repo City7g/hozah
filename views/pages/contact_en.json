@@ -23,5 +23,8 @@
         "border": true
       }
     ]
+  },
+  "schedule": {
+    "title": "Schedule a <span>free consultation</span>"
   }
 }

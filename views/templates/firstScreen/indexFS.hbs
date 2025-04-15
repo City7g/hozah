@@ -8,15 +8,21 @@
       {{>components/lazyImg path="img/bg/index" mobilePath="img/bg/index-mobile" ext="png" class="f-index__bg" }}
 
       <div class="f-index__content">
-        <h1 class="title-h1 f-index__title">{{{ first.title }}}</h1>
-        <h2 class="title-h4 f-index__subtitle">{{ first.subtitle }}</h2>
-        <p class="text-main f-index__text">{{ first.text }}</p>
-        <div class="f-index__bottom">
+        <h1 class="title-h1 fadeEl f-index__title">
+          {{{ first.title }}}
+        </h1>
+        <h2 class="title-h4 fadeEl f-index__subtitle" data-delay="100">
+          {{ first.subtitle }}
+        </h2>
+        <p class="text-main fadeEl f-index__text" data-delay="200">
+          {{ first.text }}
+        </p>
+        <div class="f-index__bottom fadeEl" data-delay="300">
           {{>button tag="a" href="#" text=first.btn class="f-index__btn" }}
           {{>components/truspilot }}
         </div>
 
-        <div class="f-index__awards">
+        <div class="f-index__awards fadeEl" data-delay="500">
           <h4 class="f-index__awards-title">Our Awards</h4>
           {{>components/awards }}
         </div>

@@ -46,6 +46,10 @@
 .news .btn {
   color: #064093;
 
+  @include hover {
+    color: #064093;
+  }
+
   @media screen and (max-width: $tablet) {
     order: 1;
   }

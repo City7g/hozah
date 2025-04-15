@@ -1,11 +1,11 @@
 <section class="news" data-acf-block="news" data-acf-label="news" data-acf-style="news">
   <div class="container">
     <div class="news__wrap">
-      <h2 class="title-h1 news__title">
+      <h2 class="title-h1 fadeEl news__title">
         {{{ news.title }}}
       </h2>
 
-      {{>button tag="a" href="#" text=news.btn type="secondary" }}
+      {{>button tag="a" href="#" text=news.btn class="fadeEl" type="secondary" }}
 
       <div class="news__list">
         {{#each news.list }}
