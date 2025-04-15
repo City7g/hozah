@@ -1,11 +1,19 @@
-<div class="c-benefit">
+<div class="c-benefit{{#if border}} c-benefit--border{{/if}}">
   {{>components/lazyImg path=(concat "img/icons/" image ) ext="png" class="c-benefit__image" }}
 
   <h4 class="title-h4 c-benefit__title">
     {{{ title }}}
   </h4>
 
+  {{#if text }}
   <p class="text-main c-benefit__text">
     {{ text }}
   </p>
+  {{/if}}
+
+  {{#if link }}
+  <a href="#" class="c-benefit__link">
+    {{ link }}
+  </a>
+  {{/if}}
 </div>

@@ -1,0 +1,27 @@
+{
+  "title": "contact",
+  "first": {
+    "title": "Let’s connect and <span>create solutions</span> together",
+    "text": "Prefer a direct approach? Reach us through the contact details below.  Our team is ready to assist you with any inquiries or support you need.",
+    "list": [
+      {
+        "title": "Our <span>location</span>",
+        "text": "Croydon,  London",
+        "image": "item-1",
+        "border": true
+      },
+      {
+        "title": "<span>Email</span> us at",
+        "link": "hello@hozah.com",
+        "image": "item-1",
+        "border": true
+      },
+      {
+        "title": "<span>Follow</span> us on",
+        "link": "Linkedin",
+        "image": "item-1",
+        "border": true
+      }
+    ]
+  }
+}

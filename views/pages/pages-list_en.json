@@ -3,6 +3,10 @@
     "title": "Pages list",
     "list": [
         {
+            "name": "contact",
+            "slug": "contact"
+        },
+        {
             "name": "Main page",
             "slug": "/"
         },
@@ -11,5 +15,5 @@
             "slug": "ui"
         }
     ],
-    "total": 2
+    "total": 3
 }

@@ -1,0 +1,30 @@
+<section id="heroScreen" class="f-contact heroScreen pageHeroScreen {{#if build}}styleBoxes{{/if}}"
+  data-animated="false" {{#if build}} data-style-loaded="false" data-fs="fs-style" data-style-href="fs-path" {{/if}}>
+
+  <div class="container">
+    <div class="f-contact__wrap">
+      {{!-- {{>components/lazyImg path="img/bg/index" mobilePath="img/bg/index-mobile" ext="png" class="f-contact__bg"
+      }} --}}
+
+      <div class="f-contact__list">
+        {{#each first.list }}
+        {{>components/benefit }}
+        {{/each}}
+      </div>
+
+      <div class="f-contact__content">
+        <h1 class="title-h2 f-contact__title">{{{ first.title }}}</h1>
+        <p class="text-subtitle f-contact__text">{{ first.text }}</p>
+        {{!-- <div class="f-contact__bottom">
+          {{>button tag="a" href="#" text=first.btn class="f-contact__btn" }}
+          {{>components/truspilot }}
+        </div>
+
+        <div class="f-contact__awards">
+          <h4 class="f-contact__awards-title">Our Awards</h4>
+          {{>components/awards }}
+        </div> --}}
+      </div>
+    </div>
+  </div>
+</section>

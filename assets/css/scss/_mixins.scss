@@ -242,3 +242,39 @@
 @mixin maskSafari {
   -webkit-mask: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC); // fix for safari
 }
+
+@mixin animatedUnderlineBefore {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: currentColor;
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.5s;
+}
+
+@mixin animatedUnderlineHover {
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+@mixin animatedUnderline {
+  position: relative;
+  width: fit-content;
+
+  &:before {
+    @include animatedUnderlineBefore;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      &:before {
+        @include animatedUnderlineHover;
+      }
+    }
+  }
+}
