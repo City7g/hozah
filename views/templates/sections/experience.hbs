@@ -1,0 +1,18 @@
+<section class="experience" data-acf-block="experience" data-acf-label="Experience" data-acf-style="experience">
+  <div class="container">
+    <div class="experience__wrap">
+      <h2 class="title-h2 fadeEl experience__title">
+        {{{ experience.title }}}
+      </h2>
+      <p class="text-main fadeEl experience__text">
+        {{{ experience.text }}}
+      </p>
+
+      <div class="experience__list">
+        {{#each experience.list }}
+        {{>components/service }}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

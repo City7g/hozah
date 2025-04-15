@@ -34,7 +34,6 @@ export default new (class CustomSelect extends SiteAnimation {
       });
     }
 
-    // Добавляем обработчик клика вне селекта
     document.addEventListener('click', this.handleOutsideClick.bind(this));
   }
 
@@ -42,10 +41,8 @@ export default new (class CustomSelect extends SiteAnimation {
     if (parent.classList.contains('init')) return;
     parent.classList.add('init');
 
-    // Добавляем tabindex для фокусировки с клавиатуры
     box.setAttribute('tabindex', '0');
 
-    // Инициализация начального состояния
     gsap.set(dropdown, {
       opacity: 0,
       y: 10,
@@ -57,7 +54,6 @@ export default new (class CustomSelect extends SiteAnimation {
       y: 20,
     });
 
-    // Обработчик клика по боксу
     box.addEventListener('click', (e) => {
       if (!e.target.closest('.c-select__tag-remove')) {
         e.stopPropagation();
@@ -65,7 +61,6 @@ export default new (class CustomSelect extends SiteAnimation {
       }
     });
 
-    // Обработчик нажатия клавиш
     box.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
@@ -73,7 +68,6 @@ export default new (class CustomSelect extends SiteAnimation {
       }
     });
 
-    // Обработчик изменения чекбоксов
     checkboxes.forEach((checkbox) => {
       checkbox.addEventListener('change', () => {
         this.updateSelectedText(parent, text, tags, checkboxes);
@@ -84,7 +78,6 @@ export default new (class CustomSelect extends SiteAnimation {
   toggleDropdown(parent, dropdown, items) {
     const isOpen = parent.classList.contains('is-open');
 
-    // Закрываем все другие селекты
     this.instances.forEach(
       ({ parent: otherParent, dropdown: otherDropdown, items: otherItems }) => {
         if (otherParent !== parent) {
@@ -94,7 +87,6 @@ export default new (class CustomSelect extends SiteAnimation {
       },
     );
 
-    // Переключаем текущий селект
     parent.classList.toggle('is-open');
 
     if (!isOpen) {
@@ -147,7 +139,6 @@ export default new (class CustomSelect extends SiteAnimation {
       <svg class="c-select__tag-remove" data-value="${value}"><use xlink:href="/img/symbol/svg/sprite.symbol.svg#close"></use></svg>
     `;
 
-    // Начальное состояние тега для анимации
     gsap.set(tag, {
       opacity: 0,
       scale: 0.8,
@@ -159,7 +150,6 @@ export default new (class CustomSelect extends SiteAnimation {
       .addEventListener('click', (e) => {
         e.stopPropagation();
 
-        // Анимация удаления тега перед изменением чекбокса
         gsap.to(tag, {
           opacity: 0,
           scale: 0.8,
@@ -193,7 +183,6 @@ export default new (class CustomSelect extends SiteAnimation {
         value: checkbox.value,
       }));
 
-    // Устанавливаем display: flex, если есть выбранные элементы
     if (selectedOptions.length > 0) {
       gsap.set(tagsContainer, { display: 'flex' });
       parent.classList.add('has-selection');
@@ -202,7 +191,6 @@ export default new (class CustomSelect extends SiteAnimation {
       parent.classList.remove('has-selection');
     }
 
-    // Сохраняем предыдущие и новые значения для сравнения
     const previousValues = Array.from(
       tagsContainer.querySelectorAll('.c-select__tag-remove'),
     ).map((el) => el.dataset.value);
@@ -213,7 +201,6 @@ export default new (class CustomSelect extends SiteAnimation {
     const allSelectionsRemoved =
       selectedOptions.length === 0 && previousValues.length > 0;
 
-    // Найдем элементы, которые нужно удалить (есть в previous, но нет в new)
     const tagsToRemove = Array.from(
       tagsContainer.querySelectorAll('.c-select__tag'),
     ).filter((tag) => {
@@ -221,7 +208,6 @@ export default new (class CustomSelect extends SiteAnimation {
       return !newValues.includes(value);
     });
 
-    // Удаляем теги с анимацией
     if (tagsToRemove.length > 0) {
       gsap.to(tagsToRemove, {
         opacity: 0,
@@ -235,7 +221,6 @@ export default new (class CustomSelect extends SiteAnimation {
         },
       });
     } else if (allSelectionsRemoved) {
-      // Если теги были сняты через клик на чекбоксы напрямую
       gsap.set(textElement, { display: 'block' });
       gsap.to(textElement, {
         opacity: 1,
@@ -245,9 +230,7 @@ export default new (class CustomSelect extends SiteAnimation {
       });
     }
 
-    // Добавляем только новые теги
     selectedOptions.forEach((option) => {
-      // Проверяем, существует ли уже такой тег
       const existingTag = Array.from(
         tagsContainer.querySelectorAll('.c-select__tag-remove'),
       ).find((el) => el.dataset.value === option.value);
@@ -261,7 +244,6 @@ export default new (class CustomSelect extends SiteAnimation {
         );
         tagsContainer.appendChild(tag);
 
-        // Анимация появления нового тега
         gsap.to(tag, {
           opacity: 1,
           scale: 1,

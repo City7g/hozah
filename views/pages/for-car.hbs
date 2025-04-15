@@ -1,0 +1,15 @@
+<div class="wrapper main-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}"
+  data-router-view="for-car" data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/for-car.css"
+  data-style-id="styleBoxes">
+  {{>base }}
+
+  <div class="styleBoxes" id="pageStyleBoxes">
+    {{>sections/partners }}
+    {{>sections/why }}
+    {{>sections/stories }}
+    {{>sections/experience }}
+    {{>sections/impact }}
+    {{>sections/reach }}
+    {{>sections/stories stories=drivers }}
+  </div>
+</div>

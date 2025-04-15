@@ -1,0 +1,16 @@
+<section id="heroScreen" class="f-base heroScreen pageHeroScreen {{#if build}}styleBoxes{{/if}}" data-animated="false"
+  {{#if build}} data-style-loaded="false" data-fs="fs-style" data-style-href="fs-path" {{/if}}>
+  <div class="container">
+    <div class="f-base__wrap">
+      <div class="f-base__content">
+        <h1 class="title-h2 f-base__title">
+          {{{ first.title }}}
+        </h1>
+        <p class="text-subtitle f-base__text">
+          {{ first.text }}
+        </p>
+        {{>button tag="a" href="#" text=first.btn class="f-base__btn" }}
+      </div>
+    </div>
+  </div>
+</section>

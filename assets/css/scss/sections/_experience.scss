@@ -1,0 +1,16 @@
+@import '../components/service';
+
+.experience__text {
+  margin-top: toRem(24);
+}
+
+.experience__list {
+  display: grid;
+  gap: toRem(20);
+  margin-top: toRem(40);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: toRem(72);
+  }
+}

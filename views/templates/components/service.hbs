@@ -1,4 +1,8 @@
 <div class="c-service fadeEl">
+  {{#if image }}
+  {{>components/lazyImg path=(concat "img/icons/" image ) ext="png" class="c-service__image" }}
+  {{/if}}
+
   <h4 class="title-h4 c-service__title">
     {{ title }}
   </h4>

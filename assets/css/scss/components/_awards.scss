@@ -128,18 +128,19 @@
   width: toRem(4);
   height: toRem(4);
   background: #689bef;
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .awards__pagination .swiper-pagination-bullet-active {
   background-color: #689bef;
+  opacity: 1;
 }
 
 .awards__pagination .glide__bullet {
   width: toRem(4);
   height: toRem(4);
   background: #689bef;
-  opacity: 1;
+  opacity: 0.5;
   margin: 0 toRem(4);
   padding: 0;
   border: none;

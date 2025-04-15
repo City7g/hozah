@@ -7,6 +7,10 @@
             "slug": "contact"
         },
         {
+            "name": "for-car",
+            "slug": "for-car"
+        },
+        {
             "name": "Main page",
             "slug": "/"
         },
@@ -15,5 +19,5 @@
             "slug": "ui"
         }
     ],
-    "total": 3
+    "total": 4
 }

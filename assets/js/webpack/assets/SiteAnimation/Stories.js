@@ -5,14 +5,18 @@ export default class Impact {
     this.slider = null;
   }
   init() {
-    this.parent = document.querySelector('.js-stories-slider');
-    if (!this.parent) return;
+    this.instances = document.querySelectorAll('.js-stories-slider');
+    if (!this.instances.length) return;
 
-    this.sliderInit();
+    this.instances.forEach((instance) => {
+      this.sliderInit(instance);
+    });
   }
 
-  sliderInit() {
-    var splide = new Splide('.js-stories-slider .splide', {
+  sliderInit(instance) {
+    console.log(instance);
+
+    var splide = new Splide(instance.querySelector('.splide'), {
       type: 'loop',
       perPage: 1.5,
       // arrows: false,

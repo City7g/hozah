@@ -8,6 +8,24 @@
   }
 }
 
+.c-service__image {
+  justify-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: toRem(80);
+  height: toRem(80);
+  background-color: #a3c7f7;
+  border-radius: toRem(10);
+  margin-bottom: toRem(16);
+}
+
+.c-service__image img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
 .c-service__title {
   margin-bottom: toRem(16);
 }

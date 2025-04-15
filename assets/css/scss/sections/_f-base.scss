@@ -1,0 +1,41 @@
+.f-base {
+  padding: toRem(96) 0 toRem(119);
+  background-color: #064093;
+  color: #f9f9f9;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    padding: toRem(164) 0 toRem(206);
+  }
+}
+
+.f-base__wrap {
+  display: grid;
+  // gap: toRem(40);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: toRem(10);
+  }
+}
+
+.f-base__title {
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-top: toRem(-6);
+  }
+}
+
+.f-base__text {
+  margin-top: toRem(16);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-top: toRem(24);
+  }
+}
+
+.f-base__btn {
+  margin-top: toRem(24);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-top: toRem(40);
+  }
+}
