@@ -1,7 +1,8 @@
 .c-service {
   padding: toRem(20);
-  background-color: #efefef;
   border-radius: toRem(20);
+  background-color: #efefef;
+  color: #064093;
 
   @media screen and (min-width: ($tablet + 1)) {
     padding: toRem(40);
@@ -26,8 +27,17 @@
   object-fit: contain;
 }
 
-.c-service__title {
-  margin-bottom: toRem(16);
+.c-service__subtitle {
+  margin-top: toRem(16);
+  font-size: toRem(16);
+  line-height: toRem(20);
+  font-weight: 700;
+  letter-spacing: 0;
+  color: #689bef;
+}
+
+.c-service__text {
+  margin-top: toRem(8);
 }
 
 .c-service__btn {

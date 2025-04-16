@@ -1,6 +1,24 @@
 @import '../components/service';
 
+.experience {
+  padding: toRem(60) 0;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    padding: toRem(120) 0;
+  }
+}
+
+.experience.--blue {
+  background-color: #064093;
+  color: #f9f9f9;
+}
+
+.experience__title {
+  max-width: toRem(985);
+}
+
 .experience__text {
+  max-width: toRem(985);
   margin-top: toRem(24);
 }
 

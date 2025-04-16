@@ -1,0 +1,14 @@
+<section class="questions">
+  <div class="container">
+    <div class="questions__wrap">
+      <h3 class="title-h2 questions__title">
+        {{{ questions.title }}}
+      </h3>
+      <p class="text-subtitle questions__text">
+        {{ questions.text }}
+      </p>
+
+      {{>components/accordion list=questions.list }}
+    </div>
+  </div>
+</section>

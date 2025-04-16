@@ -1,11 +1,12 @@
 .reach {
   position: relative;
+  padding: toRem(60) 0;
   text-align: center;
   background-color: #064093;
   color: #efefef;
 
-  @media screen and (max-width: $tablet) {
-    padding: toRem(100) 0 !important;
+  @media screen and (min-width: ($tablet + 1)) {
+    padding: toRem(120) 0;
   }
 }
 

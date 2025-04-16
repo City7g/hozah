@@ -1,0 +1,25 @@
+@import '../components/accordion';
+
+.questions {
+  padding: toRem(60) 0;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    padding: toRem(120) 0;
+  }
+}
+
+.questions__text {
+  margin-top: toRem(16);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-top: toRem(24);
+  }
+}
+
+.questions .accordion {
+  margin-top: toRem(40);
+
+  @media screen and (min-width: ($tablet + 1)) {
+    margin-top: toRem(60);
+  }
+}

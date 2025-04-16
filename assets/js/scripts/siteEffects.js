@@ -37,6 +37,9 @@ function initSiteEffects(fadePage = true, middle = false) {
     if (document.querySelector('.js-marquee')) {
       requestAnimationFrame(() => Marquee.init());
     }
+    if (document.querySelector('.js-accordion')) {
+      requestAnimationFrame(() => Accordion.init());
+    }
     if (document.querySelector('.c-select')) {
       requestAnimationFrame(() => CustomSelect.init());
     }

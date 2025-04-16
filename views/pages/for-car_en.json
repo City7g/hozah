@@ -1,5 +1,6 @@
 {
   "title": "for-car",
+  "isDarkHeader": true,
   "first": {
     "title": "<span>Revolutionize</span> Your <span>Parking Management</span> with Seamless Automation",
     "text": "Transform your car park into a stress-free, efficient, and profit-maximizing space with our all-in-one system, featuring seamless autopay and advanced analytics to enhance the experience for both you and your customers.",
@@ -58,31 +59,8 @@
       }
     ]
   },
-  "stories": {
-    "title": "<span>Success Stories</span> from Our Clients",
-    "list": [
-      {
-        "percent": "20%",
-        "title": "Increased revenue",
-        "text": "Hozah’s digital-first approach transformed our car park, increasing revenue by 20% while improving compliance and customer satisfaction.",
-        "name": "Julie Webb",
-        "status": "General Manager",
-        "image": "item-1",
-        "btn": "Read their case"
-      },
-      {
-        "percent": "15%",
-        "title": "Increased revenue new",
-        "text": "Hozah’s digital-first approach transformed our car park, increasing revenue by 20% while improving compliance and customer satisfaction.",
-        "name": "Julie Webb",
-        "status": "General Manager",
-        "image": "item-1",
-        "btn": "Read their case"
-      }
-    ]
-  },
   "experience": {
-    "title": "Effortless Payment Technology, Anytime, Anywhere. Simple Driver Experience.",
+    "title": "Effortless Payment Technology, Anytime, Anywhere. <span>Simple Driver Experience.</span>",
     "text": "Leading with our revolutionary Hozah Autopay solution, we offer a suite of payment options for drivers, reducing friction when switching from your existing parking solutions and giving drivers the easiest ways to pay on arrival or exit.",
     "list": [
       {

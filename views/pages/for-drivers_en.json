@@ -1,0 +1,73 @@
+{
+  "title": "for-drivers",
+  "isDarkHeader": true,
+  "first": {
+    "title": "Pay for Parking, Effortlessly",
+    "text": "Fast, simple, and contactless payment options at your fingertips. Never worry about penalties or confusion again.",
+    "btn": "Set up Hozah Autopay"
+  },
+  "choose": {
+    "title": "Why Choose Us? ",
+    "list": [
+      {
+        "title": "<span>Seamless</span> autopay",
+        "text": "in implementing advanced automated parking solutions",
+        "image": "item-1"
+      },
+      {
+        "title": "<span>No unfair</span> fines",
+        "text": "processed through the Hozah system",
+        "image": "item-2"
+      },
+      {
+        "title": "<span>Instant</span> refunds",
+        "text": "achieved with the implementation of Hozah ecosystem",
+        "image": "item-3"
+      },
+      {
+        "title": "<span>Easy</span> to use",
+        "text": "ensures uninterrupted system operation",
+        "image": "item-4"
+      }
+    ]
+  },
+  "experience": {
+    "title": "Effortless Payment Technology, Anytime, Anywhere. <span>Simple Driver Experience.</span>",
+    "text": "Leading with our revolutionary Hozah Autopay solution, we offer a suite of payment options for drivers, reducing friction when switching from your existing parking solutions and giving drivers the easiest ways to pay on arrival or exit.",
+    "list": [
+      {
+        "title": "Hozah Autopay",
+        "subtitle": "Frictionless driver experience. Increased compliance.",
+        "text": "After a one-time setup by the driver, our industry-unique technology takes automatic, accurate payment each time they visit your car park.",
+        "btn": "Learn more",
+        "image": "item-1"
+      },
+      {
+        "title": "Pay by Web",
+        "subtitle": "Simple user experience for one-time payments",
+        "text": "Needing only an internet connection, Hozah's web-based app takes on-the-day payments in no time at all.",
+        "btn": "Learn more",
+        "image": "item-1"
+      },
+      {
+        "title": "Season Tickets",
+        "subtitle": "Guaranteed, recurring revenue",
+        "text": "Our unique ANPR-based payment technology enables charging drivers based on several criteria including account, vehicle, and usage.",
+        "btn": "Learn more",
+        "image": "item-1"
+      },
+      {
+        "title": "Smart Kiosks",
+        "subtitle": "Easy-to-use physical payments",
+        "text": "Hozah offers state-of-the-art payment kiosks linked to ANPR cameras for drivers preferring to make payments onsite.",
+        "btn": "Learn more",
+        "image": "item-1"
+      }
+    ]
+  },
+  "reach": {
+    "title": "Manage Your Parking Payments <span>with Ease</span>",
+    "text": "Get a tailored parking solution designed for measurable success.",
+    "btn": "Reach out to our team"
+  }
+}

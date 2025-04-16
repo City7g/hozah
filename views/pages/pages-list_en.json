@@ -11,6 +11,10 @@
             "slug": "for-car"
         },
         {
+            "name": "for-drivers",
+            "slug": "for-drivers"
+        },
+        {
             "name": "Main page",
             "slug": "/"
         },
@@ -23,5 +27,5 @@
             "slug": "ui"
         }
     ],
-    "total": 5
+    "total": 6
 }

@@ -10,16 +10,12 @@
         "path": "/"
       },
       {
-        "name": "UI",
-        "path": "/ui"
-      },
-      {
         "name": "For car park owners",
-        "path": "/"
+        "path": "/for-car"
       },
       {
         "name": "For drivers",
-        "path": "/"
+        "path": "/for-drivers"
       },
       {
         "name": "Help & Support",
@@ -134,6 +130,59 @@
           "Company"
         ],
         "image": "item-3"
+      }
+    ]
+  },
+  "stories": {
+    "title": "<span>Success Stories</span> from Our Clients",
+    "list": [
+      {
+        "percent": "20%",
+        "title": "Increased revenue",
+        "text": "Hozah’s digital-first approach transformed our car park, increasing revenue by 20% while improving compliance and customer satisfaction.",
+        "name": "Julie Webb",
+        "status": "General Manager",
+        "image": "item-1",
+        "btn": "Read their case"
+      },
+      {
+        "percent": "15%",
+        "title": "Increased revenue new",
+        "text": "Hozah’s digital-first approach transformed our car park, increasing revenue by 20% while improving compliance and customer satisfaction.",
+        "name": "Julie Webb",
+        "status": "General Manager",
+        "image": "item-1",
+        "btn": "Read their case"
+      }
+    ]
+  },
+  "questions": {
+    "title": "Got <span>Questions?</span>",
+    "text": "We’ve got answers to help you park with confidence.",
+    "list": [
+      {
+        "title": "What if I need to change my registration or payment details?",
+        "text": "Imply log in and change any details in your account settings."
+      },
+      {
+        "title": "What if I need to change my registration or payment details?",
+        "text": "Imply log in and change any details in your account settings."
+      },
+      {
+        "title": "What if I need to change my registration or payment details?",
+        "text": "Imply log in and change any details in your account settings."
+      },
+      {
+        "title": "What if I need to change my registration or payment details?",
+        "text": "Imply log in and change any details in your account settings."
+      },
+      {
+        "title": "What if I need to change my registration or payment details?",
+        "text": "Imply log in and change any details in your account settings."
+      },
+      {
+        "title": "What if I need to change my registration or payment details?",
+        "text": "Imply log in and change any details in your account settings."
       }
     ]
   }

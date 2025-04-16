@@ -1,0 +1,17 @@
+<div class="wrapper for-drivers-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}"
+  data-router-view="for-drivers" data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/for-drivers.css"
+  data-style-id="styleBoxes">
+
+  <div class="pageHeroScreen {{#if build}}styleBoxes{{/if}}" data-animated="false" {{#if build}}
+    data-style-loaded="false" data-fs="fs-style" data-style-href="fs-path" {{/if}}>
+    {{>base }}
+  </div>
+
+  <div>
+    {{>sections/choose }}
+    {{>sections/experience type="blue" }}
+    {{>sections/stories }}
+    {{>sections/reach }}
+    {{>sections/questions }}
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<section class="choose" data-acf-block="choose" data-acf-label="Choose" data-acf-style="choose">
+  {{>components/lazyImg path="img/bg/choose-mobile" ext="png" class="choose__bg" }}
+
+  <div class="container">
+    <div class="choose__wrap">
+      <h2 class="title-h2 fadeEl choose__title">
+        {{{ choose.title }}}
+      </h2>
+
+      <div class="choose__list">
+        {{#each choose.list }}
+        {{>components/benefit }}
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

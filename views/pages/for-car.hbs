@@ -1,9 +1,13 @@
-<div class="wrapper main-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}"
+<div class="wrapper for-car-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}"
   data-router-view="for-car" data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/for-car.css"
   data-style-id="styleBoxes">
-  {{>base }}
 
-  <div class="styleBoxes" id="pageStyleBoxes">
+  <div class="pageHeroScreen {{#if build}}styleBoxes{{/if}}" data-animated="false" {{#if build}}
+    data-style-loaded="false" data-fs="fs-style" data-style-href="fs-path" {{/if}}>
+    {{>base }}
+  </div>
+
+  <div>
     {{>sections/partners }}
     {{>sections/why }}
     {{>sections/stories }}

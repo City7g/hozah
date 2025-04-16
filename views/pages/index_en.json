@@ -98,29 +98,6 @@
       }
     ]
   },
-  "stories": {
-    "title": "<span>Success Stories</span> from Our Clients",
-    "list": [
-      {
-        "percent": "20%",
-        "title": "Increased revenue",
-        "text": "Hozah’s digital-first approach transformed our car park, increasing revenue by 20% while improving compliance and customer satisfaction.",
-        "name": "Julie Webb",
-        "status": "General Manager",
-        "image": "item-1",
-        "btn": "Read their case"
-      },
-      {
-        "percent": "15%",
-        "title": "Increased revenue new",
-        "text": "Hozah’s digital-first approach transformed our car park, increasing revenue by 20% while improving compliance and customer satisfaction.",
-        "name": "Julie Webb",
-        "status": "General Manager",
-        "image": "item-1",
-        "btn": "Read their case"
-      }
-    ]
-  },
   "reach": {
     "title": "Turn Your Car Park into <span>a High-Performing Asset</span>",
     "text": "Get a tailored parking solution designed for measurable success.",
