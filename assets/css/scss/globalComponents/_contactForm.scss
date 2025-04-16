@@ -194,6 +194,14 @@
       color: #aaaaaa;
     }
 
+    @include hover {
+      border-color: #0eb495;
+    }
+
+    &:focus {
+      border-color: #0eb495;
+    }
+
     // reset autocomplete styles
     &:-webkit-autofill,
     &:-webkit-autofill:hover,

@@ -14,9 +14,9 @@ export default new (class Header extends SiteAnimation {
     this.burger = document.querySelector('.header .burger');
 
     if (!this.header) return;
+    this.addListener(this.burger, 'click', this.toggleMenu.bind(this));
     if (this.isWork) return;
     this.addListener(window, 'scroll', this.handleScroll.bind(this));
-    this.addListener(this.burger, 'click', this.toggleMenu.bind(this));
 
     this.isWork = true;
 

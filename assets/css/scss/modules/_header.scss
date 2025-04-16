@@ -34,6 +34,7 @@
 .header.--open {
   transform: translateY(0);
   background-color: #064093;
+  color: #f9f9f9;
 }
 
 .header__wrap {
@@ -143,6 +144,7 @@
   }
 }
 
+.header.--open .header__btn,
 .header--dark .header__btn {
   color: #f9f9f9;
 
