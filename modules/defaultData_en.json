@@ -1,7 +1,8 @@
 {
   "test": "lorem",
   "projectVersion": "1.1.65",
-  "buildDate": "16.4.2025",
+  "buildDate": "15.4.2025",
+  "isDarkHeader": false,
   "header": {
     "links": [
       {
@@ -41,7 +42,7 @@
           },
           {
             "name": "News",
-            "path": "#"
+            "path": "/news"
           },
           {
             "name": "Contact us",
@@ -102,5 +103,38 @@
     "title": "Thank you!",
     "text": "Your message has been sent successfully — we’ll be in touch soon.",
     "btn": "Back to homepage"
+  },
+  "news": {
+    "title": "<span>Latest</span> News",
+    "btn": "To all news",
+    "list": [
+      {
+        "title": "Hozah has been awarded PayTech Company of the Year",
+        "text": "This award is a testament to our unwavering commitment to driving innovation in payment technology. We are redefining the parking experience, making the journey effortless through cutting-edge technology.",
+        "date": "Aug 27, 2024",
+        "tags": [
+          "Company"
+        ],
+        "image": "item-1"
+      },
+      {
+        "title": "New Parking Code of Practice",
+        "text": "This month, we highlight key takeaways from the newly published Private Parking Sector Single Code of Practice by the British Parking Association (BPA) and",
+        "date": "Aug 27, 2024",
+        "tags": [
+          "Industry"
+        ],
+        "image": "item-2"
+      },
+      {
+        "title": "Hozah will be at Completely Retail Marketplace",
+        "text": "For expert insights on retail asset management, parking solutions, and the latest in parking technology, don’t miss the chance to connect with Robert P. and Billy Morris. ",
+        "date": "Aug 27, 2024",
+        "tags": [
+          "Company"
+        ],
+        "image": "item-3"
+      }
+    ]
   }
 }

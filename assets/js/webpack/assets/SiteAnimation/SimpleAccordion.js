@@ -1,16 +1,17 @@
 import SiteAnimation from '../modules/SiteAnimation';
-export default new (class Example extends SiteAnimation {
+export default new (class SimpleAccordion extends SiteAnimation {
   init() {
     if (this.isWpAdmin) return;
-    super.init('example');
+    super.init('SimpleAccordion');
     this.styleBoxes = document.getElementById('wrapper');
     // this.parent = document.querySelector('.about-section');
     this.instances = [
-      ...document.querySelectorAll('.about-section:not(.init)'),
-    ].map((stackParent) => {
+      ...document.querySelectorAll('.js-simple-accordion:not(.init)'),
+    ].map((parent) => {
       return {
-        parent: stackParent,
-        isHeroScreen: stackParent.classList.contains('pageHeroScreen'),
+        parent,
+        opener: parent.querySelector('.js-opener'),
+        content: parent.querySelector('.js-content'),
       };
     });
     // isHeroScreen important init
@@ -32,6 +33,14 @@ export default new (class Example extends SiteAnimation {
   initAnimation(instance) {
     if (instance.parent.classList.contains('init')) return;
     instance.parent.classList.add('init');
+
+    const { parent, opener, content } = instance;
+
+    parent.style.setProperty('--content-height', `${content.scrollHeight}px`);
+
+    opener.addEventListener('click', () => {
+      parent.classList.toggle('opened');
+    });
   }
   styleFileLoaded() {
     if (this.styleBoxes.dataset.styleLoaded === 'true') {

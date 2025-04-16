@@ -60,6 +60,14 @@ export default new (class Header extends SiteAnimation {
       this.header.classList.remove('--hide');
     }
 
+    if (scrollTop > this.lastScrollTop) {
+      document.body.classList.add('scrolling-down');
+      document.body.classList.remove('scrolling-up');
+    } else {
+      document.body.classList.remove('scrolling-down');
+      document.body.classList.add('scrolling-up');
+    }
+
     this.lastScrollTop = scrollTop;
   }
 

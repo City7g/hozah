@@ -49,6 +49,9 @@ function initSiteEffects(fadePage = true, middle = false) {
         if (LOADED_SCRIPTS_PACK) LOADED_SCRIPTS_PACK.push(window.Awards);
       }
     }
+    if (document.querySelector('.js-simple-accordion')) {
+      requestAnimationFrame(() => SimpleAccordion.init());
+    }
     if (document.querySelector('.js-stories-slider')) {
       if (typeof window.Stories === 'function') {
         window.Stories = new window.Stories();

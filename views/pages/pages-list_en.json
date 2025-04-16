@@ -15,6 +15,10 @@
             "slug": "/"
         },
         {
+            "name": "News & Press",
+            "slug": "news"
+        },
+        {
             "name": "ui",
             "slug": "ui"
         }

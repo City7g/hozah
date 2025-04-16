@@ -1,12 +1,13 @@
-<header class="header">
+<header class="header {{#if isDarkHeader}}header--dark{{/if}}">
+<!-- WP: нужно добавить возможность задать темный хедер на странице - нужно добавлять класс header--dark -->
   <div class="container">
     <div class="header__wrap">
-      <a href="/" class="header__logo">
+      <a href="/" class="header__logo" aria-label="Go to home page">
         {{>components/logo }}
       </a>
 
       <div class="header__mobile">
-        <nav class="header__list">
+        <nav class="header__list" aria-label="Main menu">
           <ul>
             {{#each header.links }}
             <li>
@@ -19,7 +20,7 @@
         {{>button tag="a" href="/contact" text=header.btn class="header__btn" type="secondary" }}
       </div>
 
-      <div class="burger">
+      <button class="burger" aria-label="Open menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -32,7 +33,7 @@
             d="M8.66582 2H6.26506C4.76982 2 4.0241 2 3.45339 2.28911C2.95117 2.54398 2.54407 2.95102 2.28916 3.45316C2 4.02378 2 4.76938 2 6.26438V8.66476M8.66582 26H6.26506C4.76982 26 4.0241 26 3.45339 25.7109C2.95117 25.456 2.54407 25.049 2.28916 24.5468C2 23.9762 2 23.2306 2 21.7356V19.3352M26 8.66857V6.26819C26 4.77318 26 4.02758 25.7108 3.45697C25.4559 2.95483 25.0488 2.54779 24.5466 2.29292C23.9759 2.0038 23.2302 2.0038 21.7349 2.0038H19.3342M26 19.3314V21.7318C26 23.2268 26 23.9724 25.7108 24.543C25.4559 25.0452 25.0488 25.4522 24.5466 25.7071C23.9759 25.9962 23.2302 25.9962 21.7349 25.9962H19.3342"
             stroke="#064093" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
-      </div>
+      </button>
     </div>
   </div>
 </header>

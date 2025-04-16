@@ -1,0 +1,156 @@
+@import '../components/tag';
+
+.news-first-screen-section {
+  padding: toRem(164) 0 toRem(140);
+
+  .page-title {
+    margin-bottom: toRem(24);
+  }
+
+  @media screen and (max-width: $tablet) {
+    padding: toRem(120) 0 toRem(60);
+  }
+}
+
+.big-news-card {
+  .card-inner {
+    display: grid;
+    grid-template-columns: 1fr toRem(602);
+    align-items: end;
+    grid-gap: toRem(72);
+
+    @media screen and (max-width: $tablet) {
+      display: contents;
+    }
+  }
+
+  .card-title {
+    margin-bottom: 0;
+  }
+
+  .card-text {
+    margin-top: toRem(24);
+    letter-spacing: 0;
+  }
+
+  .card-info {
+    margin-top: toRem(20);
+    display: flex;
+    align-items: center;
+  }
+
+  .card-date {
+    margin-left: toRem(24);
+  }
+
+  .card-button {
+    margin-top: toRem(42);
+  }
+
+  .card-image {
+    margin-bottom: toRem(10);
+    position: relative;
+    overflow: hidden;
+    border-radius: toRem(16);
+    @include maskSafari;
+
+    @media screen and (min-width: calc($tablet + 1px)) {
+      transform: translateX(toRem(4));
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: linear-gradient(
+        181.01deg,
+        rgba(1, 88, 202, 0) 24.59%,
+        rgba(1, 88, 202, 0.2) 76.07%
+      );
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      padding-top: per(360, 602);
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    display: flex;
+    flex-direction: column;
+
+    .card-content {
+      display: contents;
+    }
+
+    .card-title {
+      order: 1;
+    }
+
+    .card-image {
+      order: 2;
+      margin-top: toRem(24);
+      margin-bottom: 0;
+      border-radius: toRem(12);
+    }
+
+    .card-text {
+      order: 3;
+    }
+
+    .card-footer {
+      order: 4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: toRem(20);
+    }
+
+    .card-button,
+    .card-info {
+      margin-top: 0;
+    }
+  }
+
+  @media screen and (max-width: $mobile) {
+    .card-title {
+      font-size: toRem(28);
+      line-height: 1.2;
+      font-weight: 500;
+      letter-spacing: 0;
+    }
+
+    .card-footer {
+      margin-top: 0;
+      display: block;
+    }
+
+    .card-button {
+      margin-top: toRem(20);
+
+      .btn {
+        width: 100%;
+      }
+    }
+
+    .card-info {
+      margin-top: toRem(20);
+    }
+  }
+}

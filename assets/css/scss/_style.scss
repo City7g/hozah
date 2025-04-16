@@ -3,7 +3,14 @@
   --windowHeight: 100vh;
   --windowWidth: 100vw;
   --deltaVH: 0;
+
+  --header-height: #{toRem(84)};
+
+  @media screen and (max-width: $tablet) {
+    --header-height: #{toRem(60)};
+  }
 }
+
 .container {
   padding: 0 toRem(20);
   width: 100%;

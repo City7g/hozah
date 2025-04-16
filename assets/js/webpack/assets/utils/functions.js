@@ -362,13 +362,13 @@ const onSlideUpComplete = (element, paddingTop, paddingBottom) => {
  */
 const fixPageHeroScreen = () => {
   // add class for sections
-  [
-    ...document.querySelectorAll(
-      '#wrapper > *:not(#pageStyleBoxes):not(.pageHeroScreen)',
-    ),
-  ].forEach((el) => {
-    el.classList.add('pageHeroScreen');
-  });
+  // [
+  //   ...document.querySelectorAll(
+  //     '#wrapper > *:not(#pageStyleBoxes):not(.pageHeroScreen)',
+  //   ),
+  // ].forEach((el) => {
+  //   el.classList.add('pageHeroScreen');
+  // });
 };
 
 /**
@@ -429,7 +429,7 @@ async function scrollNextSection(id, findSection, centered = false) {
 }
 
 async function checkLoadPageStyleBoxes() {
-  const pageStyleBoxes = document.getElementById('pageStyleBoxes');
+  const pageStyleBoxes = document.getElementById('wrapper');
   if (
     pageStyleBoxes &&
     pageStyleBoxes.getAttribute('data-style-loaded') === 'false'

@@ -26,7 +26,6 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  word-break: break-all;
 }
 
 @mixin noTap {
@@ -213,16 +212,13 @@
 }
 
 @mixin rootFontSizeGlobal($root: ':root') {
-  @include rootFontSize($root, 14, 1680, 'min-width');
-  @include rootFontSize($root, 16.0111, 1441);
-  @include rootFontSize($root, 16.0111, 1101);
-  @include rootFontSize($root, 16.52, 1024);
-  @include rootFontSize($root, 16.35, 780);
-  @include rootFontSize($root, 16.35, 760);
-  @include rootFontSize($root, 16, 690);
-  @include rootFontSize($root, 20, 540);
-  @include rootFontSize($root, 16.1, 420);
-  @include rootFontSize($root, 16.22, 380);
+  @include rootFontSize($root, 16, 1441, 'min-width');
+  @include rootFontSize($root, 16, 1440);
+  @include rootFontSize($root, 23.178, 1101);
+  @include rootFontSize($root, 16, 760);
+  @include rootFontSize($root, 27.3, 640);
+  @include rootFontSize($root, 23.04, 540);
+  @include rootFontSize($root, 16, 375);
 }
 
 @mixin font-face($font-family, $font-name, $weight: 400, $style: normal) {

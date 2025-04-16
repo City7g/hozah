@@ -1,6 +1,25 @@
 @import '../components/article';
 
 .news {
+  .c-article:first-child {
+    @media screen and (min-width: ($tablet + 1)) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .c-article:first-child .c-article__img {
+    &::before {
+      @media screen and (min-width: ($tablet + 1)) {
+        padding-top: 50%;
+      }
+    }
+  }
+
+  .c-article:first-child .c-article__content {
+    @media screen and (min-width: ($tablet + 1)) {
+      order: -1;
+    }
+  }
 }
 
 .news__wrap {

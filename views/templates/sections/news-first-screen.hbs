@@ -1,0 +1,29 @@
+<section class="news-first-screen-section" data-acf-block="news-first-screen" data-acf-label="News page (first screen)" data-acf-style="news-first-screen">
+  <div class="container">
+    <h1 class="page-title title-h1">News &amp; Press</h1>
+    
+    <!-- WP: тут показывается последняя новость или та, что выбрана в админке -->
+    <div class="big-news-card">
+      <div class="card-inner">
+        <div class="card-content">
+          <h2 class="card-title title-h3">Hozah and Yate Shopping Centre have earned Park Mark status and received the Safer Parking Award!</h2>
+          <div class="card-text">
+            <p>This award is a testament to our unwavering commitment to driving innovation in payment technology. We are redefining the parking experience, making the journey effortless through cutting-edge technology.</p>
+          </div>
+          <div class="card-footer">
+            <div class="card-info">
+              {{>components/tag text="Company" type="gray" }}
+              <p class="card-date text-label">Aug 27, 2024</p>
+            </div>
+            <div class="card-button">
+              {{>button tag="a" href="/single-news" text="Read more" }}
+            </div>
+          </div>
+        </div>
+        <div class="card-image">
+          {{>components/lazyImg path="img/news/big-news-image" mobilePath="img/news/big-news-image-mobile" noAcf=true }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

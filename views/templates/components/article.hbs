@@ -1,8 +1,8 @@
-<div class="c-article">
+<a href="single-news{{htmlPrefix}}" class="c-article">
   <div class="c-article__image">
     {{>components/lazyImg path=(concat "img/articles/" image ) class="c-image c-article__img" }}
 
-    {{>button tag="a" href="#" text="Read more" class="c-article__btn" type="blue" }}
+    {{>button tag="div" text="Read more" class="c-article__btn" type="blue" }}
   </div>
 
   <div class="c-article__content">
@@ -16,8 +16,8 @@
 
     <div class="c-article__bottom">
       <div class="c-article__tags">
-        {{#each tags }}
-        <p class="text-label c-article__tag">{{ this }}</p>
+        {{#each tags as |tagText| }}
+          {{>components/tag text=tagText }}
         {{/each}}
       </div>
 
@@ -26,4 +26,4 @@
       </p>
     </div>
   </div>
-</div>
+</a>

@@ -5,11 +5,11 @@
         {{{ news.title }}}
       </h2>
 
-      {{>button tag="a" href="#" text=news.btn class="fadeEl" type="secondary" }}
+      {{>button tag="a" href="news" text=news.btn class="fadeEl" type="secondary" }}
 
       <div class="news__list">
         {{#each news.list }}
-        {{>components/article }}
+          {{>components/article }}
         {{/each}}
       </div>
     </div>

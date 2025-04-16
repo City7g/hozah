@@ -1,0 +1,12 @@
+<div class="wrapper news-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}" data-router-view="news"
+  data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/news.css" data-style-id="styleBoxes">
+  
+  <div class="pageHeroScreen {{#if build}}styleBoxes{{/if}}" data-animated="false"
+  {{#if build}} data-style-loaded="false" data-fs="fs-style" data-style-href="fs-path" {{/if}}>
+    {{>sections/news-first-screen}}
+  </div>
+
+  <div>
+    {{>sections/news-list }}
+  </div>
+</div>

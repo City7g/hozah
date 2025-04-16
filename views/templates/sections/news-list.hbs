@@ -1,0 +1,36 @@
+<section class="news-list-section" data-acf-block="news-list" data-acf-label="News list" data-acf-style="news-list">
+  <div class="container">
+    <div class="section-inner">
+      <div class="section-sidebar">
+        <div class="categories-block js-simple-accordion">
+          <div class="block-top js-opener">
+            <h2 class="block-title">Category:</h2>
+            <button class="block-opener-btn" aria-label="Open navigation" aria-expanded="false">
+              <svg class="btn-icon">
+                <use xlink:href="./img/symbol/svg/sprite.symbol.svg#arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+          <div class="block-content js-content">
+            <ul>
+              <li class="current-menu-item"><a href="#">All</a></li>
+              <li><a href="#">Company</a></li>
+              <li><a href="#">Industry</a></li>
+              <li><a href="#">Events</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section-content">
+        <div class="section-cards">
+          {{#each news.list}}
+            {{>components/article}}
+          {{/each}}
+        </div>
+
+        {{>components/pagination}}
+      </div>
+    </div>
+  </div>
+</section>

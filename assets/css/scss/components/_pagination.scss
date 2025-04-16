@@ -1,0 +1,85 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  ul {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-right: toRem(8);
+    }
+
+    &:not(:first-child) {
+      margin-left: toRem(8);
+    }
+
+    li {
+      flex: none;
+
+      &:not(:last-child) {
+        margin-right: toRem(8);
+      }
+
+      a,
+      span {
+        width: toRem(44);
+        height: toRem(44);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #d3d3d3;
+        font-size: toRem(20);
+        font-weight: bold;
+        line-height: 1.2;
+        letter-spacing: 0;
+        color: #064093;
+        border-radius: toRem(8);
+      }
+
+      a {
+        transition: color 0.3s ease, border-color 0.3s ease;
+
+        @include hover {
+          border-color: #0eb495;
+          color: #064093;
+        }
+      }
+
+      &.current {
+        a {
+          background: #0eb495;
+          border-color: #0eb495;
+          color: #f9f9f9;
+          cursor: default;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.pagination-btn {
+  width: toRem(44);
+  height: toRem(44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #064093;
+  color: #a3c7f7;
+  border-radius: toRem(8);
+  transition: background 0.3s ease, color 0.3s ease;
+  flex: none;
+
+  @include hover {
+    background: #0eb495;
+    color: #f9f9f9 !important;
+  }
+
+  .btn-icon {
+    display: block;
+    width: toRem(28);
+    height: toRem(28);
+    fill: currentcolor;
+  }
+}

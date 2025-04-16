@@ -6,7 +6,7 @@ export default new (class CustomSelect extends SiteAnimation {
     if (this.isWpAdmin) return;
     super.init('CustomSelect');
 
-    this.styleBoxes = document.getElementById('pageStyleBoxes');
+    this.styleBoxes = document.getElementById('wrapper');
     this.instances = [...document.querySelectorAll('.c-select:not(.init)')].map(
       (parent) => {
         return {
