@@ -80,6 +80,19 @@
   @media screen and (min-width: ($tablet + 1)) {
     height: toRem(39);
   }
+  &:first-child {
+    display: none;
+  }
+}
+
+.header--dark .header__logo svg {
+  &:first-child {
+    display: block;
+  }
+
+  &:last-child {
+    display: none;
+  }
 }
 
 .header__list {

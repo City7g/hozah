@@ -70,15 +70,8 @@ export default new (class Header extends SiteAnimation {
       document.body.classList.add('scrolling-up');
     }
 
-    console.log(this.lastScrollTop, scrollTop);
-
     this.lastScrollTop = scrollTop;
   }
 
-  destroy() {
-    if (this.slider) {
-      this.slider = null;
-    }
-    console.log('destroy');
-  }
+  destroy() {}
 })();

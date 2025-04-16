@@ -1,9 +1,10 @@
 <header class="header {{#if isDarkHeader}}header--dark{{/if}}">
-<!-- WP: нужно добавить возможность задать темный хедер на странице - нужно добавлять класс header--dark -->
+  <!-- WP: нужно добавить возможность задать темный хедер на странице - нужно добавлять класс header--dark -->
   <div class="container">
     <div class="header__wrap">
       <a href="/" class="header__logo" aria-label="Go to home page">
         {{>components/logo }}
+        {{>components/logoReverse }}
       </a>
 
       <div class="header__mobile">
