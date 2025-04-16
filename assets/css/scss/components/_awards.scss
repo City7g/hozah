@@ -84,11 +84,15 @@
   top: toRem(18);
   width: toRem(24);
   height: toRem(24);
-  cursor: pointer;
 
   @media screen and (min-width: ($tablet + 1)) {
     top: toRem(24);
   }
+}
+
+.awards__prev:not(.swiper-button-disabled),
+.awards__next:not(.swiper-button-disabled) {
+  cursor: pointer;
 }
 
 .awards__prev {

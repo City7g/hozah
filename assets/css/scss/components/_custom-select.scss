@@ -19,6 +19,10 @@
   background-color: #f9f9f9;
   transition: 0.3s border-color ease;
 
+  @include hover {
+    border-color: #0eb495;
+  }
+
   &:focus-visible {
     outline: none;
     border-color: #0eb495;
