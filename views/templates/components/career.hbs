@@ -1,0 +1,38 @@
+<div class="c-career">
+  <div class="c-career__badge">
+    <svg>
+      <use xlink:href="/img/symbol/svg/sprite.symbol.svg#flame"></use>
+      Hot
+    </svg>
+  </div>
+
+  <h2 class="c-career__title">
+    {{ title }}
+  </h2>
+
+  <p class="c-career__text">
+    {{ text }}
+  </p>
+
+  <div class="text-bold c-career__meta">
+    {{#if location }}
+    <div class="c-career__location">
+      <svg>
+        <use xlink:href="/img/symbol/svg/sprite.symbol.svg#location"></use>
+      </svg>
+      {{ location }}
+    </div>
+    {{/if}}
+
+    {{#if time }}
+    <div class="c-career__time">
+      <svg>
+        <use xlink:href="/img/symbol/svg/sprite.symbol.svg#time"></use>
+      </svg>
+      {{ time }}
+    </div>
+    {{/if}}
+  </div>
+
+  {{>button tag="a" href="#" text=btn class="c-career__btn" }}
+</div>

@@ -1,0 +1,44 @@
+.c-career {
+  background-color: #efefef;
+  border-radius: toRem(20);
+  padding: toRem(20);
+  color: #064093;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    padding: toRem(40);
+  }
+}
+
+.c-career__title {
+  margin-bottom: toRem(16);
+}
+
+.c-career__badge {
+  color: #d93400;
+  background-color: rgba(#d93400, 0.16);
+}
+
+.c-career__badge,
+.c-career__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: toRem(16);
+}
+
+.c-career__badge > * .c-career__meta > * {
+  display: flex;
+  align-items: center;
+  margin-right: toRem(24);
+}
+
+.c-career__badge svg,
+.c-career__meta svg {
+  margin-right: toRem(8);
+  width: toRem(24);
+  height: toRem(24);
+}
+
+.c-career__btn {
+  margin-top: toRem(24);
+}

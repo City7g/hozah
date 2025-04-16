@@ -61,5 +61,15 @@
       "image": "item-1",
       "btn": "Read their case"
     }
+  ],
+  "careers": [
+    {
+      "title": "Backend Developer",
+      "text": "We are looking for a software engineer who is eager to learn about new technologies with a desire for continuous improvement. You should care first and foremost about understanding the business impact of the work you do.",
+      "btn": "Read more",
+      "badge": "Hot",
+      "location": "London, UK",
+      "time": "Full time"
+    }
   ]
 }

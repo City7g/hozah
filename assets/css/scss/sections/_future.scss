@@ -1,4 +1,5 @@
 .future {
+  position: relative;
   padding: toRem(60) 0;
 
   @media screen and (min-width: ($tablet + 1)) {
