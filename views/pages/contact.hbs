@@ -1,9 +1,15 @@
-<div class="wrapper main-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}"
+<div class="wrapper contact-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}"
   data-router-view="contact" data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/contact.css"
   data-style-id="styleBoxes">
-  {{>contactFS }}
 
-  <div class="styleBoxes" id="pageStyleBoxes">
+  {{>components/lazyImg path="img/bg/contact" mobilePath="img/bg/contact-mobile" ext="png" class="contact-page__bg" }}
+
+  <div class="pageHeroScreen {{#if build}}styleBoxes{{/if}}" data-animated="false" {{#if build}}
+    data-style-loaded="false" data-fs="fs-style" data-style-href="fs-path" {{/if}}>
+    {{>contactFS }}
+  </div>
+
+  <div class="contact-page__content">
     {{>sections/schedule }}
   </div>
 </div>

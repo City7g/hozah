@@ -1,8 +1,18 @@
 .schedule {
-  text-align: center;
-  margin-top: 0;
+  padding: toRem(60) 0;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    padding: toRem(120) 0 toRem(188);
+  }
 }
 
 .schedule__title {
   margin-bottom: toRem(40);
+  text-align: center;
+}
+
+.schedule__image {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
