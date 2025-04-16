@@ -12,7 +12,7 @@
   text-decoration: none;
 
   @media screen and (min-width: ($tablet + 1)) {
-    grid-template-columns: 52% 1fr;
+    grid-template-columns: toRem(313) 1fr;
     padding: toRem(24);
     gap: toRem(54) toRem(32);
   }
@@ -43,7 +43,7 @@
 }
 
 .c-article__title {
-  margin-bottom: toRem(16);
+  margin-bottom: toRem(12);
   @include textOverflow(2);
 
   @media screen and (min-width: ($tablet + 1)) {
@@ -54,6 +54,13 @@
 .c-article__text {
   margin-bottom: auto;
   @include textOverflow(3);
+}
+
+.c-article__date {
+  @media screen and (max-width: $mobile) {
+    font-size: toRem(14);
+    line-height: 1.4;
+  }
 }
 
 .c-article .c-article__btn {

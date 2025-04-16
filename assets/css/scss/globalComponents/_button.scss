@@ -34,6 +34,11 @@
     color: #fff;
   }
 
+  &:focus-visible {
+    outline: 1px solid #0eb495;
+    outline-offset: 1px;
+  }
+
   @include hover {
     color: #fff;
   }

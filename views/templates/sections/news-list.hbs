@@ -24,7 +24,7 @@
 
       <div class="section-content">
         <div class="section-cards">
-          {{#each news.list}}
+          {{#each newsList}}
             {{>components/article}}
           {{/each}}
         </div>
@@ -32,5 +32,9 @@
         {{>components/pagination}}
       </div>
     </div>
+  </div>
+
+  <div class="section-roads">
+    {{>components/lazyImg path="img/roads/news-gray-road-mobile" ext="svg" noAcf=true lazy=false class="news-gray-road mobile-visible"}}
   </div>
 </section>

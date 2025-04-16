@@ -81,11 +81,20 @@
 			>
 		{{/ifNotEquals}}
 		{{#if mobilePath}}
+			{{#ifEquals ext 'svg'}}
+				<source
+					srcset="{{puthSRC}}/{{mobilePath}}.svg"
+					media="(max-width: 640px)"
+					type="image/svg+xml"
+				>	
+			{{/ifEquals}}
+			{{#ifNotEquals ext 'svg'}}
 			<source
 				srcset="{{puthSRC}}/{{mobilePath}}.{{#if ext}}{{ext}}{{else}}jpg{{/if}}{{#unless no2x}} 1x, {{puthSRC}}/{{mobilePath}}@2x.{{#if ext}}{{ext}}{{else}}jpg{{/if}} 2x{{/unless}}"
 				media="(max-width: 640px)"
 				type="image/{{#if ext}}{{ext}}{{else}}jpg{{/if}}"
 			>
+			{{/ifNotEquals}}
 		{{/if}}
 		{{#ifNotEquals ext 'svg'}}
 			<source
@@ -101,7 +110,7 @@
 		{{#ifEquals ext 'svg'}}
 			<source
 				srcset="{{puthSRC}}/{{path}}.svg"
-				type="image/svg">
+				type="image/svg+xml">
 				<img src="{{puthSRC}}/{{path}}.svg"
 				alt="{{#if alt}}{{alt}}{{else}}image alt{{/if}}" {{#ifNotEquals lazy false }}
 				loading="lazy" {{/ifNotEquals}}>

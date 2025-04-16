@@ -1,4 +1,51 @@
 {
   "title": "News & Press",
-  "bodyClass": "news-page"
+  "bodyClass": "news-page",
+  "newsList": [
+      {
+        "title": "New Parking Code of Practice",
+        "text": "This month, we highlight key takeaways from the newly published Private Parking Sector Single Code of Practice by the British Parking Association (BPA) and",
+        "date": "Aug 27, 2024",
+        "tags": [
+          "Industry"
+        ],
+        "image": "item-1"
+      },
+      {
+        "title": "Hozah will be at Completely Retail Marketplace",
+        "text": "For expert insights on retail asset management, parking solutions, and the latest in parking technology, don’t miss the chance to connect with Robert P. and Billy Morris.",
+        "date": "Aug 27, 2024",
+        "tags": [
+          "Events"
+        ],
+        "image": "item-2"
+      },
+      {
+        "title": "Hozah will be at Completely Retail Marketplace",
+        "text": "For expert insights on retail asset management, parking solutions, and the latest in parking technology, don’t miss the chance to connect with Robert P. and Billy Morris. ",
+        "date": "Aug 27, 2024",
+        "tags": [
+          "Events"
+        ],
+        "image": "item-3"
+      },
+      {
+        "title": "Hozah will be at Completely Retail Marketplace",
+        "text": "For expert insights on retail asset management, parking solutions, and the latest in parking technology, don’t miss the chance to connect with Robert P. and Billy Morris. ",
+        "date": "Aug 27, 2024",
+        "tags": [
+          "Events"
+        ],
+        "image": "item-3"
+      },
+      {
+        "title": "Hozah will be at Completely Retail Marketplace",
+        "text": "For expert insights on retail asset management, parking solutions, and the latest in parking technology, don’t miss the chance to connect with Robert P. and Billy Morris. ",
+        "date": "Aug 27, 2024",
+        "tags": [
+          "Events"
+        ],
+        "image": "item-3"
+      }
+    ]
 }

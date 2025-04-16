@@ -1,14 +1,68 @@
 @import '../components/tag';
 
 .news-first-screen-section {
-  padding: toRem(164) 0 toRem(140);
+  padding: toRem(164) 0 toRem(140) !important;
+  position: relative;
 
   .page-title {
     margin-bottom: toRem(24);
+
+    @media screen and (max-width: $mobile) {
+      font-size: toRem(48);
+      line-height: 1;
+      font-weight: 500;
+      margin-bottom: toRem(25);
+    }
+  }
+
+  .section-roads {
+    pointer-events: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .news-roads {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+
+    @media screen and (max-width: $mobile) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  .news-blue-road {
+    width: toRem(611);
+    height: toRem(404);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 3;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    @media screen and (max-width: $mobile) {
+      width: toRem(375);
+      height: toRem(137);
+    }
   }
 
   @media screen and (max-width: $tablet) {
-    padding: toRem(120) 0 toRem(60);
+    padding: toRem(120) 0 toRem(60) !important;
   }
 }
 
@@ -136,6 +190,11 @@
       letter-spacing: 0;
     }
 
+    .card-text {
+      @include textOverflow(3);
+      letter-spacing: -0.03em;
+    }
+
     .card-footer {
       margin-top: 0;
       display: block;
@@ -150,7 +209,12 @@
     }
 
     .card-info {
-      margin-top: toRem(20);
+      margin-top: toRem(21);
+    }
+
+    .card-date {
+      font-size: toRem(14);
+      line-height: 1.4;
     }
   }
 }

@@ -21,9 +21,14 @@
           </div>
         </div>
         <div class="card-image">
-          {{>components/lazyImg path="img/news/big-news-image" mobilePath="img/news/big-news-image-mobile" noAcf=true }}
+          {{>components/lazyImg path="img/news/big-news-image" mobilePath="img/news/big-news-image-mobile" noAcf=true lazy=false }}
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="section-roads">
+    {{>components/lazyImg path="img/roads/news-roads" ext="svg" noAcf=true lazy=false class="news-roads"}}
+    {{>components/lazyImg path="img/roads/news-blue-road" mobilePath="img/roads/news-blue-road-mobile" ext="svg" noAcf=true lazy=false class="news-blue-road"}}
   </div>
 </section>
