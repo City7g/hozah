@@ -3,10 +3,10 @@ import SiteAnimation from '../modules/SiteAnimation';
 export default new (class Header extends SiteAnimation {
   constructor() {
     super();
-    this.slider = null;
     this.isOpen = false;
     this.lastScrollTop = 0;
     this.scrollThreshold = 10;
+    this.isWork = false;
   }
 
   init() {
@@ -14,9 +14,11 @@ export default new (class Header extends SiteAnimation {
     this.burger = document.querySelector('.header .burger');
 
     if (!this.header) return;
-
+    if (this.isWork) return;
     this.addListener(window, 'scroll', this.handleScroll.bind(this));
     this.addListener(this.burger, 'click', this.toggleMenu.bind(this));
+
+    this.isWork = true;
 
     // if (isTablet) {
     //   console.log(this.header.querySelector('.header__list'));
@@ -68,6 +70,8 @@ export default new (class Header extends SiteAnimation {
       document.body.classList.add('scrolling-up');
     }
 
+    console.log(this.lastScrollTop, scrollTop);
+
     this.lastScrollTop = scrollTop;
   }
 
@@ -75,6 +79,6 @@ export default new (class Header extends SiteAnimation {
     if (this.slider) {
       this.slider = null;
     }
-    window.removeEventListener('scroll', this.handleScroll.bind(this));
+    console.log('destroy');
   }
 })();

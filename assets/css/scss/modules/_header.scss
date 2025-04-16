@@ -11,6 +11,11 @@
   z-index: 100;
   transition: 0.3s ease;
   transition-property: transform, background-color;
+  color: #064093;
+}
+
+.header--dark {
+  color: #f9f9f9;
 }
 
 .header.--hide {
@@ -18,6 +23,11 @@
 }
 
 .header.--mini {
+  background-color: rgba(#f9f9f9, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.header--dark.--mini {
   background-color: #064093;
 }
 
@@ -104,9 +114,26 @@
   line-height: toRem(28);
   font-weight: 700;
   letter-spacing: 0;
+  color: inherit;
 
   @media screen and (min-width: ($tablet + 1)) {
     font-size: toRem(16);
     line-height: toRem(20);
+  }
+}
+
+.header .header__btn {
+  color: #064093;
+
+  @include hover {
+    color: #064093;
+  }
+}
+
+.header--dark .header__btn {
+  color: #f9f9f9;
+
+  @include hover {
+    color: #f9f9f9;
   }
 }

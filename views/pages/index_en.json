@@ -1,5 +1,6 @@
 {
   "title": "Main page",
+  "isDarkHeader": true,
   "bodyClass": "main-page",
   "first": {
     "title": "The Future of Parking Management <span>Starts Now.</span>",
