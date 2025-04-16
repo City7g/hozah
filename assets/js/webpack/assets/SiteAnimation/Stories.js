@@ -14,8 +14,6 @@ export default class Impact {
   }
 
   sliderInit(instance) {
-    console.log(instance);
-
     var splide = new Splide(instance.querySelector('.splide'), {
       type: 'loop',
       perPage: 1.5,

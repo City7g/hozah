@@ -1,6 +1,8 @@
-.styleBoxes section.future {
-  @media screen and (max-width: $tablet) {
-    padding-bottom: toRem(67);
+.future {
+  padding: toRem(60) 0;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    padding: toRem(120) 0;
   }
 }
 

@@ -1,10 +1,10 @@
 @import '../components/partner';
 
-.styleBoxes section.partners {
+.partners {
   padding: toRem(60) 0;
 
-  @media screen and (max-width: $tablet) {
-    padding: toRem(64) 0 toRem(138);
+  @media screen and (min-width: ($tablet + 1)) {
+    padding: toRem(120) 0;
   }
 }
 

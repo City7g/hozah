@@ -1,8 +1,8 @@
-.styleBoxes section.why {
-  padding-top: toRem(128);
+.why {
+  padding: toRem(60) 0 toRem(450);
 
-  @media screen and (max-width: $tablet) {
-    padding: toRem(80) 0 toRem(471);
+  @media screen and (min-width: ($tablet + 1)) {
+    padding: toRem(120) 0;
   }
 }
 

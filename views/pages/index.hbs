@@ -1,8 +1,13 @@
-<div class="wrapper main-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}" data-router-view="home"
+<div class="wrapper index-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}" data-router-view="index"
   data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/index.css" data-style-id="styleBoxes">
-  {{>indexFS }}
 
-  <div class="styleBoxes" id="pageStyleBoxes">
+  <div class="pageHeroScreen {{#if build}}styleBoxes{{/if}}" data-animated="false" {{#if build}}
+    data-style-loaded="false" data-fs="fs-style" data-style-href="fs-path" {{/if}}>
+    {{>indexFS }}
+  </div>
+
+  <div class="index-page__content">
+    {{>components/lazyImg path="img/bg/home" ext="png" class="index-page__bg" }}
     {{>sections/partners }}
     {{>sections/help }}
     {{>sections/future }}
@@ -14,13 +19,3 @@
     {{>sections/news }}
   </div>
 </div>
-
-{{!-- or load all page styles --}}
-
-{{!-- <div class="wrapper main-page" id="wrapper" data-title="{{title}}" data-lang="{{currentLang}}"
-  data-router-view="home" data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/index.css"
-  data-script-src="{{puthSRC}}/js/MainPageScript{{version}}.js" data-script-init="false" data-style-id="styleBoxes">
-  {{> indexFS}}
-  <div class="styleBoxes noStyles" id="pageStyleBoxes">
-  </div>
-</div> --}}
