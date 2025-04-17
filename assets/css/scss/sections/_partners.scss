@@ -18,6 +18,7 @@
 .partners__list {
   display: flex;
   margin-top: toRem(40);
+  overflow: hidden;
 
   @media screen and (min-width: ($tablet + 1)) {
     margin-top: toRem(50);
