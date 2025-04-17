@@ -2,6 +2,7 @@
 
 .partners {
   position: relative;
+  z-index: 1;
   padding: toRem(60) 0;
 
   @media screen and (min-width: ($tablet + 1)) {

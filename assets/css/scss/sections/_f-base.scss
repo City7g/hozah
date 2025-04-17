@@ -1,4 +1,28 @@
+.for-car-page {
+  position: relative;
+}
+
+.for-car-page__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+}
+
+.for-car-page__bg img {
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
 .f-base {
+  position: relative;
   padding: toRem(96) 0 toRem(119);
   background-color: #064093;
   color: #f9f9f9;
@@ -37,5 +61,26 @@
 
   @media screen and (min-width: ($tablet + 1)) {
     margin-top: toRem(40);
+  }
+}
+
+.f-base__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+}
+
+.f-base__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  user-select: none;
+
+  @media screen and (min-width: ($tablet + 1)) {
+    object-position: bottom right;
   }
 }

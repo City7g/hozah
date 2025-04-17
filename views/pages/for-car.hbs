@@ -2,12 +2,15 @@
   data-router-view="for-car" data-style-loaded="false" data-style-href="{{puthSRC}}/css/pages/for-car.css"
   data-style-id="styleBoxes">
 
+  {{>components/lazyImg path="img/bg/for-car" ext="png" class="for-car-page__bg" }}
+
   <div class="pageHeroScreen {{#if build}}styleBoxes{{/if}}" data-animated="false" {{#if build}}
     data-style-loaded="false" data-fs="fs-style" data-style-href="fs-path" {{/if}}>
     {{>base }}
   </div>
 
-  <div>
+  <div class="for-car-page__content">
+    {{!-- {{>components/lazyImg path="img/bg/for-car-main" ext="png" class="for-car-page__bg" }} --}}
     {{>sections/partners }}
     {{>sections/why }}
     {{>sections/stories }}
