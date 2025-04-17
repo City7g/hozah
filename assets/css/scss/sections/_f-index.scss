@@ -156,7 +156,6 @@
   user-select: none;
 
   @media screen and (min-width: ($tablet + 1)) {
-    object-fit: contain;
-    object-position: right;
+    object-position: bottom right;
   }
 }
